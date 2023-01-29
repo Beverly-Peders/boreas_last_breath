@@ -236,6 +236,9 @@ VAR inspect = 0
 {murder}
 {char_turn_name}'s Turn
 
+/// Should I put a thing at the beginning {variable <= X} then they can do the action, but if all the actions FOR THEM are taken, they can't? 
+/// Can I use char_turn-name?? Can that somehow make it so that I can make sure that only that person's options are taken? 
+
 +   [Inspect Self] -> inspect_self
 +   [Inspect Body] -> inspect_body
 +   [Inspect Crime Scene] -> inspect_crime_scene
@@ -299,9 +302,6 @@ VAR inspect = 0
         -> murderer_reveal
 
 === inspect_self ===
-
-/// BIG ISSUE here - need to make sure that clues can reopen and reshuffle!! Not sure how... 
-
 {
     - char_turn_name == "Desponia": 
         {shuffle: 
@@ -773,31 +773,31 @@ I K 2
 === murderer_reveal ===
 
 {
-    - murder == accuse: 
+    - murder == 1 && accuse == 1: 
         Desponia 
         -> END
-    - murder == accuse: 
+    - murder == 2 && accuse == 2:  
         Khione 
         -> END
-    - murder == accuse: 
+    - murder == 3 && accuse == 3:  
         Ded Moroz 
         -> END
-    - murder == accuse: 
+    - murder == 4 && accuse == 4: 
         Itzlacoliuhqui
         -> END
-    - murder == accuse: 
+    - murder == 5 && accuse == 5: 
         Marzanna 
         -> END
-    - murder == accuse: 
+    - murder == 6 && accuse == 6: 
         Skadi
         -> END
-    - murder == accuse: 
+    - murder == 7 && accuse == 7: 
         Hine Takurua 
         -> END
-    - murder == accuse: 
+    - murder == 8 && accuse == 8: 
         Shakok
         -> END
-    - murder == accuse:
+    - murder == 9 && accuse == 9: 
         Naneh Sarma
         -> END
     - else: 
