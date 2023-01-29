@@ -300,36 +300,102 @@ VAR inspect = 0
 
 === inspect_self ===
 
+/// BIG ISSUE here - need to make sure that clues can reopen and reshuffle!! Not sure how... 
+
 {
     - char_turn_name == "Desponia": 
-        { 
-            - murder == 1:
-                { shuffle: 
-                    - {not self_d_m_1} -> self_d_m_1 
-                    - {not self_d_m_2} -> self_d_m_2
-                }
-            - else: 
-                { shuffle: 
+        {shuffle: 
                     - {not self_d_1} -> self_d_1 
                     - {not self_d_2} -> self_d_2
-                }
+                    - {not self_d_3} -> self_d_3
+                    - {not self_d_4} -> self_d_4
+                    - {not self_d_5} -> self_d_5
+                    - {not self_d_6} -> self_d_6
+                    - {not self_d_7} -> self_d_7
         }
     - char_turn_name == "Khione":
-        { 
-            - murder == 2:
-                { shuffle: 
-                    - {not self_k_m_1} -> self_k_m_1 
-                    - {not self_k_m_2} -> self_k_m_2
-                }
-            - else: 
-                { shuffle: 
+        {shuffle: 
                     - {not self_k_1} -> self_k_1 
                     - {not self_k_2} -> self_k_2
-                }
+                    - {not self_k_3} -> self_k_3
+                    - {not self_k_4} -> self_k_4
+                    - {not self_k_5} -> self_k_5
+                    - {not self_k_6} -> self_k_6
+                    - {not self_k_7} -> self_k_7
+        }
+    - char_turn_name == "Ded Moroz": 
+        {shuffle: 
+                    - {not self_dm_1} -> self_dm_1 
+                    - {not self_dm_2} -> self_dm_2
+                    - {not self_dm_3} -> self_dm_3
+                    - {not self_dm_4} -> self_dm_4
+                    - {not self_dm_5} -> self_dm_5
+                    - {not self_dm_6} -> self_dm_6
+                    - {not self_dm_7} -> self_dm_7
+        }
+    - char_turn_name == "Itzlacoliuhqui": 
+        {shuffle: 
+                    - {not self_i_1} -> self_i_1 
+                    - {not self_i_2} -> self_i_2
+                    - {not self_i_3} -> self_i_3
+                    - {not self_i_4} -> self_i_4
+                    - {not self_i_5} -> self_i_5
+                    - {not self_i_6} -> self_i_6
+                    - {not self_i_7} -> self_i_7
+        }
+    - char_turn_name == "Marzanna": 
+        {shuffle: 
+                    - {not self_m_1} -> self_m_1 
+                    - {not self_m_2} -> self_m_2
+                    - {not self_m_3} -> self_m_3
+                    - {not self_m_4} -> self_m_4
+                    - {not self_m_5} -> self_m_5
+                    - {not self_m_6} -> self_m_6
+                    - {not self_m_7} -> self_m_7
+        }
+    - char_turn_name == "Skadi": 
+        {shuffle: 
+                    - {not self_sk_1} -> self_sk_1 
+                    - {not self_sk_2} -> self_sk_2
+                    - {not self_sk_3} -> self_sk_3
+                    - {not self_sk_4} -> self_sk_4
+                    - {not self_sk_5} -> self_sk_5
+                    - {not self_sk_6} -> self_sk_6
+                    - {not self_sk_7} -> self_sk_7
+        }
+    - char_turn_name == "Hine-Takurua": 
+        {shuffle: 
+                    - {not self_ht_1} -> self_ht_1 
+                    - {not self_ht_2} -> self_ht_2
+                    - {not self_ht_3} -> self_ht_3
+                    - {not self_ht_4} -> self_ht_4
+                    - {not self_ht_5} -> self_ht_5
+                    - {not self_ht_6} -> self_ht_6
+                    - {not self_ht_7} -> self_ht_7
+        }
+    - char_turn_name == "Shakok": 
+        {shuffle: 
+                    - {not self_sk_1} -> self_sk_1 
+                    - {not self_sk_2} -> self_sk_2
+                    - {not self_sk_3} -> self_sk_3
+                    - {not self_sk_4} -> self_sk_4
+                    - {not self_sk_5} -> self_sk_5
+                    - {not self_sk_6} -> self_sk_6
+                    - {not self_sk_7} -> self_sk_7
+        }
+    - char_turn_name == "Naneh Sarma": 
+        {shuffle: 
+                    - {not self_ns_1} -> self_ns_1 
+                    - {not self_ns_2} -> self_ns_2
+                    - {not self_ns_3} -> self_ns_3
+                    - {not self_ns_4} -> self_ns_4
+                    - {not self_ns_5} -> self_ns_5
+                    - {not self_ns_6} -> self_ns_6
+                    - {not self_ns_7} -> self_ns_7
         }
     - else:
+        Something Fucked Up 
         -> turn 
-        
 }
 
 === inspect_body ===
@@ -372,68 +438,280 @@ VAR inspect = 0
 
 {
     - inspect == 1: 
-        { 
-            - murder == 1:
-                { shuffle: 
-                    - {not inspect_d_m_1} -> inspect_d_m_1
-                    - {not inspect_d_m_2} -> inspect_d_m_2
-                }
-            - else: 
-                { shuffle: 
+        { shuffle: 
                     - {not inspect_d_1} ->  inspect_d_1
                     - {not inspect_d_2} ->  inspect_d_2
-                }
         }
     - inspect == 2:
-        { 
-            - murder == 2:
-                { shuffle: 
-                    - {not inspect_k_m_1} -> inspect_k_m_1
-                    - {not inspect_k_m_2} -> inspect_k_m_2
-                }
-            - else: 
-                { shuffle: 
+        { shuffle: 
                     - {not inspect_k_1} -> inspect_k_1
                     - {not inspect_k_2} -> inspect_k_2
-                }
         }
     - else:
+        Something Fucked Up
         -> turn 
         
 }
 
 /// Desponia Self //////////////////////////////////////////////
-=== self_d_m_1 ===
-D M 1
-+ [Continue] -> turn
-
-=== self_d_m_2 ===
-D M 2 
-+ [Continue] -> turn 
-
 === self_d_1 === 
-D 1
+D1 - Missing gloves
 + [Continue] -> turn
 
 === self_d_2 ===
-D 2
+D2 - Soot on pants 
++ [Continue] -> turn
+
+=== self_d_3 ===
+D3 - Forged contract
++ [Continue] -> turn
+
+=== self_d_4 ===
+D4 - Correspondence w/ fam 
++ [Continue] -> turn
+
+=== self_d_5 ===
+D5 - Flirting with Itzla 
++ [Continue] -> turn
+
+=== self_d_6 ===
+D6 - Seen in lounge with Boreas 
++ [Continue] -> turn
+
+=== self_d_7 ===
+D7 - Horse hair 
 + [Continue] -> turn
 
 /// Khione Self //////////////////////////////////////////////
-=== self_k_m_1 ===
-K M 1
-+ [Continue] -> turn
-
-=== self_k_m_2 ===
-K M 2 
-+ [Continue] -> turn 
-
 === self_k_1 === 
-K 1
+K1 - List of chores
 + [Continue] -> turn
 
 === self_k_2 ===
-K 2
+K2 - Correspondence
++ [Continue] -> turn
+
+=== self_k_3 === 
+K3 - Blackmail (for each individual?) 
++ [Continue] -> turn
+
+=== self_k_4 === 
+K4 - Seen everywhere
++ [Continue] -> turn
+
+=== self_k_5 === 
+K5 - Served drinks
++ [Continue] -> turn
+
+=== self_k_6 === 
+K6 - Knew Boreas' schedule
++ [Continue] -> turn
+
+=== self_k_7 === 
+K7 - Has keys to all the rooms
++ [Continue] -> turn
+
+/// Ded Moroz Self //////////////////////////////////////////////
+=== self_dm_1 === 
+DM1 - Concealed sword in cane
++ [Continue] -> turn
+
+=== self_dm_2 ===
+DM2 - Correspondence w/ Boreas
++ [Continue] -> turn
+
+=== self_dm_3 === 
+DM3 - Invoices / ledger
++ [Continue] -> turn
+
+=== self_dm_4 === 
+DM4 - Cigars
++ [Continue] -> turn
+
+=== self_dm_5 === 
+DM5 - Animal fur boots
++ [Continue] -> turn
+
+=== self_dm_6 === 
+DM6 - Seen playing cards with Boreas
++ [Continue] -> turn
+
+=== self_dm_7 === 
+DM7 - SOMETHING
++ [Continue] -> turn
+
+/// Itzlacoliuhqui Self //////////////////////////////////////////////
+=== self_i_1 === 
+I1 - Coded correspondence with Zephyr 
++ [Continue] -> turn
+
+=== self_i_2 ===
+I2 - Seen helping B into the lounge
++ [Continue] -> turn
+
+=== self_i_3 === 
+I3 - Flirting with everyone
++ [Continue] -> turn
+
+=== self_i_4 === 
+I4 - Missing gun, empty holster
++ [Continue] -> turn
+
+=== self_i_5 === 
+I5 - Very expensive accessories 
++ [Continue] -> turn
+
+=== self_i_6 === 
+I6 - Smokes cigarettes
++ [Continue] -> turn
+
+=== self_i_7 === 
+I7 - SOMETHING
++ [Continue] -> turn
+
+/// Marzanna Self //////////////////////////////////////////////
+=== self_m_1 === 
+M1 - Missing pills, bottle
++ [Continue] -> turn
+
+=== self_m_2 ===
+M2 - Purse full of stolen items
++ [Continue] -> turn
+
+=== self_m_3 === 
+M3 - Clothing covered in beads 
++ [Continue] -> turn
+
+=== self_m_4 === 
+M4 - Fate gemstone jewelry
++ [Continue] -> turn
+
+=== self_m_5 === 
+M5 - Seen gawking in the viewing room 
++ [Continue] -> turn
+
+=== self_m_6 === 
+M6 - Love letter between mother and Boreas
++ [Continue] -> turn
+
+=== self_m_7 === 
+M7 - Old photograph of mother and Boreas?
++ [Continue] -> turn
+
+/// Skadi Self //////////////////////////////////////////////
+=== self_sk_1 === 
+SK1 - Missing fur coat 
++ [Continue] -> turn
+
+=== self_sk_2 ===
+SK2 - Correspondence 
++ [Continue] -> turn
+
+=== self_sk_3 === 
+SK3 - Forged contract 
++ [Continue] -> turn
+
+=== self_sk_4 === 
+SK4 - Went to restock beverages from supply room?
++ [Continue] -> turn
+
+=== self_sk_5 === 
+SK5 - Feather accessories in hair 
++ [Continue] -> turn
+
+=== self_sk_6 === 
+SK6 - SOMETHING
++ [Continue] -> turn
+
+=== self_sk_7 === 
+SK7 - SOMETHING
++ [Continue] -> turn
+
+/// Hine-Takurua Self //////////////////////////////////////////////
+=== self_ht_1 === 
+HT1 - Bird feathers on outfit 
++ [Continue] -> turn
+
+=== self_ht_2 ===
+HT2 - Newspaper clippings about husband 
++ [Continue] -> turn
+
+=== self_ht_3 === 
+HT3 - Perfume 
++ [Continue] -> turn
+
+=== self_ht_4 === 
+HT4 - Seen hanging on Boreas' arm 
++ [Continue] -> turn
+
+=== self_ht_5 === 
+HT5 - Has gems bought by Boreas (in ledger) 
++ [Continue] -> turn
+
+=== self_ht_6 === 
+HT6 - Love letters 
++ [Continue] -> turn
+
+=== self_ht_7 === 
+HT7 - SOMETHING
++ [Continue] -> turn
+
+/// Shakok Self //////////////////////////////////////////////
+=== self_sh_1 === 
+SH1 - Seen shouting with Boreas about finances 
++ [Continue] -> turn
+
+=== self_sh_2 ===
+SH2 - Executor of the will 
++ [Continue] -> turn
+
+=== self_sh_3 === 
+SH3 - Missing briefcase?
++ [Continue] -> turn
+
+=== self_sh_4 === 
+SH4 - Ledger shows that Boreas is lying 
++ [Continue] -> turn
+
+=== self_sh_5 === 
+SH5 - Correspondence 
++ [Continue] -> turn
+
+=== self_sh_6 === 
+SH6 - Ink on hands 
++ [Continue] -> turn
+
+=== self_sh_7 === 
+SH7 - SOMETHING 
++ [Continue] -> turn
+
+/// Naneh Sarma Self //////////////////////////////////////////////
+=== self_ns_1 === 
+NS1 - Yarn
++ [Continue] -> turn
+
+=== self_ns_2 ===
+NS2 - Correspondence 
++ [Continue] -> turn
+
+=== self_ns_3 === 
+NS3 - Helpers are packing heat 
++ [Continue] -> turn
+
+=== self_ns_4 === 
+NS4 - Beads on her knitting bag 
++ [Continue] -> turn
+
+=== self_ns_5 === 
+NS5 - Missing something? 
++ [Continue] -> turn
+
+=== self_ns_6 === 
+NS6 - SOMETHING - glasses?
++ [Continue] -> turn
+
+=== self_ns_7 === 
+NS7 - SOMETHING
 + [Continue] -> turn
 
 ///Body 1 //////////////////////////////////////////////
@@ -473,14 +751,6 @@ CS 2 2
 + [Continue] -> turn
 
 ///Inspect Desponia //////////////////////////////////////////////
-=== inspect_d_m_1 ===
-I D M 1
-+ [Continue] -> turn
-
-=== inspect_d_m_2 ===
-I D M 2
-+ [Continue] -> turn
-
 === inspect_d_1 ===
 I D 1 
 + [Continue] -> turn
@@ -490,14 +760,6 @@ I D 2
 + [Continue] -> turn
 
 ///Inspect Khione //////////////////////////////////////////////
-=== inspect_k_m_1 ===
-I K M 1
-+ [Continue] -> turn
-
-=== inspect_k_m_2 ===
-I K M 2
-+ [Continue] -> turn
-
 === inspect_k_1 ===
 I K 1 
 + [Continue] -> turn
