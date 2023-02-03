@@ -236,9 +236,6 @@ VAR inspect = 0
 {murder}
 {char_turn_name}'s Turn
 
-/// Should I put a thing at the beginning {variable <= X} then they can do the action, but if all the actions FOR THEM are taken, they can't? 
-/// Can I use char_turn-name?? Can that somehow make it so that I can make sure that only that person's options are taken? 
-
 +   [Inspect Self] -> inspect_self
 +   [Inspect Body] -> inspect_body
 +   [Inspect Crime Scene] -> inspect_crime_scene
@@ -403,13 +400,93 @@ VAR inspect = 0
 { 
     - murder == 1: 
         {shuffle: 
-            - {not body1_1} -> body1_1
-            - {not body1_2} -> body1_2
+            - -> body1_1
+            - -> body1_2
+            - -> body1_3
+            - -> body1_4
+            - -> body1_5
+            - -> body1_6
+            - -> body1_7
         }
     - murder == 2:
         {shuffle: 
-            - {not body2_1} -> body2_1
-            - {not body2_2} -> body2_2
+            - -> body2_1
+            - -> body2_2
+            - -> body2_3
+            - -> body2_4
+            - -> body2_5
+            - -> body2_6
+            - -> body2_7
+        }
+    - murder == 3:
+        {shuffle: 
+            - -> body3_1
+            - -> body3_2
+            - -> body3_3
+            - -> body3_4
+            - -> body3_5
+            - -> body3_6
+            - -> body3_7
+        }
+    - murder == 4:
+        {shuffle: 
+            - -> body4_1
+            - -> body4_2
+            - -> body4_3
+            - -> body4_4
+            - -> body4_5
+            - -> body4_6
+            - -> body4_7
+        }
+    - murder == 5:
+        {shuffle: 
+            - -> body5_1
+            - -> body5_2
+            - -> body5_3
+            - -> body5_4
+            - -> body5_5
+            - -> body5_6
+            - -> body5_7
+        }
+    - murder == 6:
+        {shuffle: 
+            - -> body6_1
+            - -> body6_2
+            - -> body6_3
+            - -> body6_4
+            - -> body6_5
+            - -> body6_6
+            - -> body6_7
+        }
+    - murder == 7:
+        {shuffle: 
+            - -> body7_1
+            - -> body7_2
+            - -> body7_3
+            - -> body7_4
+            - -> body7_5
+            - -> body7_6
+            - -> body7_7
+        }
+    - murder == 8:
+        {shuffle: 
+            - -> body8_1
+            - -> body8_2
+            - -> body8_3
+            - -> body8_4
+            - -> body8_5
+            - -> body8_6
+            - -> body8_7
+        }
+    - murder == 9:
+        {shuffle: 
+            - -> body9_1
+            - -> body9_2
+            - -> body9_3
+            - -> body9_4
+            - -> body9_5
+            - -> body9_6
+            - -> body9_7
         }
     - else: 
         something fucked up 
@@ -421,13 +498,93 @@ VAR inspect = 0
 { 
     - murder == 1: 
         {shuffle: 
-            - {not cs_1_1} -> cs_1_1
-            - {not cs_1_2} -> cs_1_2
+            - -> cs_1_1
+            - -> cs_1_2
+            - -> cs_1_3
+            - -> cs_1_4
+            - -> cs_1_5
+            - -> cs_1_6
+            - -> cs_1_7
         }
     - murder == 2:
         {shuffle: 
-            - {not cs_2_1} -> cs_2_1
-            - {not cs_2_2} -> cs_2_2
+            - -> cs_2_1
+            - -> cs_2_2
+            - -> cs_2_3
+            - -> cs_2_4
+            - -> cs_2_5
+            - -> cs_2_6
+            - -> cs_2_7
+        }
+    - murder == 3:
+        {shuffle: 
+            - -> cs_3_1
+            - -> cs_3_2
+            - -> cs_3_3
+            - -> cs_3_4
+            - -> cs_3_5
+            - -> cs_3_6
+            - -> cs_3_7
+        }
+    - murder == 4:
+        {shuffle: 
+            - -> cs_4_1
+            - -> cs_4_2
+            - -> cs_4_3
+            - -> cs_4_4
+            - -> cs_4_5
+            - -> cs_4_6
+            - -> cs_4_7
+        }
+    - murder == 5:
+        {shuffle: 
+            - -> cs_5_1
+            - -> cs_5_2
+            - -> cs_5_3
+            - -> cs_5_4
+            - -> cs_5_5
+            - -> cs_5_6
+            - -> cs_5_7
+        }
+    - murder == 6:
+        {shuffle: 
+            - -> cs_6_1
+            - -> cs_6_2
+            - -> cs_6_3
+            - -> cs_6_4
+            - -> cs_6_5
+            - -> cs_6_6
+            - -> cs_6_7
+        }
+    - murder == 7:
+        {shuffle: 
+            - -> cs_7_1
+            - -> cs_7_2
+            - -> cs_7_3
+            - -> cs_7_4
+            - -> cs_7_5
+            - -> cs_7_6
+            - -> cs_7_7
+        }
+    - murder == 8:
+        {shuffle: 
+            - -> cs_8_1
+            - -> cs_8_2
+            - -> cs_8_3
+            - -> cs_8_4
+            - -> cs_8_5
+            - -> cs_8_6
+            - -> cs_8_7
+        }
+    - murder == 9:
+        {shuffle: 
+            - -> cs_9_1
+            - -> cs_9_2
+            - -> cs_9_3
+            - -> cs_9_4
+            - -> cs_9_5
+            - -> cs_9_6
+            - -> cs_9_7
         }
     - else: 
         something fucked up 
@@ -439,13 +596,93 @@ VAR inspect = 0
 {
     - inspect == 1: 
         { shuffle: 
-                    - {not inspect_d_1} ->  inspect_d_1
-                    - {not inspect_d_2} ->  inspect_d_2
+                    - ->  inspect_d_1
+                    - ->  inspect_d_2
+                    - ->  inspect_d_3
+                    - ->  inspect_d_4
+                    - ->  inspect_d_5
+                    - ->  inspect_d_6
+                    - ->  inspect_d_7
         }
     - inspect == 2:
         { shuffle: 
-                    - {not inspect_k_1} -> inspect_k_1
-                    - {not inspect_k_2} -> inspect_k_2
+                    - ->  inspect_k_1
+                    - ->  inspect_k_2
+                    - ->  inspect_k_3
+                    - ->  inspect_k_4
+                    - ->  inspect_k_5
+                    - ->  inspect_k_6
+                    - ->  inspect_k_7
+        }
+    - inspect == 3:
+        { shuffle: 
+                    - ->  inspect_dm_1
+                    - ->  inspect_dm_2
+                    - ->  inspect_dm_3
+                    - ->  inspect_dm_4
+                    - ->  inspect_dm_5
+                    - ->  inspect_dm_6
+                    - ->  inspect_dm_7
+        }
+    - inspect == 4:
+        { shuffle: 
+                    - ->  inspect_i_1
+                    - ->  inspect_i_2
+                    - ->  inspect_i_3
+                    - ->  inspect_i_4
+                    - ->  inspect_i_5
+                    - ->  inspect_i_6
+                    - ->  inspect_i_7
+        }
+    - inspect == 5:
+        { shuffle: 
+                    - ->  inspect_m_1
+                    - ->  inspect_m_2
+                    - ->  inspect_m_3
+                    - ->  inspect_m_4
+                    - ->  inspect_m_5
+                    - ->  inspect_m_6
+                    - ->  inspect_m_7
+        }
+    - inspect == 6:
+        { shuffle: 
+                    - ->  inspect_sk_1
+                    - ->  inspect_sk_2
+                    - ->  inspect_sk_3
+                    - ->  inspect_sk_4
+                    - ->  inspect_sk_5
+                    - ->  inspect_sk_6
+                    - ->  inspect_sk_7
+        }
+    - inspect == 7:
+        { shuffle: 
+                    - ->  inspect_ht_1
+                    - ->  inspect_ht_2
+                    - ->  inspect_ht_3
+                    - ->  inspect_ht_4
+                    - ->  inspect_ht_5
+                    - ->  inspect_ht_6
+                    - ->  inspect_ht_7
+        }
+    - inspect == 8:
+        { shuffle: 
+                    - ->  inspect_sh_1
+                    - ->  inspect_sh_2
+                    - ->  inspect_sh_3
+                    - ->  inspect_sh_4
+                    - ->  inspect_sh_5
+                    - ->  inspect_sh_6
+                    - ->  inspect_sh_7
+        }
+    - inspect == 9:
+        { shuffle: 
+                    - ->  inspect_ns_1
+                    - ->  inspect_ns_2
+                    - ->  inspect_ns_3
+                    - ->  inspect_ns_4
+                    - ->  inspect_ns_5
+                    - ->  inspect_ns_6
+                    - ->  inspect_ns_7
         }
     - else:
         Something Fucked Up
@@ -716,56 +953,785 @@ NS7 - SOMETHING
 
 ///Body 1 //////////////////////////////////////////////
 === body1_1 ===
-Body 1 1
+Body11 - Dent in skull
 + [Continue] -> turn
 
 === body1_2 ===
-Body 1 2
+Body12 - Ink on fingers
++ [Continue] -> turn
+
+=== body1_3 ===
+Body13 - Animal hair on body 
++ [Continue] -> turn
+
+=== body1_4 ===
+Body14 - Perfume on body 
++ [Continue] -> turn
+
+=== body1_5 ===
+Body15 - Ledger
++ [Continue] -> turn
+
+=== body1_6 ===
+Body16
++ [Continue] -> turn
+
+=== body1_7 ===
+Body17
 + [Continue] -> turn
 
 ///Body 2 //////////////////////////////////////////////
 === body2_1 ===
-Body 2 1
+Body21 - Gunshot wound
 + [Continue] -> turn
 
 === body2_2 ===
-Body 2 1
+Body22 - Foam at mouth (poison)
++ [Continue] -> turn
+
+=== body2_3 ===
+Body23 - Perfume
++ [Continue] -> turn
+
+=== body2_4 ===
+Body24 - Ledger
++ [Continue] -> turn
+
+=== body2_5 ===
+Body25
++ [Continue] -> turn
+
+=== body2_6 ===
+Body26
++ [Continue] -> turn
+
+=== body2_7 ===
+Body27
++ [Continue] -> turn
+
+///Body 3 //////////////////////////////////////////////
+=== body3_1 ===
+Body31 - Stab wound through the body 
++ [Continue] -> turn
+
+=== body3_2 ===
+Body32 - Multiple stabs
++ [Continue] -> turn
+
+=== body3_3 ===
+Body33 - Small bruises from the hilt
++ [Continue] -> turn
+
+=== body3_4 ===
+Body34 - Expensive items stolen off body
++ [Continue] -> turn
+
+=== body3_5 ===
+Body35 - Ledger
++ [Continue] -> turn
+
+=== body3_6 ===
+Body36 - Perfume
++ [Continue] -> turn
+
+=== body3_7 ===
+Body37
++ [Continue] -> turn
+
+///Body 4 //////////////////////////////////////////////
+=== body4_1 ===
+Body41 - Foam at mouth, poison
++ [Continue] -> turn
+
+=== body4_2 ===
+Body42 - Expertly cleaned
++ [Continue] -> turn
+
+=== body4_3 ===
+Body43 - Planted feather 
++ [Continue] -> turn
+
+=== body4_4 ===
+Body44 - Ledger
++ [Continue] -> turn
+
+=== body4_5 ===
+Body45 - Perfume
++ [Continue] -> turn
+
+=== body4_6 ===
+Body46
++ [Continue] -> turn
+
+=== body4_7 ===
+Body47
++ [Continue] -> turn
+
+///Body 5 //////////////////////////////////////////////
+=== body5_1 ===
+Body51 - Cheap beads in the folds of his clothes
++ [Continue] -> turn
+
+=== body5_2 ===
+Body52 - Stabbed, knife in body 
++ [Continue] -> turn
+
+=== body5_3 ===
+Body53 - Expensive items stolen off body 
++ [Continue] -> turn
+
+=== body5_4 ===
+Body54 - Ledger
++ [Continue] -> turn
+
+=== body5_5 ===
+Body55 - Perfume
++ [Continue] -> turn
+
+=== body5_6 ===
+Body56
++ [Continue] -> turn
+
+=== body5_7 ===
+Body57
++ [Continue] -> turn
+
+///Body 6 //////////////////////////////////////////////
+=== body6_1 ===
+Body61 - Stabbed with sharp blade - ice pick
++ [Continue] -> turn
+
+=== body6_2 ===
+Body62 - Animal hair 
++ [Continue] -> turn
+
+=== body6_3 ===
+Body63 - Ledger
++ [Continue] -> turn
+
+=== body6_4 ===
+Body64 - Perfume
++ [Continue] -> turn
+
+=== body6_5 ===
+Body65
++ [Continue] -> turn
+
+=== body6_6 ===
+Body66
++ [Continue] -> turn
+
+=== body6_7 ===
+Body67
++ [Continue] -> turn
+
+///Body 7 //////////////////////////////////////////////
+=== body7_1 ===
+Body71 - Wedding ring in box
++ [Continue] -> turn
+
+=== body7_2 ===
+Body72 - Ledger 
++ [Continue] -> turn
+
+=== body7_3 ===
+Body73 - Perfume
++ [Continue] -> turn
+
+=== body7_4 ===
+Body74 - Smothed by pillow
++ [Continue] -> turn
+
+=== body7_5 ===
+Body75 - Lipstick 
++ [Continue] -> turn
+
+=== body7_6 ===
+Body76
++ [Continue] -> turn
+
+=== body7_7 ===
+Body77
++ [Continue] -> turn
+
+///Body 8 //////////////////////////////////////////////
+=== body8_1 ===
+Body81 - Ledger
++ [Continue] -> turn
+
+=== body8_2 ===
+Body82 - Letter opener murder weapon
++ [Continue] -> turn
+
+=== body8_3 ===
+Body83
++ [Continue] -> turn
+
+=== body8_4 ===
+Body84
++ [Continue] -> turn
+
+=== body8_5 ===
+Body85
++ [Continue] -> turn
+
+=== body8_6 ===
+Body86
++ [Continue] -> turn
+
+=== body8_7 ===
+Body87
++ [Continue] -> turn
+
+///Body 9 //////////////////////////////////////////////
+=== body9_1 ===
+Body91 - Smashed head
++ [Continue] -> turn
+
+=== body9_2 ===
+Body92 - Ledger
++ [Continue] -> turn
+
+=== body9_3 ===
+Body93 - Perfume
++ [Continue] -> turn
+
+=== body9_4 ===
+Body94 - Shot to make sure he was dead - profession
++ [Continue] -> turn
+
+=== body9_5 ===
+Body95
++ [Continue] -> turn
+
+=== body9_6 ===
+Body96
++ [Continue] -> turn
+
+=== body9_7 ===
+Body97
 + [Continue] -> turn
 
 ///Crime Scene 1 //////////////////////////////////////////////
 === cs_1_1 ===
-CS 1 1 
+CS11 - Not a lot of blood on the bed
 + [Continue] -> turn 
 
 === cs_1_2 ===
-CS 1 2 
+CS12 - Chair has been cleaned in the lounge
 + [Continue] -> turn
+
+=== cs_1_3 ===
+CS13 - Firepoker is missing
++ [Continue] -> turn 
+
+=== cs_1_4 ===
+CS14 - Documents burned in the fireplace
++ [Continue] -> turn 
+
+=== cs_1_5 ===
+CS15 - Flower pot looks weird - bloody gloves stashed into it
++ [Continue] -> turn 
+
+=== cs_1_6 ===
+CS16 - Scuff marks on the floor
++ [Continue] -> turn 
+
+=== cs_1_7 ===
+CS17
++ [Continue] -> turn 
 
 ///Crime Scene 2 //////////////////////////////////////////////
 === cs_2_1 ===
-CS 2 1 
+CS21 - Bloody gloves in the flower pot
 + [Continue] -> turn 
 
 === cs_2_2 ===
-CS 2 2 
+CS22 - Boreas' will
 + [Continue] -> turn
+
+=== cs_2_3 ===
+CS23 - Killed in the study
++ [Continue] -> turn
+
+=== cs_2_4 ===
+CS24 - Drugs in drink
++ [Continue] -> turn 
+
+=== cs_2_5 ===
+CS25 - Gun left behind
++ [Continue] -> turn 
+
+=== cs_2_6 ===
+CS26 - Empty pill bottle
++ [Continue] -> turn 
+
+=== cs_2_7 ===
+CS27
++ [Continue] -> turn 
+
+///Crime Scene 3 //////////////////////////////////////////////
+=== cs_3_1 ===
+CS31 - Killed at poker table
++ [Continue] -> turn 
+
+=== cs_3_2 ===
+CS32 - Ash from cigar? Cigarette?
++ [Continue] -> turn
+
+=== cs_3_3 ===
+CS33 - Large shoe print in blood 
++ [Continue] -> turn
+
+=== cs_3_4 ===
+CS34
++ [Continue] -> turn 
+
+=== cs_3_5 ===
+CS35
++ [Continue] -> turn 
+
+=== cs_3_6 ===
+CS36
++ [Continue] -> turn 
+
+=== cs_3_7 ===
+CS37
++ [Continue] -> turn 
+
+///Crime Scene 4 //////////////////////////////////////////////
+=== cs_4_1 ===
+CS41 - Poisoned drink
++ [Continue] -> turn 
+
+=== cs_4_2 ===
+CS42 - Empty pill bottle
++ [Continue] -> turn
+
+=== cs_4_3 ===
+CS43 - Prints wiped from drinking glass
++ [Continue] -> turn
+
+=== cs_4_4 ===
+CS44 - 
++ [Continue] -> turn 
+
+=== cs_4_5 ===
+CS45
++ [Continue] -> turn 
+
+=== cs_4_6 ===
+CS46
++ [Continue] -> turn 
+
+=== cs_4_7 ===
+CS47
++ [Continue] -> turn 
+
+///Crime Scene 5 //////////////////////////////////////////////
+=== cs_5_1 ===
+CS51 - Body on floor of the viewing car 
++ [Continue] -> turn 
+
+=== cs_5_2 ===
+CS52 - Will
++ [Continue] -> turn
+
+=== cs_5_3 ===
+CS53 - Based on the blood spatter, someone tried to move him
++ [Continue] -> turn
+
+=== cs_5_4 ===
+CS54
++ [Continue] -> turn 
+
+=== cs_5_5 ===
+CS55
++ [Continue] -> turn 
+
+=== cs_5_6 ===
+CS56
++ [Continue] -> turn 
+
+=== cs_5_7 ===
+CS57
++ [Continue] -> turn 
+
+///Crime Scene 6 //////////////////////////////////////////////
+=== cs_6_1 ===
+CS61 - Supplies with ice pick 
++ [Continue] -> turn 
+
+=== cs_6_2 ===
+CS62 - Scuff marks
++ [Continue] -> turn
+
+=== cs_6_3 ===
+CS63 - Lounge
++ [Continue] -> turn
+
+=== cs_6_4 ===
+CS64 - Burned contract in fireplace
++ [Continue] -> turn 
+
+=== cs_6_5 ===
+CS65
++ [Continue] -> turn 
+
+=== cs_6_6 ===
+CS66
++ [Continue] -> turn 
+
+=== cs_6_7 ===
+CS67
++ [Continue] -> turn 
+
+///Crime Scene 7 //////////////////////////////////////////////
+=== cs_7_1 ===
+CS71 - Love letters
++ [Continue] -> turn 
+
+=== cs_7_2 ===
+CS72 - Bird feather from outfit
++ [Continue] -> turn
+
+=== cs_7_3 ===
+CS73
++ [Continue] -> turn
+
+=== cs_7_4 ===
+CS74
++ [Continue] -> turn 
+
+=== cs_7_5 ===
+CS75
++ [Continue] -> turn 
+
+=== cs_7_6 ===
+CS76
++ [Continue] -> turn 
+
+=== cs_7_7 ===
+CS77
++ [Continue] -> turn 
+
+///Crime Scene 8 //////////////////////////////////////////////
+=== cs_8_1 ===
+CS81 - Study 
++ [Continue] -> turn 
+
+=== cs_8_2 ===
+CS82 - Bloody cloth stashed into a drawer 
++ [Continue] -> turn
+
+=== cs_8_3 ===
+CS83
++ [Continue] -> turn
+
+=== cs_8_4 ===
+CS84
++ [Continue] -> turn 
+
+=== cs_8_5 ===
+CS85
++ [Continue] -> turn 
+
+=== cs_8_6 ===
+CS86
++ [Continue] -> turn 
+
+=== cs_8_7 ===
+CS87
++ [Continue] -> turn 
+
+///Crime Scene 9 //////////////////////////////////////////////
+=== cs_9_1 ===
+CS91 - String 
++ [Continue] -> turn 
+
+=== cs_9_2 ===
+CS92 - Something on the ground to lure him in 
++ [Continue] -> turn
+
+=== cs_9_3 ===
+CS93 - Different/multiple footprints
++ [Continue] -> turn
+
+=== cs_9_4 ===
+CS94
++ [Continue] -> turn 
+
+=== cs_9_5 ===
+CS95
++ [Continue] -> turn 
+
+=== cs_9_6 ===
+CS96
++ [Continue] -> turn 
+
+=== cs_9_7 ===
+CS97
++ [Continue] -> turn 
 
 ///Inspect Desponia //////////////////////////////////////////////
 === inspect_d_1 ===
-I D 1 
+ID1 - Missing gloves
 + [Continue] -> turn
 
 === inspect_d_2 ===
-I D 2 
+ID2 - Soot on pants 
++ [Continue] -> turn
+
+=== inspect_d_3 ===
+ID3 - Forged contract 
++ [Continue] -> turn
+
+=== inspect_d_4 ===
+ID4 - Correspondence with fam 
++ [Continue] -> turn
+
+=== inspect_d_5 ===
+ID5 - Flirting with Itzla 
++ [Continue] -> turn
+
+=== inspect_d_6 ===
+ID6 - Seen in lounge with Boreas
++ [Continue] -> turn
+
+=== inspect_d_7 ===
+ID7 - Horse hair 
 + [Continue] -> turn
 
 ///Inspect Khione //////////////////////////////////////////////
 === inspect_k_1 ===
-I K 1 
+IK1 - List of chores
 + [Continue] -> turn
 
 === inspect_k_2 ===
-I K 2 
+IK2 - Correspondence
++ [Continue] -> turn
+
+=== inspect_k_3 ===
+IK3 - Blackmail 
++ [Continue] -> turn
+
+=== inspect_k_4 ===
+IK4 - Seen everywhere
++ [Continue] -> turn
+
+=== inspect_k_5 ===
+IK5 - Served drinks 
++ [Continue] -> turn
+
+=== inspect_k_6 ===
+IK6 - Knew B's schedule
++ [Continue] -> turn
+
+=== inspect_k_7 ===
+IK7 - Has keys to all rooms
++ [Continue] -> turn
+
+///Inspect Ded Moroz //////////////////////////////////////////////
+=== inspect_dm_1 ===
+IDM1 - Concealed sword in cane 
++ [Continue] -> turn
+
+=== inspect_dm_2 ===
+IDM2 - Correspondence with Boreas
++ [Continue] -> turn
+
+=== inspect_dm_3 ===
+IDM3 - Invoices / Ledger 
++ [Continue] -> turn
+
+=== inspect_dm_4 ===
+IDM4 - Cigars 
++ [Continue] -> turn
+
+=== inspect_dm_5 ===
+IDM5 - Animal fur boots 
++ [Continue] -> turn
+
+=== inspect_dm_6 ===
+IDM6 - Seen playing cards with Boreas 
++ [Continue] -> turn
+
+=== inspect_dm_7 ===
+IDM7
++ [Continue] -> turn
+
+///Inspect Itzlacoliuhqui //////////////////////////////////////////////
+=== inspect_i_1 ===
+II1 - Coded correspondence with Zephyr
++ [Continue] -> turn
+
+=== inspect_i_2 ===
+II2 - Seen helping B into lounge 
++ [Continue] -> turn
+
+=== inspect_i_3 ===
+II3 - Flirting with everyone
++ [Continue] -> turn
+
+=== inspect_i_4 ===
+II4 - Missing gun, empty holster
++ [Continue] -> turn
+
+=== inspect_i_5 ===
+II5 - Very exepnsive accesories 
++ [Continue] -> turn
+
+=== inspect_i_6 ===
+II6 - Cigarettes
++ [Continue] -> turn
+
+=== inspect_i_7 ===
+II7 
++ [Continue] -> turn
+
+///Inspect Marzanna //////////////////////////////////////////////
+=== inspect_m_1 ===
+IM1 - Missing pills / bottle
++ [Continue] -> turn
+
+=== inspect_m_2 ===
+IM2 - Purse full of stolen items 
++ [Continue] -> turn
+
+=== inspect_m_3 ===
+IM3 - Clothing covered in beads 
++ [Continue] -> turn
+
+=== inspect_m_4 ===
+IM4 - Fate gemstone jewelry 
++ [Continue] -> turn
+
+=== inspect_m_5 ===
+IM5 - Seen gawking in viewing room 
++ [Continue] -> turn
+
+=== inspect_m_6 ===
+IM6 - Love letters between mother/Boreas
++ [Continue] -> turn
+
+=== inspect_m_7 ===
+IM7 - Old photograph of mother/Boreas
++ [Continue] -> turn
+
+///Inspect Skadi //////////////////////////////////////////////
+=== inspect_sk_1 ===
+ISK1 - Missing fur coat
++ [Continue] -> turn
+
+=== inspect_sk_2 ===
+ISK2 - Correspondence 
++ [Continue] -> turn
+
+=== inspect_sk_3 ===
+ISK3 - Forged contract 
++ [Continue] -> turn
+
+=== inspect_sk_4 ===
+ISK4 - Went to get ice from supply room
++ [Continue] -> turn
+
+=== inspect_sk_5 ===
+ISK5 - Feather accessories in hair 
++ [Continue] -> turn
+
+=== inspect_sk_6 ===
+ISK6 
++ [Continue] -> turn
+
+=== inspect_sk_7 ===
+ISK7
++ [Continue] -> turn
+
+///Inspect Hine-Takurua //////////////////////////////////////////////
+=== inspect_ht_1 ===
+IHT1 - Bird feathers on outfit 
++ [Continue] -> turn
+
+=== inspect_ht_2 ===
+IHT2 - Newspaper clippings about husband 
++ [Continue] -> turn
+
+=== inspect_ht_3 ===
+IHT3 - Perfume
++ [Continue] -> turn
+
+=== inspect_ht_4 ===
+IHT4 - Seen handing on Boreas' arm 
++ [Continue] -> turn
+
+=== inspect_ht_5 ===
+IHT5 - Has gems bought by Boreas (ledger)
++ [Continue] -> turn
+
+=== inspect_ht_6 ===
+IHT6 - Love letters
++ [Continue] -> turn
+
+=== inspect_ht_7 ===
+IHT7 
++ [Continue] -> turn
+
+///Inspect Shakok //////////////////////////////////////////////
+=== inspect_sh_1 ===
+ISH1 - Seen shouting with Boreas about finances 
++ [Continue] -> turn
+
+=== inspect_sh_2 ===
+ISH2 - Executor of the will
++ [Continue] -> turn
+
+=== inspect_sh_3 ===
+ISH3 - Missing briefcase
++ [Continue] -> turn
+
+=== inspect_sh_4 ===
+ISH4 - Ledger 
++ [Continue] -> turn
+
+=== inspect_sh_5 ===
+ISH5 - Correspondence 
++ [Continue] -> turn
+
+=== inspect_sh_6 ===
+ISH6 - Ink on hands 
++ [Continue] -> turn
+
+=== inspect_sh_7 ===
+ISH7
++ [Continue] -> turn
+
+///Inspect Naneh Sarma //////////////////////////////////////////////
+=== inspect_ns_1 ===
+INS1 - Yarn
++ [Continue] -> turn
+
+=== inspect_ns_2 ===
+INS2 - Correspondence 
++ [Continue] -> turn
+
+=== inspect_ns_3 ===
+INS3 - Helpers are packing heat 
++ [Continue] -> turn
+
+=== inspect_ns_4 ===
+INS4 - Beads on her knitting bag 
++ [Continue] -> turn
+
+=== inspect_ns_5 ===
+INS5 - Missing something?
++ [Continue] -> turn
+
+=== inspect_ns_6 ===
+INS6
++ [Continue] -> turn
+
+=== inspect_ns_7 ===
+INS7
 + [Continue] -> turn
 
 /// Murderer Reveal //////////////////////////////////////////////
