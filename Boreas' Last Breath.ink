@@ -10,7 +10,9 @@ VAR naneh_sarma = 0
 VAR character = 1 
 VAR character_turn = 1
 
-Boreas Invitation. -> character_selection
+Boreas Invitation. 
+
++ [Accept] -> character_selection
 
 === character_selection ===
 
@@ -406,7 +408,6 @@ VAR inspect = 0
             - -> body1_4
             - -> body1_5
             - -> body1_6
-            - -> body1_7
         }
     - murder == 2:
         {shuffle: 
@@ -415,8 +416,6 @@ VAR inspect = 0
             - -> body2_3
             - -> body2_4
             - -> body2_5
-            - -> body2_6
-            - -> body2_7
         }
     - murder == 3:
         {shuffle: 
@@ -425,8 +424,6 @@ VAR inspect = 0
             - -> body3_3
             - -> body3_4
             - -> body3_5
-            - -> body3_6
-            - -> body3_7
         }
     - murder == 4:
         {shuffle: 
@@ -435,8 +432,6 @@ VAR inspect = 0
             - -> body4_3
             - -> body4_4
             - -> body4_5
-            - -> body4_6
-            - -> body4_7
         }
     - murder == 5:
         {shuffle: 
@@ -445,8 +440,6 @@ VAR inspect = 0
             - -> body5_3
             - -> body5_4
             - -> body5_5
-            - -> body5_6
-            - -> body5_7
         }
     - murder == 6:
         {shuffle: 
@@ -455,8 +448,6 @@ VAR inspect = 0
             - -> body6_3
             - -> body6_4
             - -> body6_5
-            - -> body6_6
-            - -> body6_7
         }
     - murder == 7:
         {shuffle: 
@@ -465,8 +456,6 @@ VAR inspect = 0
             - -> body7_3
             - -> body7_4
             - -> body7_5
-            - -> body7_6
-            - -> body7_7
         }
     - murder == 8:
         {shuffle: 
@@ -474,9 +463,6 @@ VAR inspect = 0
             - -> body8_2
             - -> body8_3
             - -> body8_4
-            - -> body8_5
-            - -> body8_6
-            - -> body8_7
         }
     - murder == 9:
         {shuffle: 
@@ -485,8 +471,6 @@ VAR inspect = 0
             - -> body9_3
             - -> body9_4
             - -> body9_5
-            - -> body9_6
-            - -> body9_7
         }
     - else: 
         something fucked up 
@@ -504,7 +488,6 @@ VAR inspect = 0
             - -> cs_1_4
             - -> cs_1_5
             - -> cs_1_6
-            - -> cs_1_7
         }
     - murder == 2:
         {shuffle: 
@@ -574,7 +557,6 @@ VAR inspect = 0
             - -> cs_8_4
             - -> cs_8_5
             - -> cs_8_6
-            - -> cs_8_7
         }
     - murder == 9:
         {shuffle: 
@@ -584,7 +566,6 @@ VAR inspect = 0
             - -> cs_9_4
             - -> cs_9_5
             - -> cs_9_6
-            - -> cs_9_7
         }
     - else: 
         something fucked up 
@@ -692,89 +673,95 @@ VAR inspect = 0
 
 /// Desponia Self //////////////////////////////////////////////
 === self_d_1 === 
-D1 - Missing gloves
+D1 - You rub your hands together, noticing a chill resting on the skin. Something doesn't feel right. Didn't you have gloves? A very expensive pair of leather riding gloves? Those were one of a kind! 
 + [Continue] -> turn
 
 === self_d_2 ===
-D2 - Soot on pants 
+D2 - You brush away something gritty on your pants. It's black and coarse between your fingers -- soot? What now? Were you playing the scullery maid and messing with the fireplace? Damn hangover!
 + [Continue] -> turn
 
 === self_d_3 ===
-D3 - Forged contract
+D3 - Tucked away inside your jacket you find a neatly folded document. Unfolding it you recognize it as the contract that brought you to Boreas and to this damned party. The same one you needed him to sign and oh --- he has signed it! 
+
+    You squint at the signature, not sure if it's the hangover or the ink, but the script looks shaky at best. Perhaps you didn't really get his signature. Not legally. 
 + [Continue] -> turn
 
 === self_d_4 ===
-D4 - Correspondence w/ fam 
+D4 - A gossy image catches your eye. You know that magazine. You know that smirk! You snatch up the magazine and read the blurb. It's an article on your business mogul mother, Demeter, in which showers praise on your sister, Kore, and all her accomplishments. You scan the pages, but there is not one mention of you. 
 + [Continue] -> turn
 
 === self_d_5 ===
-D5 - Flirting with Itzla 
+D5 - Was that a wink from that dashing young man, Itzlacoliuhqui? Oh. A flush to your face reminds you of the charming conversations with him. He was so easy to talk to. Probably because he made sure your drink was always full. 
 + [Continue] -> turn
 
 === self_d_6 ===
-D6 - Seen in lounge with Boreas 
+D6 - Tired of standing around, you collapse into a leather chair in the lounge. The room feels awfully familar. A conversation echoes in your head. It quickly escalates into an argument and you remember Boreas' nasty condescension as if he were still alive in the room with you. Good riddance. 
 + [Continue] -> turn
 
 === self_d_7 ===
-D7 - Horse hair 
+D7 - Speckling your jacket is yet more horse hair. No matter how many times you brush it and have someone clean it, there always seems to be more. It gets everywhere. It's so hard to find good help. 
 + [Continue] -> turn
 
 /// Khione Self //////////////////////////////////////////////
 === self_k_1 === 
-K1 - List of chores
+K1 - Crumpled up in your pocket is an abused piece of paper, the creases and folds almost tearing through it from being opened and crumpled again. 
+    
+    It contains a list of chores. A never ending list. Everything from keeping the train running smoothly to menial tasks like making the beds and scrubbing the toilets. The more you did, the more he added. Can't add anything anymore.
 + [Continue] -> turn
 
 === self_k_2 ===
-K2 - Correspondence
+K2 - Tucked away in a small box in the closet you get to call your room is stack of letters. Different names on the return addresses and all far off locations. Each one writes wistfully that they wish you could visit. Maybe now... without the shackle of your father tying you down...
 + [Continue] -> turn
 
 === self_k_3 === 
-K3 - Blackmail (for each individual?) 
+K3 - A small black key lives on your keychain separate from the others. The study. It goes to the safe in the study. In the study, you open the safe. 
+
+    It's stuffed with envelopes. Each one containing details on all of the invitees of the party. Secrets. Secrets that you now remember that you helped collect. Why else would Boreas have invited all these people except to have you go through all their belongings and find the skeletons in their closets? 
 + [Continue] -> turn
 
 === self_k_4 === 
-K4 - Seen everywhere
+K4 - In the mirror, you glimpse a streak of red on you jaw. A fresh bruise. You can almost see the handprint from the slap. So hard that it left an impression from the ring.
 + [Continue] -> turn
 
 === self_k_5 === 
-K5 - Served drinks
+K5 - You start cleaning up the discarded drink glasses before remembering that you don't have to do his dirty work anymore. You don't have to clean up or serve these rich snobs ever again.  
 + [Continue] -> turn
 
 === self_k_6 === 
-K6 - Knew Boreas' schedule
+K6 - You examine a small notebook in your pocket. At the top of each page is a calendar date with times and details inside it. Even at his own party, he still scheduled business and you had to track it and make sure he made all the deadlines. 
 + [Continue] -> turn
 
 === self_k_7 === 
-K7 - Has keys to all the rooms
+K7 - Stashed away in the pocket of your jacket is a lump of keys. One for every door on the whole train. You have full access to any room and everything therein. Better to keep those tucked away. 
 + [Continue] -> turn
 
 /// Ded Moroz Self //////////////////////////////////////////////
 === self_dm_1 === 
-DM1 - Concealed sword in cane
+DM1 - After shifting your weight onto the cane, you notice it feels off. A little light? You fiddle with the top and -- fwoop! The handle pulls out to reveal a long steel blade hidden in the cane. 
 + [Continue] -> turn
 
 === self_dm_2 ===
-DM2 - Correspondence w/ Boreas
+DM2 - What's that? Something on your sleeve is bugging you and you reach into your pocket to grab something - your handkerchief. But it's not there. You're sure you had it before the party. 
 + [Continue] -> turn
 
 === self_dm_3 === 
-DM3 - Invoices / ledger
+DM3 - Tucked away in an inner jacket pocket is a small notebook. You flip through it. Numbers. Dates. Your ledger. Underlined with angry emphasis are a lot of payments to "Boreas Trans." The numbers kept increasing even over the span of a few short months. Boreas always believed that if someone was able to pay, they could always pay more. Good riddance. 
 + [Continue] -> turn
 
 === self_dm_4 === 
-DM4 - Cigars
+DM4 - You're seized by a craving and your hands instinctively grab a cigar from a box you stashed in the lounge. A quick flick of the wrist with the match and you're able to scratch your itch. At least you're still able to afford the good ones. 
 + [Continue] -> turn
 
 === self_dm_5 === 
-DM5 - Animal fur boots
+DM5 - Shuffling around, you notice clumps of fur being shed by your boots. They weren't top dollar boots, but they should be holding better for the price you paid! Damn those swindler salesmen!
 + [Continue] -> turn
 
 === self_dm_6 === 
-DM6 - Seen playing cards with Boreas
+DM6 - Walking by the game table you see a set of cards dealt on the table. Not a winning hand for the poker game. Not by a long shot. Those numbers laughed at you, just like Boreas had when you failed your bluff. Not laughing now, are you? 
 + [Continue] -> turn
 
 === self_dm_7 === 
-DM7 - SOMETHING
+DM7 - Jingle jingle. Jingle jingle. You are going to kill the saleswoman who convinced you that beaded coats were "in". Sure, it looked good in the store. It looks good now! You look great in anything! But damn does it sound awful. 
 + [Continue] -> turn
 
 /// Itzlacoliuhqui Self //////////////////////////////////////////////
@@ -803,7 +790,7 @@ I6 - Smokes cigarettes
 + [Continue] -> turn
 
 === self_i_7 === 
-I7 - SOMETHING
+I7 - Cologne
 + [Continue] -> turn
 
 /// Marzanna Self //////////////////////////////////////////////
@@ -816,11 +803,11 @@ M2 - Purse full of stolen items
 + [Continue] -> turn
 
 === self_m_3 === 
-M3 - Clothing covered in beads 
+M3 - Clothing covered in beads, fake gems 
 + [Continue] -> turn
 
 === self_m_4 === 
-M4 - Fate gemstone jewelry
+M4 - Smokes a pipe
 + [Continue] -> turn
 
 === self_m_5 === 
@@ -828,11 +815,11 @@ M5 - Seen gawking in the viewing room
 + [Continue] -> turn
 
 === self_m_6 === 
-M6 - Love letter between mother and Boreas
+M6 - Knit scarf/shawl made from string
 + [Continue] -> turn
 
 === self_m_7 === 
-M7 - Old photograph of mother and Boreas?
+M7 - Old photograph of mother and Boreas
 + [Continue] -> turn
 
 /// Skadi Self //////////////////////////////////////////////
@@ -849,7 +836,7 @@ SK3 - Forged contract
 + [Continue] -> turn
 
 === self_sk_4 === 
-SK4 - Went to restock beverages from supply room?
+SK4 - Went to restock beverages/ice from supply room?
 + [Continue] -> turn
 
 === self_sk_5 === 
@@ -857,11 +844,11 @@ SK5 - Feather accessories in hair
 + [Continue] -> turn
 
 === self_sk_6 === 
-SK6 - SOMETHING
+SK6 - Brochure for new resort 
 + [Continue] -> turn
 
 === self_sk_7 === 
-SK7 - SOMETHING
+SK7 - Soot on boots 
 + [Continue] -> turn
 
 /// Hine-Takurua Self //////////////////////////////////////////////
@@ -882,7 +869,7 @@ HT4 - Seen hanging on Boreas' arm
 + [Continue] -> turn
 
 === self_ht_5 === 
-HT5 - Has gems bought by Boreas (in ledger) 
+HT5 - Has gems bought by Boreas (in ledger) - missing an earring
 + [Continue] -> turn
 
 === self_ht_6 === 
@@ -890,7 +877,7 @@ HT6 - Love letters
 + [Continue] -> turn
 
 === self_ht_7 === 
-HT7 - SOMETHING
+HT7 - Has security with her
 + [Continue] -> turn
 
 /// Shakok Self //////////////////////////////////////////////
@@ -899,7 +886,7 @@ SH1 - Seen shouting with Boreas about finances
 + [Continue] -> turn
 
 === self_sh_2 ===
-SH2 - Executor of the will 
+SH2 - Scent 
 + [Continue] -> turn
 
 === self_sh_3 === 
@@ -911,15 +898,15 @@ SH4 - Ledger shows that Boreas is lying
 + [Continue] -> turn
 
 === self_sh_5 === 
-SH5 - Correspondence 
+SH5 - Business card 
 + [Continue] -> turn
 
 === self_sh_6 === 
-SH6 - Ink on hands 
+SH6 - Missing handkerchief 
 + [Continue] -> turn
 
 === self_sh_7 === 
-SH7 - SOMETHING 
+SH7 - Soot on shoes
 + [Continue] -> turn
 
 /// Naneh Sarma Self //////////////////////////////////////////////
@@ -940,15 +927,15 @@ NS4 - Beads on her knitting bag
 + [Continue] -> turn
 
 === self_ns_5 === 
-NS5 - Missing something? 
+NS5 - Missing handkerchief 
 + [Continue] -> turn
 
 === self_ns_6 === 
-NS6 - SOMETHING - glasses?
+NS6 - Ledger
 + [Continue] -> turn
 
 === self_ns_7 === 
-NS7 - SOMETHING
+NS7 - Knitting needles 
 + [Continue] -> turn
 
 ///Body 1 //////////////////////////////////////////////
@@ -965,7 +952,7 @@ Body13 - Animal hair on body
 + [Continue] -> turn
 
 === body1_4 ===
-Body14 - Perfume on body 
+Body14 - Defensive wounds
 + [Continue] -> turn
 
 === body1_5 ===
@@ -973,16 +960,12 @@ Body15 - Ledger
 + [Continue] -> turn
 
 === body1_6 ===
-Body16
-+ [Continue] -> turn
-
-=== body1_7 ===
-Body17
+Body16 - Piece of paper in his hands, torn 
 + [Continue] -> turn
 
 ///Body 2 //////////////////////////////////////////////
 === body2_1 ===
-Body21 - Gunshot wound
+Body21 - Gunshot wounds - double tap 
 + [Continue] -> turn
 
 === body2_2 ===
@@ -990,7 +973,7 @@ Body22 - Foam at mouth (poison)
 + [Continue] -> turn
 
 === body2_3 ===
-Body23 - Perfume
+Body23 - Earring (HT)
 + [Continue] -> turn
 
 === body2_4 ===
@@ -998,24 +981,16 @@ Body24 - Ledger
 + [Continue] -> turn
 
 === body2_5 ===
-Body25
-+ [Continue] -> turn
-
-=== body2_6 ===
-Body26
-+ [Continue] -> turn
-
-=== body2_7 ===
-Body27
+Body25 - Defensive wounds 
 + [Continue] -> turn
 
 ///Body 3 //////////////////////////////////////////////
 === body3_1 ===
-Body31 - Stab wound through the body 
+Body31 - Multiple stabs 
 + [Continue] -> turn
 
 === body3_2 ===
-Body32 - Multiple stabs
+Body32 - Ledger
 + [Continue] -> turn
 
 === body3_3 ===
@@ -1023,19 +998,11 @@ Body33 - Small bruises from the hilt
 + [Continue] -> turn
 
 === body3_4 ===
-Body34 - Expensive items stolen off body
+Body34 - Animal fur 
 + [Continue] -> turn
 
 === body3_5 ===
-Body35 - Ledger
-+ [Continue] -> turn
-
-=== body3_6 ===
-Body36 - Perfume
-+ [Continue] -> turn
-
-=== body3_7 ===
-Body37
+Body35 - Expensive items taken off body 
 + [Continue] -> turn
 
 ///Body 4 //////////////////////////////////////////////
@@ -1048,7 +1015,7 @@ Body42 - Expertly cleaned
 + [Continue] -> turn
 
 === body4_3 ===
-Body43 - Planted feather 
+Body43 - Stolen ring 
 + [Continue] -> turn
 
 === body4_4 ===
@@ -1056,24 +1023,16 @@ Body44 - Ledger
 + [Continue] -> turn
 
 === body4_5 ===
-Body45 - Perfume
-+ [Continue] -> turn
-
-=== body4_6 ===
-Body46
-+ [Continue] -> turn
-
-=== body4_7 ===
-Body47
+Body45 - Cologne 
 + [Continue] -> turn
 
 ///Body 5 //////////////////////////////////////////////
 === body5_1 ===
-Body51 - Cheap beads in the folds of his clothes
+Body51 - Kitchen knife still in the wound 
 + [Continue] -> turn
 
 === body5_2 ===
-Body52 - Stabbed, knife in body 
+Body52 - Stab isn't that deep 
 + [Continue] -> turn
 
 === body5_3 ===
@@ -1085,20 +1044,12 @@ Body54 - Ledger
 + [Continue] -> turn
 
 === body5_5 ===
-Body55 - Perfume
-+ [Continue] -> turn
-
-=== body5_6 ===
-Body56
-+ [Continue] -> turn
-
-=== body5_7 ===
-Body57
+Body55 - Threads in his grip
 + [Continue] -> turn
 
 ///Body 6 //////////////////////////////////////////////
 === body6_1 ===
-Body61 - Stabbed with sharp blade - ice pick
+Body61 - Stabbed with something skinny and sharp 
 + [Continue] -> turn
 
 === body6_2 ===
@@ -1110,24 +1061,16 @@ Body63 - Ledger
 + [Continue] -> turn
 
 === body6_4 ===
-Body64 - Perfume
+Body64 - Animal hair 
 + [Continue] -> turn
 
 === body6_5 ===
-Body65
-+ [Continue] -> turn
-
-=== body6_6 ===
-Body66
-+ [Continue] -> turn
-
-=== body6_7 ===
-Body67
+Body65 - Defensive wounds 
 + [Continue] -> turn
 
 ///Body 7 //////////////////////////////////////////////
 === body7_1 ===
-Body71 - Wedding ring in box
+Body71 - Ring taken 
 + [Continue] -> turn
 
 === body7_2 ===
@@ -1135,52 +1078,32 @@ Body72 - Ledger
 + [Continue] -> turn
 
 === body7_3 ===
-Body73 - Perfume
+Body73 - Eyes closed 
 + [Continue] -> turn
 
 === body7_4 ===
-Body74 - Smothed by pillow
+Body74 - Blue face from asphyxiation 
 + [Continue] -> turn
 
 === body7_5 ===
-Body75 - Lipstick 
-+ [Continue] -> turn
-
-=== body7_6 ===
-Body76
-+ [Continue] -> turn
-
-=== body7_7 ===
-Body77
+Body75 - Lost earring
 + [Continue] -> turn
 
 ///Body 8 //////////////////////////////////////////////
 === body8_1 ===
-Body81 - Ledger
+Body81 - Stabbed w/ letter opener
 + [Continue] -> turn
 
 === body8_2 ===
-Body82 - Letter opener murder weapon
+Body82 - Ledger
 + [Continue] -> turn
 
 === body8_3 ===
-Body83
+Body83 - Ink on hands 
 + [Continue] -> turn
 
 === body8_4 ===
-Body84
-+ [Continue] -> turn
-
-=== body8_5 ===
-Body85
-+ [Continue] -> turn
-
-=== body8_6 ===
-Body86
-+ [Continue] -> turn
-
-=== body8_7 ===
-Body87
+Body84 - Torn piece of paper in hands 
 + [Continue] -> turn
 
 ///Body 9 //////////////////////////////////////////////
@@ -1193,7 +1116,7 @@ Body92 - Ledger
 + [Continue] -> turn
 
 === body9_3 ===
-Body93 - Perfume
+Body93 - Intercepted corespondence 
 + [Continue] -> turn
 
 === body9_4 ===
@@ -1201,15 +1124,7 @@ Body94 - Shot to make sure he was dead - profession
 + [Continue] -> turn
 
 === body9_5 ===
-Body95
-+ [Continue] -> turn
-
-=== body9_6 ===
-Body96
-+ [Continue] -> turn
-
-=== body9_7 ===
-Body97
+Body95 - Beads
 + [Continue] -> turn
 
 ///Crime Scene 1 //////////////////////////////////////////////
@@ -1235,10 +1150,6 @@ CS15 - Flower pot looks weird - bloody gloves stashed into it
 
 === cs_1_6 ===
 CS16 - Scuff marks on the floor
-+ [Continue] -> turn 
-
-=== cs_1_7 ===
-CS17
 + [Continue] -> turn 
 
 ///Crime Scene 2 //////////////////////////////////////////////
@@ -1267,12 +1178,12 @@ CS26 - Empty pill bottle
 + [Continue] -> turn 
 
 === cs_2_7 ===
-CS27
+CS27 - Yarn
 + [Continue] -> turn 
 
 ///Crime Scene 3 //////////////////////////////////////////////
 === cs_3_1 ===
-CS31 - Killed at poker table
+CS31 - Items are stolen 
 + [Continue] -> turn 
 
 === cs_3_2 ===
@@ -1284,19 +1195,19 @@ CS33 - Large shoe print in blood
 + [Continue] -> turn
 
 === cs_3_4 ===
-CS34
+CS34 - chair has stabs in it - long blade 
 + [Continue] -> turn 
 
 === cs_3_5 ===
-CS35
+CS35 - Blood wiped on handkerchief, left behind 
 + [Continue] -> turn 
 
 === cs_3_6 ===
-CS36
+CS36 - Beads on ground 
 + [Continue] -> turn 
 
 === cs_3_7 ===
-CS37
+CS37 - Torn document on the floor, stained/ruined by blood
 + [Continue] -> turn 
 
 ///Crime Scene 4 //////////////////////////////////////////////
@@ -1313,24 +1224,24 @@ CS43 - Prints wiped from drinking glass
 + [Continue] -> turn
 
 === cs_4_4 ===
-CS44 - 
+CS44 - Burned correspondence with Zephyr 
 + [Continue] -> turn 
 
 === cs_4_5 ===
-CS45
+CS45 - Ash
 + [Continue] -> turn 
 
 === cs_4_6 ===
-CS46
+CS46 - Scuff marks, dragged form dining room 
 + [Continue] -> turn 
 
 === cs_4_7 ===
-CS47
+CS47 - Feather 
 + [Continue] -> turn 
 
 ///Crime Scene 5 //////////////////////////////////////////////
 === cs_5_1 ===
-CS51 - Body on floor of the viewing car 
+CS51 - Burned love letters 
 + [Continue] -> turn 
 
 === cs_5_2 ===
@@ -1342,24 +1253,24 @@ CS53 - Based on the blood spatter, someone tried to move him
 + [Continue] -> turn
 
 === cs_5_4 ===
-CS54
+CS54 - Empty pill bottle
 + [Continue] -> turn 
 
 === cs_5_5 ===
-CS55
+CS55 - Ash 
 + [Continue] -> turn 
 
 === cs_5_6 ===
-CS56
+CS56 - Beads on ground 
 + [Continue] -> turn 
 
 === cs_5_7 ===
-CS57
+CS57 - Bloody scarf/shawl found 
 + [Continue] -> turn 
 
 ///Crime Scene 6 //////////////////////////////////////////////
 === cs_6_1 ===
-CS61 - Supplies with ice pick 
+CS61 - Wiped up blood, not well
 + [Continue] -> turn 
 
 === cs_6_2 ===
@@ -1367,7 +1278,7 @@ CS62 - Scuff marks
 + [Continue] -> turn
 
 === cs_6_3 ===
-CS63 - Lounge
+CS63 - Bloody woman's coat hidden 
 + [Continue] -> turn
 
 === cs_6_4 ===
@@ -1375,15 +1286,15 @@ CS64 - Burned contract in fireplace
 + [Continue] -> turn 
 
 === cs_6_5 ===
-CS65
+CS65 - Feather on the floor
 + [Continue] -> turn 
 
 === cs_6_6 ===
-CS66
+CS66 - Boot prints
 + [Continue] -> turn 
 
 === cs_6_7 ===
-CS67
+CS67 - Ice pick hidden 
 + [Continue] -> turn 
 
 ///Crime Scene 7 //////////////////////////////////////////////
@@ -1396,52 +1307,48 @@ CS72 - Bird feather from outfit
 + [Continue] -> turn
 
 === cs_7_3 ===
-CS73
+CS73 - Pillow used to smother 
 + [Continue] -> turn
 
 === cs_7_4 ===
-CS74
+CS74 - Perfume 
 + [Continue] -> turn 
 
 === cs_7_5 ===
-CS75
+CS75 - Place looks cleaned up 
 + [Continue] -> turn 
 
 === cs_7_6 ===
-CS76
+CS76 - Wedding ring in box 
 + [Continue] -> turn 
 
 === cs_7_7 ===
-CS77
+CS77 - Multiple boot prints 
 + [Continue] -> turn 
 
 ///Crime Scene 8 //////////////////////////////////////////////
 === cs_8_1 ===
-CS81 - Study 
+CS81 - Burned correspondence by candle, stomped it out 
 + [Continue] -> turn 
 
 === cs_8_2 ===
-CS82 - Bloody cloth stashed into a drawer 
+CS82 - Bloody handkerchief stashed into a drawer 
 + [Continue] -> turn
 
 === cs_8_3 ===
-CS83
+CS83 - Will / executor 
 + [Continue] -> turn
 
 === cs_8_4 ===
-CS84
+CS84 - Scent 
 + [Continue] -> turn 
 
 === cs_8_5 ===
-CS85
+CS85 - Bloody letter opener cleaned on desk 
 + [Continue] -> turn 
 
 === cs_8_6 ===
-CS86
-+ [Continue] -> turn 
-
-=== cs_8_7 ===
-CS87
+CS86 - 
 + [Continue] -> turn 
 
 ///Crime Scene 9 //////////////////////////////////////////////
@@ -1458,19 +1365,15 @@ CS93 - Different/multiple footprints
 + [Continue] -> turn
 
 === cs_9_4 ===
-CS94
+CS94 - Handkerchief on floor 
 + [Continue] -> turn 
 
 === cs_9_5 ===
-CS95
+CS95 - Professionally staged to look like an accident 
 + [Continue] -> turn 
 
 === cs_9_6 ===
-CS96
-+ [Continue] -> turn 
-
-=== cs_9_7 ===
-CS97
+CS96 - Briefcase
 + [Continue] -> turn 
 
 ///Inspect Desponia //////////////////////////////////////////////
@@ -1487,7 +1390,7 @@ ID3 - Forged contract
 + [Continue] -> turn
 
 === inspect_d_4 ===
-ID4 - Correspondence with fam 
+ID4 - Gossip magazine
 + [Continue] -> turn
 
 === inspect_d_5 ===
@@ -1516,7 +1419,7 @@ IK3 - Blackmail
 + [Continue] -> turn
 
 === inspect_k_4 ===
-IK4 - Seen everywhere
+IK4 - Bruise on face
 + [Continue] -> turn
 
 === inspect_k_5 ===
@@ -1537,7 +1440,7 @@ IDM1 - Concealed sword in cane
 + [Continue] -> turn
 
 === inspect_dm_2 ===
-IDM2 - Correspondence with Boreas
+IDM2 - Handkerchief
 + [Continue] -> turn
 
 === inspect_dm_3 ===
@@ -1557,7 +1460,7 @@ IDM6 - Seen playing cards with Boreas
 + [Continue] -> turn
 
 === inspect_dm_7 ===
-IDM7
+IDM7 - Beads on his coat 
 + [Continue] -> turn
 
 ///Inspect Itzlacoliuhqui //////////////////////////////////////////////
@@ -1586,7 +1489,7 @@ II6 - Cigarettes
 + [Continue] -> turn
 
 === inspect_i_7 ===
-II7 
+II7 - Cologne 
 + [Continue] -> turn
 
 ///Inspect Marzanna //////////////////////////////////////////////
@@ -1599,11 +1502,11 @@ IM2 - Purse full of stolen items
 + [Continue] -> turn
 
 === inspect_m_3 ===
-IM3 - Clothing covered in beads 
+IM3 - Clothing covered in beads, fake gems
 + [Continue] -> turn
 
 === inspect_m_4 ===
-IM4 - Fate gemstone jewelry 
+IM4 - Smokes a pipe 
 + [Continue] -> turn
 
 === inspect_m_5 ===
@@ -1611,7 +1514,7 @@ IM5 - Seen gawking in viewing room
 + [Continue] -> turn
 
 === inspect_m_6 ===
-IM6 - Love letters between mother/Boreas
+IM6 - Missing scarf/shawl
 + [Continue] -> turn
 
 === inspect_m_7 ===
@@ -1640,11 +1543,11 @@ ISK5 - Feather accessories in hair
 + [Continue] -> turn
 
 === inspect_sk_6 ===
-ISK6 
+ISK6 - Brochure for new resort 
 + [Continue] -> turn
 
 === inspect_sk_7 ===
-ISK7
+ISK7 - Soot on boots
 + [Continue] -> turn
 
 ///Inspect Hine-Takurua //////////////////////////////////////////////
@@ -1673,7 +1576,7 @@ IHT6 - Love letters
 + [Continue] -> turn
 
 === inspect_ht_7 ===
-IHT7 
+IHT7 - Security 
 + [Continue] -> turn
 
 ///Inspect Shakok //////////////////////////////////////////////
@@ -1682,7 +1585,7 @@ ISH1 - Seen shouting with Boreas about finances
 + [Continue] -> turn
 
 === inspect_sh_2 ===
-ISH2 - Executor of the will
+ISH2 - Scent
 + [Continue] -> turn
 
 === inspect_sh_3 ===
@@ -1694,15 +1597,15 @@ ISH4 - Ledger
 + [Continue] -> turn
 
 === inspect_sh_5 ===
-ISH5 - Correspondence 
+ISH5 - Business card 
 + [Continue] -> turn
 
 === inspect_sh_6 ===
-ISH6 - Ink on hands 
+ISH6 - Missing handkerchief
 + [Continue] -> turn
 
 === inspect_sh_7 ===
-ISH7
+ISH7 - Soot on shoes 
 + [Continue] -> turn
 
 ///Inspect Naneh Sarma //////////////////////////////////////////////
@@ -1723,15 +1626,15 @@ INS4 - Beads on her knitting bag
 + [Continue] -> turn
 
 === inspect_ns_5 ===
-INS5 - Missing something?
+INS5 - Missing handkerchief 
 + [Continue] -> turn
 
 === inspect_ns_6 ===
-INS6
+INS6 - Ledger
 + [Continue] -> turn
 
 === inspect_ns_7 ===
-INS7
+INS7 - Knitting needles
 + [Continue] -> turn
 
 /// Murderer Reveal //////////////////////////////////////////////
@@ -1770,34 +1673,31 @@ INS7
     {
         - accuse == 1: 
             Desponia innocent
-            + [Return] -> gameplay
+            + [Return] -> turn
         - accuse == 2: 
             Khione innocent
-            + [Return] -> gameplay
-        - accuse == 3: 
+            + [Return] -> turn
+        - accuse == 3:
             Ded Moroz innocent
-            + [Return] -> gameplay
+            + [Return] -> turn
         - accuse == 4: 
             Itzlacoliuhqui innocent
-            + [Return] -> gameplay
+            + [Return] -> turn
         - accuse == 5: 
             Marzanna innocent
-            + [Return] -> gameplay
+            + [Return] -> turn
         - accuse == 6: 
             Skadi innocent
-            + [Return] -> gameplay
+            + [Return] -> turn
         - accuse == 7: 
             Hine Takurua innocent
-            + [Return] -> gameplay
+            + [Return] -> turn
         - accuse == 8: 
             Shakok innocent
-            + [Return] -> gameplay
+            + [Return] -> turn
         - else: 
             Naneh Sarma innocent
-            + [Return] -> gameplay
-            
+            + [Return] -> turn
     }
 
 }
- 
-    -> END
