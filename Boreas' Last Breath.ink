@@ -407,7 +407,6 @@ VAR inspect = 0
             - -> body1_3
             - -> body1_4
             - -> body1_5
-            - -> body1_6
         }
     - murder == 2:
         {shuffle: 
@@ -766,365 +765,361 @@ DM7 - Jingle jingle. Jingle jingle. You are going to kill the saleswoman who con
 
 /// Itzlacoliuhqui Self //////////////////////////////////////////////
 === self_i_1 === 
-I1 - Coded correspondence with Zephyr 
+I1 - A small lump inside your jacket irritates you. Stashed inside the hem of your jacket in a hidden pocket is a folded piece of paper. The paper is covered in weird symbols. A coded message. The document is hard to parse with the throbbing hang over, but you can make out two things: a demand for a ring... and the printed letterhead - an ornate "Z"... the logo of Zephyr International Transit. 
 + [Continue] -> turn
 
 === self_i_2 ===
-I2 - Seen helping B into the lounge
+I2 - You jacket lips to the side slightly and you adjust it. A few loose threads peek out from the shoulder seam and you angrily inspect the damage. It all comes back, helping the stumbling drunk Boreas into the lounge from the dining room had been a bad idea. His weight tucked almost completely on the sleeve. Had you known then that he tore your designer jacket... good riddance. 
 + [Continue] -> turn
 
 === self_i_3 === 
-I3 - Flirting with everyone
+I3 - Alone at last in the supply room. If only those women knew you're not really interested in them, not really. Whatever need you had to get close to them, it's no of use to keep up the charade. To scorn them now would bring on too much suspicion, so hiding in the supply room is the best solution for now. 
 + [Continue] -> turn
 
 === self_i_4 === 
-I4 - Missing gun, empty holster
+I4 - Snug under your armpit is your best friend, your trusted sidekick. You check your holster for that warm, friendly grip and... nothing. It's empty. You have to see it to believe it, but your holster is empty. Your gun has been stolen right from under you. If you don't find it quick there will be more dead bodies than just the old man. 
 + [Continue] -> turn
 
 === self_i_5 === 
-I5 - Very expensive accessories 
+I5 - You check the time on your one-of-a-kind timepiece knowing its worth more than the accessories of everyone on the train. This isn't something you get from just being a pretty face. Your cufflinks alone could pay for an entire train car. These people have fortunes - you're paid in fortunes. Only the best for those in your kind of work. 
 + [Continue] -> turn
 
 === self_i_6 === 
-I6 - Smokes cigarettes
+I6 - In a flair of boredom, you pull out a pack of thin hand-rolled cigarettes and light one. Just playing with the affect of your breath on the embers on the end. You must look rather mysterious with your face intermittently lit by the glow. You quickly find a dark corner to brood. Perfect. 
 + [Continue] -> turn
 
 === self_i_7 === 
-I7 - Cologne
+I7 - A tiny bottle secured in your luggage is a lifesaver. While everyone else takes on the stench of nervous energy and fear, you easily walk about with an expertly crafted scent that is as delicate as a flower and lingers like the smell of gunpowder. 
 + [Continue] -> turn
 
 /// Marzanna Self //////////////////////////////////////////////
 === self_m_1 === 
-M1 - Missing pills, bottle
+M1 - Your chest grips with panic. Panic! You scramble through your purse to find your pills. Where are your pills? You need your pills! You all but dump out your purse onto the floor of the train car in a feverish state. Your pills are missing! 
 + [Continue] -> turn
 
 === self_m_2 ===
-M2 - Purse full of stolen items
+M2 - With every move you make, clang! You reach for another drink, clang! Every moment your purse moves there's an awful noise. You open it up to discover - you've been a busy little bee. Silverware, a gold ash tray, an engraved lighter... even some steak knives. 
 + [Continue] -> turn
 
 === self_m_3 === 
-M3 - Clothing covered in beads, fake gems 
+M3 - Adorned like a night sky with stars, beads cover your dress. Which would be fine if your numerous bangles and rings wouldn't keep getting caught in them! You're not sure how many beads have snapped off already, but enough to regret wearing this dress. You can't even take off the bangles or you'll reveal the green marks their cheap metal is leaving on your skin. 
 + [Continue] -> turn
 
 === self_m_4 === 
-M4 - Smokes a pipe
+M4 - Every wealthy business man in the papers has a pipe and so, in order for wealthy people to take you seriously - you needed one! The smoke tastes awful so you really only chew on the end, but you're sure that you look very refined. Almost assuredly. 
 + [Continue] -> turn
 
 === self_m_5 === 
-M5 - Seen gawking in the viewing room 
+M5 - Something you've never understood about trains is that they have so many walls. Why not have windows so you can see the marvels you pass through? The viewing room at the back of the train with its top-to-bottom windows is your favorite room by far. Just to see the mountains and the valleys as they zip by! You'd have spent the whole party there if you didn't have business to do. 
 + [Continue] -> turn
 
 === self_m_6 === 
-M6 - Knit scarf/shawl made from string
+M6 - A breeze ruffles the sleeves of your dress and you pull them closer as if they can do anything more than flutter about. Didn't you have something warmer? That knit shawl, the only thing left of your mother. It may have been fraying at the edges, but your mother was the definition of grace and beauty, thus so was her shawl. 
 + [Continue] -> turn
 
 === self_m_7 === 
-M7 - Old photograph of mother and Boreas
+M7 - The one item in your purse separated from the rest of the rabble in a pocket is a faded photograph. The woman looks exactly like you and wears a shawl around her shoulders. A man holds her, his arms encircling her in a loving embrace. If you squinted just right and pretended that the warm gaze was instead a cruel scowl, the man looked exactly like Boreas. 
 + [Continue] -> turn
 
 /// Skadi Self //////////////////////////////////////////////
 === self_sk_1 === 
-SK1 - Missing fur coat 
+SK1 - You're used to the cold, you thrive in the cold... but the fur-lined jacket that is your signature look is somehow not wrapped around you. How will people recognize you as the most accomplished snow sports athlete in the world? You must find it. It's too late now to change your look. 
 + [Continue] -> turn
 
 === self_sk_2 ===
-SK2 - Correspondence 
+SK2 - Crumpled in the pocket of your snow pants is a document. After flattening it out, you read over a response clearly written in Boreas' unforgiving hand and your blood boils again. That bastard thinks he can refuse you? Even when you laid out the profits he would make with the new train line, he demanded more! More! If only a man could be killed more than once!
 + [Continue] -> turn
 
 === self_sk_3 === 
-SK3 - Forged contract 
+SK3 - Tucked away in the inner pocket of your vest is an envelope. Inside is the contract you were going to present to Boreas. Your final offer for the train line to be directed straight to the resort. Something was off about the signature. It looked hesitant and harsh. Not at all like the arrogant swoops and flourishes of the real Boreas signature. Who would know? 
 + [Continue] -> turn
 
 === self_sk_4 === 
-SK4 - Went to restock beverages/ice from supply room?
+SK4 - You head to the drink station for a little hair of the dog, but you notice the ice has all melted. Again. You remember the same thing happened last night. No ice. No Khione to fetch some. You had to trudge through the supply room to find the damn ice block and chip away at it yourself. 
 + [Continue] -> turn
 
 === self_sk_5 === 
-SK5 - Feather accessories in hair 
+SK5 - A feather drifts past your face as it makes an escape off your headband. What a cheap headband! Feathers littering everywhere. Not something you'll purchase again. 
 + [Continue] -> turn
 
 === self_sk_6 === 
-SK6 - Brochure for new resort 
+SK6 - Poking out from under other magazines in the lounge is the brochure you handed Boreas last night. He tucked it under all this other gossip garbage as if was worth less. Your brochure for your new resort in the lovely northwest mountains! That man has no taste. 
 + [Continue] -> turn
 
 === self_sk_7 === 
-SK7 - Soot on boots 
+SK7 - Ach, your boots! Top of the line ski boots and they have black powder on them! Soot! On your boots! 
 + [Continue] -> turn
 
 /// Hine-Takurua Self //////////////////////////////////////////////
 === self_ht_1 === 
-HT1 - Bird feathers on outfit 
+HT1 - You twirl, looking at yourself in the reflection in the windows. The feathers fan out from your dress and surround you like graceful falling leaves. Dazzling, simply dazzling. You could look at yourself in the reflection all day. 
 + [Continue] -> turn
 
 === self_ht_2 ===
-HT2 - Newspaper clippings about husband 
+HT2 - A newspaper is folded open on a table in the dining car to a page you recognize. The international news page. The picture features a wealthy political figure, your husband, with another woman on his arm. That tramp! The puff piece about his habits and interests never once mentions his wife. He wouldn’t want to scare his mistress away after all. 
 + [Continue] -> turn
 
 === self_ht_3 === 
-HT3 - Perfume 
+HT3 - You make a quick break for it when Marzanna enters reeking of cheap tobacco. Just in case, you apply some delicate perfume to your wrists and neck. You don’t want anyone to think that smell is coming from you. 
 + [Continue] -> turn
 
 === self_ht_4 === 
-HT4 - Seen hanging on Boreas' arm 
+HT4 - This is the first time you’ve ever seen Boreas host an event without any sort of camera. Where are the cameras? You hung on his arm all night, laughing at his jokes, and dancing when beckoned and yet no one here would be able to humiliate your husband with a photograph. Unacceptable.  
 + [Continue] -> turn
 
 === self_ht_5 === 
-HT5 - Has gems bought by Boreas (in ledger) - missing an earring
+HT5 - You start to fiddle with your earrings. It’s been a nervous habit you’ve never been able to get rid of. Your husband used to think it was cute or at least that’s what he’d tell you. That’s when you notice it. One is missing! Someone must’ve stolen it. After all, the rubies in them are worth a fortune. 
 + [Continue] -> turn
 
 === self_ht_6 === 
-HT6 - Love letters 
+HT6 - Stashed away at the bottom of your suitcase is a neat stack of letters. Full of lovelorn drivel from Boreas, just waiting for the moment you leave one lying around for your husband to see. Two can play at this game. 
 + [Continue] -> turn
 
 === self_ht_7 === 
-HT7 - Has security with her
+HT7 - Two men discreetly stand nearby as you step into the viewing room. Usually you don’t notice your own bodyguards, but they’ve been sticking closer since Boreas’ untimely murder. It’s good to remind everyone that you have well-armed security at the ready.
 + [Continue] -> turn
 
 /// Shakok Self //////////////////////////////////////////////
 === self_sh_1 === 
-SH1 - Seen shouting with Boreas about finances 
+SH1 - You find yourself in the study trying to find the dining car to refill your beverage. This door isn’t usually open and not many people are even allowed inside, but you know this room. It brings along with it memories of heated debates and anger. He never listened. 
 + [Continue] -> turn
 
 === self_sh_2 ===
-SH2 - Scent 
+SH2 - There are very few creature comforts that you care for. While cosmetics are not something you usually purchase, you make an exception for a specific coconut oil hand lotion that has saved your skin from the bitter winter dryness. 
 + [Continue] -> turn
 
 === self_sh_3 === 
-SH3 - Missing briefcase?
+SH3 - You must have walked the whole train at least a dozen times by now. While you would never keep original documents in your briefcase, you know there was something important in it you couldn’t let fall into the wrong hands. Perhaps someone stole it for that very reason. 
 + [Continue] -> turn
 
 === self_sh_4 === 
-SH4 - Ledger shows that Boreas is lying 
+SH4 - The utmost important documents are always kept on your person. You open the small notebook tucked away inside your jacket just to look at the numbers. Order. Structure. That’s what numbers provide you. Dozens of companies are tracked with their finances. Near the end of the list, red numbers disrupt the order. Boreas Transcontinental. 
 + [Continue] -> turn
 
 === self_sh_5 === 
-SH5 - Business card 
+SH5 - You pull a sliver of embossed card stock out from your pocket. It’s your business card. Shakok Investments - Success Starts Here. 
 + [Continue] -> turn
 
 === self_sh_6 === 
-SH6 - Missing handkerchief 
+SH6 - One of the guests rudely bumped into you, causing you to spill a little of your drink on your pants. When you reach for your handkerchief, you only find an empty pocket. 
 + [Continue] -> turn
 
 === self_sh_7 === 
-SH7 - Soot on shoes
+SH7 - This train is filthy - what is Boreas spending all that money on? You have sticky floorboards, stained upholstery and - look! - soot on your shoes! Absolutely disgraceful. 
 + [Continue] -> turn
 
 /// Naneh Sarma Self //////////////////////////////////////////////
 === self_ns_1 === 
-NS1 - Yarn
+NS1 - Your hands continue to move in smooth, uninterrupted motions as you knit. From the outside, no one can really tell what it is you are making. Is it part of a sweater? A hat? A scarf? The stitches look irregular and strange, but you know better. And so do those that need to know. 
 + [Continue] -> turn
 
 === self_ns_2 ===
-NS2 - Correspondence 
+NS2 - Your knitting bag is full of strange small projects. A glove missing two fingers, a hat too big for any head, a sock with two toes, but strangely no balls of yarn. They’re not meant to be worn. Those irregular stitches and imperfections are a code. One that only someone in the close inner circle can decipher. 
 + [Continue] -> turn
 
 === self_ns_3 === 
-NS3 - Helpers are packing heat 
+NS3 - While you did indulge in a little brandy during the festivities, enough to cloud your memory, you prefer the taste of tea. One of your attendants brings you a fresh cup and as they lean forward, you can see the gun holstered under their arm. Ahhh… Persian Chai. Your favorite. 
 + [Continue] -> turn
 
 === self_ns_4 === 
-NS4 - Beads on her knitting bag 
+NS4 - While many see beads as a fashion statement, to you, the large clunky beads on your knitting bag pose a different function: security. It’s very difficult to steal a bag that sounds like a wind chime in a violent storm.  
 + [Continue] -> turn
 
 === self_ns_5 === 
-NS5 - Missing handkerchief 
+NS5 - That terrible smoke from the lounge is picking up again and you reach for your handkerchief to cover your mouth and nose, but it’s not there! It wasn’t expensive enough to be stolen, so maybe it has been misplaced. Or it fell out of your pocket in a rare moment where you decided to walk about. 
 + [Continue] -> turn
 
 === self_ns_6 === 
-NS6 - Ledger
+NS6 - You don’t write anything down as a rule. You’re not that sloppy. But you knit and the cardigan that you wear has been getting longer and longer over the years, accumulating more and more of those irregular stitches. To a clever enough eye, to your eye, one can read years and years of invoices and sensitive information, but no one on this train is smart enough to decipher it. 
 + [Continue] -> turn
 
 === self_ns_7 === 
-NS7 - Knitting needles 
+NS7 - Click, clack. Click, clack go the long steel knitting needles in your hand. They just don’t make them like they used to. The new plastic ones wouldn’t even be able to puncture skin. 
 + [Continue] -> turn
 
 ///Body 1 //////////////////////////////////////////////
 === body1_1 ===
-Body11 - Dent in skull
+Body11 - Boreas was never your favorite, but that long groove smashed into his face by something heavy does not look like a good way to go. Maybe it could have been something like a pipe? Or a narrow bat? 
 + [Continue] -> turn
 
 === body1_2 ===
-Body12 - Ink on fingers
+Body12 - If you look closely at his hands, it looks like there is ink smeared on them. Could he have been writing something at the time of his demise? 
 + [Continue] -> turn
 
 === body1_3 ===
-Body13 - Animal hair on body 
+Body13 - You know for a fact that Boreas despised animals and never had any pets - so what could be this animal hair here on his clothes? 
 + [Continue] -> turn
 
 === body1_4 ===
-Body14 - Defensive wounds
+Body14 - Boreas was no small man and the scrapes on his knuckles show that he tried to stop his killer. Just wasn’t fast enough. 
 + [Continue] -> turn
 
 === body1_5 ===
-Body15 - Ledger
-+ [Continue] -> turn
-
-=== body1_6 ===
-Body16 - Piece of paper in his hands, torn 
+Body15 - Inside his closed fist, you’re able to pry open the fingers to see a torn piece of paper. It’s just the corner, but from the small portion you can read, it’s a contract. Or at least, was a contract.
 + [Continue] -> turn
 
 ///Body 2 //////////////////////////////////////////////
 === body2_1 ===
-Body21 - Gunshot wounds - double tap 
+Body21 - Two gunshots wounds straight to the chest seem to be the most obvious cause of death. Very neat and professional. 
 + [Continue] -> turn
 
 === body2_2 ===
-Body22 - Foam at mouth (poison)
+Body22 - Hanging on Boreas’ jacket as if it had been snagged somehow is a dazzling ruby earring. As a pair it would be worth a fortune, but the stones alone are worth quite the pretty penny. 
 + [Continue] -> turn
 
 === body2_3 ===
-Body23 - Earring (HT)
+Body23 - Near the corners of Boreas’ mouth is a weird dried foam. Could it have been part of his drink? As you get closer, the smell is pungent and acrid. Poison?
 + [Continue] -> turn
 
 === body2_4 ===
-Body24 - Ledger
+Body24 - A small notebook, tucked into his jacket, is full of scribbles. The most disorganized ledger imaginable - it’s hard to make out what the payments are for and even what the numbers. You can count the commas, though. And there are a lot of unusually large payments from an “X”. 
 + [Continue] -> turn
 
 === body2_5 ===
-Body25 - Defensive wounds 
+Body25 - Boreas was right handed and wasn't afraid to hit anyone. You can make out a red tinge on his hand, irritated. Must've fought back. 
 + [Continue] -> turn
 
 ///Body 3 //////////////////////////////////////////////
 === body3_1 ===
-Body31 - Multiple stabs 
+Body31 - Multiple blood spots on Boreas' silk shirt indicate the location of maybe seven stab wounds. Someone must have been very angry... not to mention strong enough to get through his sternum. 
 + [Continue] -> turn
 
 === body3_2 ===
-Body32 - Ledger
+Body32 - Boreas had hidden his ledger away in the inside of his jacket. While the edges of the pages are stained with his blood, the contents are relatively dry. Not that it makes it easier to understand. The ledger isn't coded, but sloppy and disorganized. Something stands out to you. Ridiculous "admininstrative fees" and "processing fees" are added to vendors until their payments almost double. 
 + [Continue] -> turn
 
 === body3_3 ===
-Body33 - Small bruises from the hilt
+Body33 - Under the shirt you can see the imprint of a bruise around the stab wounds. The murder weapon must have had a small round hilt.
 + [Continue] -> turn
 
 === body3_4 ===
-Body34 - Animal fur 
+Body34 - Boreas despised animals so her never owned a pet or allowed them near his presence. Yet, on the cuff of his pants and in the folds of his clothes are some animal hairs. Fur maybe? You're not quite sure, but it's definitely not human. 
 + [Continue] -> turn
 
 === body3_5 ===
-Body35 - Expensive items taken off body 
+Body35 - Boreas never missed an opportunity to show off his latest expensive purchase. At this party, he was particularly fond of flashing his million dollar wrist watch and gaudy cufflinks. All of which are now missing, including his signature sapphire ring. 
 + [Continue] -> turn
 
 ///Body 4 //////////////////////////////////////////////
 === body4_1 ===
-Body41 - Foam at mouth, poison
+Body41 - Near the corners of Boreas’ mouth is a weird dried foam. Could it have been part of his drink? As you get closer, the smell is pungent and acrid. Poison?
 + [Continue] -> turn
 
 === body4_2 ===
-Body42 - Expertly cleaned
+Body42 - You expected to find something amiss like in the great novels: a hair, a note, something that would bring about that a-ha moment! But you struggle to see anything amiss. Not even a wrinkle. Perhaps this killer cleaned up after themselves. 
 + [Continue] -> turn
 
 === body4_3 ===
-Body43 - Stolen ring 
+Body43 - Boreas never missed an opportunity to show off his latest expensive purchase. At this party, he was particularly fond of flashing his million dollar wrist watch and gaudy cufflinks. The murderer didn't take any of those, but instead just his signature sapphire ring. 
 + [Continue] -> turn
 
 === body4_4 ===
-Body44 - Ledger
+Body44 - A small booklet tucked inside Boreas' jacket contains numbers and logs of invoices - his ledger. Scribbled almost illegibly, it's hard to make out any information. A folded document falls out of the pages. It's a letter that Boreas must've intercepted about a new rail line that is being designed in the southwest. The same exact location that Boreas is hastily building his own rail line. Printed on the stationery letter head is an ornate "Z".
 + [Continue] -> turn
 
 === body4_5 ===
-Body45 - Cologne 
+Body45 - As you get close to the body, a smell overwhelms you. It's not the smell you'd expect a dead body to smell like. Instead of rotting meat, a strange fragrance hovers over the body. 
 + [Continue] -> turn
 
 ///Body 5 //////////////////////////////////////////////
 === body5_1 ===
-Body51 - Kitchen knife still in the wound 
+Body51 - Sticking out of Boreas' gut is the black hilt of a steak knife... the very same you used to cut your meal in the dining room. Anyone could have had access to them. 
 + [Continue] -> turn
 
 === body5_2 ===
-Body52 - Stab isn't that deep 
+Body52 - While the knife plunged all the way to the hilt in Boreas' gut, it doesn't take that much strength to do so - especially with these professionally sharpened Japanese steak knives. 
 + [Continue] -> turn
 
 === body5_3 ===
-Body53 - Expensive items stolen off body 
+Body53 - Boreas never missed an opportunity to show off his latest expensive purchase. At this party, he was particularly fond of flashing his million dollar wrist watch and gaudy cufflinks. All of which are now missing, including his signature sapphire ring. 
 + [Continue] -> turn
 
 === body5_4 ===
-Body54 - Ledger
+Body54 - Tucked away inside a jacket pocket is Boreas' ledger. A veritable gold mine of information completely useless thanks to Boreas' sloppy illegible handwriting. What stands out to you are large sum payments under "alimony". As far as you're aware, Boreas' wife died young and this payment was dated this year. 
 + [Continue] -> turn
 
 === body5_5 ===
-Body55 - Threads in his grip
+Body55 - Peeking out from Boreas' closed fist are a few knit threads. It's hard to tell what color they are since the blood has stained them red. 
 + [Continue] -> turn
 
 ///Body 6 //////////////////////////////////////////////
 === body6_1 ===
-Body61 - Stabbed with something skinny and sharp 
+Body61 - It doesn't take much to nick an artery. Something skinny and sharp pierced Boreas' neck at just the right spot. He must have bled out in seconds. 
 + [Continue] -> turn
 
 === body6_2 ===
-Body62 - Animal hair 
+Body62 - Boreas despised animals so her never owned a pet or allowed them near his presence. Yet there are short hairs clinging to his clothing and all over. They're definitely not human. 
 + [Continue] -> turn
 
 === body6_3 ===
-Body63 - Ledger
+Body63 - Slick with blood, you find Boreas' ledger nestled inside his jacket pocket. Most of the pages are stained with blood and practically illegible. However, the most recent pages are relatively dry. An entry mentions a contract that would create a new rail line to the mountains in the northwest, but it's been scratched out. 
 + [Continue] -> turn
 
 === body6_4 ===
-Body64 - Animal hair 
+Body64 - Boreas' hands have fresh ink stains on the fingers, almost as if he had been writing something when he was killed. 
 + [Continue] -> turn
 
 === body6_5 ===
-Body65 - Defensive wounds 
+Body65 - Boreas was always quick tempered and would rather argue with his fists that with his words, so it is no surprise when you notice brusing on his knuckles. He lashed out, but it looks like he met his match. 
 + [Continue] -> turn
 
 ///Body 7 //////////////////////////////////////////////
 === body7_1 ===
-Body71 - Ring taken 
+Body71 - Boreas never missed an opportunity to show off his latest expensive purchase. At this party, he was particularly fond of flashing his million dollar wrist watch and gaudy cufflinks. However, the only thing missing is his signature sapphire ring. 
 + [Continue] -> turn
 
 === body7_2 ===
-Body72 - Ledger 
+Body72 - Even while he's sleeping, Boreas keeps a ledger on him. The scribbled mess inside makes it difficult to believe this man owned a million dollar railroad company, especially with all the expenses! A receipt tucked into folds is for a pair of ruby earrings worth a small fortune. 
 + [Continue] -> turn
 
 === body7_3 ===
-Body73 - Eyes closed 
+Body73 - Despite the silent scream frozen on Boreas' face, his eyes are closed. Perhaps the killer had some regret. It's hard to think anyone on this train would care enough to close his eyes. 
 + [Continue] -> turn
 
 === body7_4 ===
-Body74 - Blue face from asphyxiation 
+Body74 - Boreas always had a rosy glow to his face. Whether it was from drinking too much or indulging too much in his chef's cooking, it always had a warm flush. It's strange to see him now, his pale face not only drained of color, but almost a pale blue. Like someone would look after asphyxiation. 
 + [Continue] -> turn
 
 === body7_5 ===
-Body75 - Lost earring
+Body75 - It doesn't seem polite to rifle through a dead man's bed sheets, but it ended up being worth it when you pull out a single ruby earring. Who has the matching one?
 + [Continue] -> turn
 
 ///Body 8 //////////////////////////////////////////////
 === body8_1 ===
-Body81 - Stabbed w/ letter opener
+Body81 - The stab would on Boreas' body is rather small and thin. The options for what it could be would have been innumerable except that the letter opener sits on the desk as if on display. It looks as if someone cleaned it, but a flect of red can be seen in the groove of the design on the handle. 
 + [Continue] -> turn
 
 === body8_2 ===
-Body82 - Ledger
+Body82 - Tucked away in an inside pocket of Boreas' jacket is a small booklet. His ledger. Inside are scribbles and logs of illegible transactions. Rumors had been going around that Boreas Transcontinental was hemmoraging money from bad deals and investments, but Boreas' own ledger shows a modest profit. 
 + [Continue] -> turn
 
 === body8_3 ===
-Body83 - Ink on hands 
+Body83 - At the tips of Boreas' hands, a black ink dries. Perhaps he was taking some notes before he died? Or drafted up a document? 
 + [Continue] -> turn
 
 === body8_4 ===
-Body84 - Torn piece of paper in hands 
+Body84 - A piece of paper peeks out between the gaps in his clenched fist. You gently pull it free, but only have a slice of a document. The tone of the partial section of document is very harsh and corporate. One word in particular stands out. "Audit". 
 + [Continue] -> turn
 
 ///Body 9 //////////////////////////////////////////////
 === body9_1 ===
-Body91 - Smashed head
+Body91 - Boreas wasn't a paranoid man, but he was difficult to surprise. Always wary and nosy, preferring to know anything and everything he could. Yet somehow, someone got the drop on him and bashed his head in from behind with something large. 
 + [Continue] -> turn
 
 === body9_2 ===
-Body92 - Ledger
+Body92 - Boreas had tucked away his ledger inside his jacket pocket, but the real security was his terrible handwriting. Without knowing what you're looking for, the scribbles created a distracting mess of information. On the most recent pages, there are large deposits made under "alternative shipping fees". 
 + [Continue] -> turn
 
 === body9_3 ===
-Body93 - Intercepted corespondence 
+Body93 - In Bores' pocket is a small knit hair tie. The stitches on it are irregular and uneven. He must have had this on him for a reason. Maybe it was a message? 
 + [Continue] -> turn
 
 === body9_4 ===
-Body94 - Shot to make sure he was dead - profession
+Body94 - Boreas always had a thick skin and thick skull. Just bashing him on the head wasn't enough to guarantee his death. Underneath his jacket, right over his heart, is a single bullet hole. Someone wanted to make sure he wouldn't recover. 
 + [Continue] -> turn
 
 === body9_5 ===
-Body95 - Beads
+Body95 - Something falls to the floor when you pat down Boreas' jacket. It rolls away, but you catch it before it rolls under display case. It looks to be a bead of some sort. 
 + [Continue] -> turn
 
 ///Crime Scene 1 //////////////////////////////////////////////
