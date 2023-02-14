@@ -10,50 +10,86 @@ VAR naneh_sarma = 0
 VAR character = 1 
 VAR character_turn = 1
 
-Boreas Invitation. 
+[[Boreas Invitation.]]
 
 + [Accept] -> character_selection
 
 === character_selection ===
 
-Please select the {first|second|third|fourth|fifth|sixth|seventh|eighth|ninth} character: 
-*   [Desponia]
+Please select the your character: 
++   {desponia == 0}[Desponia]
+    A wealthy heiress with a passion for horses.
+    ++ [Select]
     ~ desponia = character
     ~ character += 1
     -> character_selection
-*   [Khione]
+    ++ [Go back]
+    -> character_selection
++   {khione == 0}[Khione]
+    Daughter of Boreas who keeps the whole train running smoothly. 
+    ++ [Select]
     ~ khione = character
     ~ character += 1
     -> character_selection
-*   [Ded Moroz]
+    ++ [Go back]
+    -> character_selection
++   {ded_moroz == 0}[Ded Moroz]
+    Business partner and owner of a large shipping business.
+    ++ [Select]
     ~ ded_moroz = character
     ~ character += 1
     -> character_selection
-*   [Itzlacoliuhqui]
+    ++ [Go back]
+    -> character_selection
++   {itzlacoliuhqui == 0}[Itzlacoliuhqui]
+    Wealthy playboy who recently invested a lot of money into Boreas Transcontinental.
+    ++ [Select]
     ~ itzlacoliuhqui = character
     ~ character += 1
     -> character_selection
-*   [Marzanna]
+    ++ [Go back]
+    -> character_selection
++   {marzanna == 0}[Marzanna]
+    Quirky woman dressing above her station desperate to speak with Boreas about something private. 
+    ++ [Select]
     ~ marzanna = character
     ~ character += 1
     -> character_selection
-*   [Skadi]
+    ++ [Go back]
+    -> character_selection
++   {skadi ==0 }[Skadi]
+    Famous winter sports althete always looking to expand their brand. 
+    ++ [Select]
     ~ skadi = character
     ~ character += 1
     -> character_selection
-*   [Hine-Takurua]
+    ++ [Go back]
+    -> character_selection
++   {hine_takurua == 0}[Hine-Takurua]
+    Wife of a wealthy and powerful political leader. 
+    ++ [Select]
     ~ hine_takurua = character
     ~ character += 1
     -> character_selection
-*   [Shakok]
+    ++ [Go back]
+    -> character_selection
++   {shakok == 0}[Shakok]
+    Biggest investor of Boreas Transcontinental with a eye for numbers. 
+    ++ [Select]
     ~ shakok = character
     ~ character += 1
     -> character_selection
-*   [Naneh Sarma]
+    ++ [Go back]
+    -> character_selection
++   {naneh_sarma == 0}[Naneh Sarma]
+    A elderly entrepreneur who charitably gives to the community every chance she gets. 
+    ++ [Select]
     ~ naneh_sarma = character
     ~ character += 1
     -> character_selection
-*   [Continue]
+    ++ [Go back]
+    -> character_selection
++   [Continue]
     -> npcs 
 
 === npcs ===
@@ -204,31 +240,33 @@ VAR char_turn_name = ""
 
 {
     - murder == 1: 
-    Desponia 
+    [[Desponia]]
     -> turn 
     - murder == 2: 
-    Khione 
+    [[Khione]]
     -> turn 
     - murder == 3: 
-    Ded Moroz 
+    [[Ded Moroz]] 
     -> turn 
     - murder == 4: 
-    Itzlacoliuhqui 
+    [[Itzlacoliuhqui]]
     -> turn 
     - murder == 5: 
-    Marzanna 
+    [[Marzanna]] 
     -> turn 
     - murder == 6: 
-    Skadi 
+    [[Skadi]]
     -> turn 
     - murder == 7: 
-    Hine Takurua 
+    [[Hine Takurua]]
     -> turn 
     - murder == 8: 
-    Shakok 
+    [[Shakok]]
     -> turn 
+    - murder == 9:
+    [[Naneh Sarma]]
     - else: 
-    Naneh Sarma
+    something fucked up 
     -> turn 
 }
     
@@ -1443,7 +1481,7 @@ SH4 - The utmost important documents are always kept on your person. You open th
 + [Continue] -> turn
 
 === self_sh_5 === 
-SH5 - You pull a sliver of embossed card stock out from your pocket. It’s your business card. Shakok Investments - Success Starts Here. 
+SH5 - You pull a sliver of embossed card stock out from your pocket. It’s your business card. Shakok Investments - 100 Successful Businesses. 
 + [Continue] -> turn
 
 === self_sh_6 === 
@@ -1473,27 +1511,27 @@ Body84 - A piece of paper peeks out between the gaps in his clenched fist. You g
 
 ///Crime Scene 8///
 === cs_8_1 ===
-CS81 - Burned correspondence by candle, stomped it out 
+CS81 - A crispy black sheet of paper curls up on the ground. The killer must've used the candle to burn it and let it smolder before stomping it out. You hold it up to the light, trying to see if anything is discernable. It's almost completely destroyed except you can see some numbers. Big numbers. 
 + [Continue] -> turn 
 
 === cs_8_2 ===
-CS82 - Bloody handkerchief stashed into a drawer 
+CS82 - In one of the drawers of the desk is a handkerchief. Streaks of dried blood on it indicate that the killer must have used it to clean something. A blade perhaps?
 + [Continue] -> turn
 
 === cs_8_3 ===
-CS83 - Will / executor 
+CS83 - Lying Boreas' open safe is his Last Will and Testament. All of his assests and company will be split up among all of his children. And named as the executor of the will is Shakok. 
 + [Continue] -> turn
 
 === cs_8_4 ===
-CS84 - Scent 
+CS84 - Something smells strange. It reminds you of that vacation you took to the tropical islands in the west. Sipping straight from coconuts and glistening at the edge of the surf under the sun. 
 + [Continue] -> turn 
 
 === cs_8_5 ===
-CS85 - Bloody letter opener cleaned on desk 
+CS85 - A thin letter opener rests on Boreas' desk. Mainly decorative since Boreas never opened his mail or lifted a finger for anything other than drink and money, you notice a little bit of dried blood in the decorative grooves. 
 + [Continue] -> turn 
 
 === cs_8_6 ===
-CS86 - 
+CS86 - Boreas always had a love for large coats. Perhaps he liked to stay warm or maybe he loved being able to say he spent an exorbitant amount on so much bear fur. Either way, his coat his so large, it completely obscured the bulky briefcase he must have fallen on top of. 
 + [Continue] -> turn 
 
 ///Inspect Shakok///
@@ -1577,27 +1615,27 @@ Body95 - Something falls to the floor when you pat down Boreas' jacket. It rolls
 
 ///Crime Scene 9///
 === cs_9_1 ===
-CS91 - String 
+CS91 - If you hadn't zoned out for a moment, trying to collect your thoughts, you may not have noticed the bloody string with a curious loop partially hidden by the baseboard. 
 + [Continue] -> turn 
 
 === cs_9_2 ===
-CS92 - Something on the ground to lure him in 
+CS92 - Something on the ground glints and catches your attention. It's not the kind of glint from light hitting something like glass. This was a rather expensive glint. A sparkle. You kneel down and see on the ground a very expensive ruby earring! Your position almost exactly matches that of Boreas. Perhaps this was the last thing he had seen. 
 + [Continue] -> turn
 
 === cs_9_3 ===
-CS93 - Different/multiple footprints
+CS93 - Many people come and go through this hallway as they transition between different train cars, yet there are quite a few boot prints through the blood that must have been while it was fresh. 
 + [Continue] -> turn
 
 === cs_9_4 ===
-CS94 - Handkerchief on floor 
+CS94 - How strange. You notice a handkerchief wedged somehow between a floorboard. How could this be? You pull up on the handkerchief and the floor board lifts. Inside is a small empty alcove, big enough for a couple of small boxes or even a large suitcase. The construction of it doesn't look like it was part of the original train. 
 + [Continue] -> turn 
 
 === cs_9_5 ===
-CS95 - Professionally staged to look like an accident 
+CS95 - Hidden by Boreas' large bear fur jacket is a bullet wound. You almost could have missed it since there's so little blood coming out of it. Someone wanted to make sure that the job got done. 
 + [Continue] -> turn 
 
 === cs_9_6 ===
-CS96 - Briefcase
+CS96 - A sturdy gentleman's briefcase rests on top of Boreas' body with blood on the corner, exactly where it would have hit Boreas if it had fallen from the luggage rack in the hallway. The briefcase is locked by an eight digit combination lock so you can't check what is inside, but it's definitly heavy enough to knock someone out. 
 + [Continue] -> turn 
 
 ///Inspect Naneh Sarma///
