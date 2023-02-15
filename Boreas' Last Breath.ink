@@ -1,4 +1,4 @@
-VAR desponia = 0 
+VAR despoina = 0 
 VAR khione = 0
 VAR ded_moroz = 0 
 VAR itzlacoliuhqui = 0
@@ -17,10 +17,10 @@ VAR character_turn = 1
 === character_selection ===
 
 Please select the your character: 
-+   {desponia == 0}[Desponia]
++   {despoina == 0}[Despoina]
     A wealthy heiress with a passion for horses.
     ++ [Select]
-    ~ desponia = character
+    ~ despoina = character
     ~ character += 1
     -> character_selection
     ++ [Go back]
@@ -103,8 +103,8 @@ Would you like to add NPCs?
 === add_npc ===
 
 Please select your NPCs: 
-*   {desponia == 0} [Desponia]
-    ~ desponia = npc
+*   {despoina == 0} [Despoina]
+    ~ despoina = npc
     ~ npc += 1
     -> add_npc
 *   {khione == 0} [Khione]
@@ -150,8 +150,8 @@ VAR murder = 0
 ~ killer_selection = RANDOM(1,npc)
 
 { 
-    - desponia == killer_selection: 
-        ~ killer = "Desponia"
+    - despoina == killer_selection: 
+        ~ killer = "Despoina"
         ~ murder = 1
         -> murder_scene
     - khione == killer_selection: 
@@ -194,9 +194,9 @@ VAR murder = 0
 VAR char_turn_name = ""
 
 {
-    - character_turn == desponia:
+    - character_turn == despoina:
         ~ character_turn += 1
-        ~ char_turn_name = "Desponia"
+        ~ char_turn_name = "Despoina"
         -> gameplay
     - character_turn == khione:
         ~ character_turn += 1
@@ -237,16 +237,17 @@ VAR char_turn_name = ""
 }
 
 === murder_scene ===
+The lights are too bright, your temples are pounding. Everyone stumbles out of their rooms in the sleeping car like lost children. Very hungover lost children. The only person who isn't accounted for - is Boreas. 
 
 {
     - murder == 1: 
-    [[Desponia]]
+    A scream from Boreas' sleeping car draws everyone's attention. A maid cowers in the doorway. Lying in his bed is Boreas, his head bloodied and skin cold.
     -> turn 
     - murder == 2: 
-    [[Khione]]
+    The door to Boreas' study is strangely ajar. You all curiously peek through the doors to reveal Boreas slumped on the ground, blood staining his shirt. 
     -> turn 
     - murder == 3: 
-    [[Ded Moroz]] 
+    [[Ded Moroz]]
     -> turn 
     - murder == 4: 
     [[Itzlacoliuhqui]]
@@ -281,7 +282,7 @@ VAR inspect = 0
 +   [Inspect Crime Scene] -> inspect_crime_scene
 +   [Inspect Others]
     Who would you like to inspect?
-    **  {desponia > 0}[Desponia]
+    **  {despoina > 0}[Despoina]
         ~ inspect = 1 
         -> inspect_others
     **  {khione > 0}[Khione]
@@ -310,7 +311,7 @@ VAR inspect = 0
         -> inspect_others
 +   [Solve the Crime!]
     Who do you think murdered Boreas?
-    **  {desponia > 0}[Desponia]
+    **  {despoina > 0}[Despoina]
         ~ accuse = 1 
         -> murderer_reveal
     **  {khione > 0}[Khione]
@@ -340,7 +341,7 @@ VAR inspect = 0
 
 === inspect_self ===
 {
-    - char_turn_name == "Desponia": 
+    - char_turn_name == "Despoina": 
         {shuffle: 
                     - {not self_d_1} -> self_d_1 
                     - {not self_d_2} -> self_d_2
@@ -617,7 +618,8 @@ VAR inspect = 0
                     - ->  inspect_d_2
                     - ->  inspect_d_3
                     - ->  inspect_d_4
-                    - ->  inspect_d_5
+                    - {character != "itzlacoliuhqui"} -> inspect_d_5
+                    - {character == "itzlacoliuhqui"} -> inspect_d_5_i
                     - ->  inspect_d_6
                     - ->  inspect_d_7
         }
@@ -706,7 +708,7 @@ VAR inspect = 0
         -> turn 
 }
 
-///Desponia Self //////////////////////////////////////////////
+///Despoina Self //////////////////////////////////////////////
 === self_d_1 === 
 D1 - You rub your hands together, noticing a chill resting on the skin. Something doesn't feel right. Didn't you have gloves? A very expensive pair of leather riding gloves? Those were one of a kind! 
 + [Continue] -> turn
@@ -784,33 +786,39 @@ CS15 - Most of the potted plants on the train are fake. Maintenance of the type 
 CS16 - On the floor outside Boreas' sleeper car are scuff marks. Following the stray marks, it leads to the lounge. 
 + [Continue] -> turn 
 
-///Inspect Desponia///
+///Inspect Despoina///
 === inspect_d_1 ===
-ID1 - Missing gloves
+ID1 - You stare, perhaps too long, at Despoina's strange bony fingers. How had you not noticed those before? They look like knobby twigs. Despoina tucks her hands into her pockets, perhaps aware of their appearance. Gloves. Wasn't she wearing a pair of gloves?
 + [Continue] -> turn
 
 === inspect_d_2 ===
-ID2 - Soot on pants 
+ID2 - Despoina is usually pretty strict about her appearance, but has let some tidying slip. You all have with the night you enjoyed, but her riding pants have something on them. A strange black powder. Soot? 
 + [Continue] -> turn
 
 === inspect_d_3 ===
-ID3 - Forged contract 
+ID3 - No one ever pays any notice of Despoina. She craves attention like a moth to flame, but so often gets left out that maybe that's why she didn't think anyone was taking note of her while she pulled a document out from her jacket. 
+    
+    You only get a quick glimpse before she tucks it away, but it read like a contract for generous sum of money. Signed by Boreas... or at least it was made to look like. 
 + [Continue] -> turn
 
 === inspect_d_4 ===
-ID4 - Gossip magazine
+ID4 - Sitting on the sidetable in the lounge is a magazine. Since the books lining the shelves are decorative fakes, this may be the only entertainment on the whole train. You open to an article about business mogul, Demeter as she talks about business practices and raising her daughter, Kore. If Despoina didn't look like the spitting image of Demeter, you would never know she was her own daughter. 
 + [Continue] -> turn
 
 === inspect_d_5 ===
-ID5 - Flirting with Itzla 
+ID5 - Watching Despoina desperately try to get Itzlacoliuhqui's attention while acting coy has been absolutely sickening to watch, but you just can't take your eyes away. She clearly doesn't know he's been flirting with all the other eligible women. You're pretty sure he even hit on Shakok. 
++ [Continue] -> turn
+
+=== inspect_d_5_i ===
+ID5I - Despoina stares at you and then looks away as if she can't be bothered, then looks back and stares. Why does she keep staring? Ah, but you know why. She has all the firtatious grace of a lizard. It was more charming when you were drunk. 
 + [Continue] -> turn
 
 === inspect_d_6 ===
-ID6 - Seen in lounge with Boreas
+ID6 - Despoina likes to make her presence known when entering a room. She loves to have all eyes on her. Despite your throbbing headache, you remember her in a heated argument with Boreas in the lounge. 
 + [Continue] -> turn
 
 === inspect_d_7 ===
-ID7 - Horse hair 
+ID7 - The riding boots, the riding outfit... Despoina even wore her custom riding helmet to the party. Who does that? She's so obessed with horses, you've noticed she's even been shedding horse hair. Did she bring one on the train? 
 + [Continue] -> turn
 
 /// Khione Self //////////////////////////////////////////////
@@ -835,7 +843,7 @@ K4 - In the mirror, you glimpse a streak of red on you jaw. A fresh bruise. You 
 + [Continue] -> turn
 
 === self_k_5 === 
-K5 - You start cleaning up the discarded drink glasses before remembering that you don't have to do his dirty work anymore. You don't have to clean up or serve these rich snobs ever again.  
+K5 - You start cleaning up the discarded drink glasses before remembering that you don't have to do his dirty work anymore. You don't have to clean up or serve these rich snobs ever again. You're finally free to be something more than the person handing out the drinks. 
 + [Continue] -> turn
 
 === self_k_6 === 
@@ -874,7 +882,7 @@ CS21 - Most of the potted plants on the train are fake. Maintenance of the type 
 + [Continue] -> turn 
 
 === cs_2_2 ===
-CS22 - In an unlocked drawer in the study is Boreas' Last Will and Testament. It seems like he's splitting his fortune and company between all his children... and there are a lot. 
+CS22 - In an unlocked drawer in the study is Boreas' Last Will and Testament. It seems like he's splitting his fortune and company between all of his children... that are currently employed with Boreas Transcontinental. 
 + [Continue] -> turn
 
 === cs_2_3 ===
@@ -899,31 +907,31 @@ CS27 - Caught in the drawer of Boreas' desk is a thread of yarn. Perhaps pulled 
 
 ///Inspect Khione///
 === inspect_k_1 ===
-IK1 - List of chores
+IK1 - The moment everyone heard about Boreas' death, you saw Khione throw something away in the trash. You pick it up and read it. It's a list of chores. A long list with everything from scrubbing toilets to meal prep. With this kind of workload, it would be a surprise if Khione had a personal life at all. 
 + [Continue] -> turn
 
 === inspect_k_2 ===
-IK2 - Correspondence
+IK2 - Stashed away in Boreas' desk is a bundle of opened letters. Written in an angry hand, they accuse Boreas of trapping them into a contract. That they have wasted years of their lives for his profits and now that they want to make a life for themselves, they'll be denied proper payment. There's no stamp or envelopes - there's only one person who would hand deliver their demands to Boreas.
 + [Continue] -> turn
 
 === inspect_k_3 ===
-IK3 - Blackmail 
+IK3 - You watch as Khione sneaks out from the study, her arms heavy with stuffed envelopes. One drops silently as she sneaks away. You open the envelope and find pictures and sensitive documents for a foreign dignitary. Blackmail? Is there an envelope with information on you? 
 + [Continue] -> turn
 
 === inspect_k_4 ===
-IK4 - Bruise on face
+IK4 - Due to the copious amounts of alcohol consumed, everyone has a flush to their face whether red with spirit or green with illness... yet a solitary strange red streak on Khione's face seems angry. A young bruise in the making? 
 + [Continue] -> turn
 
 === inspect_k_5 ===
-IK5 - Served drinks 
+IK5 - Swirling the leftovers in your glass, you contemplate whether you should ever drink again. Or maybe just not drink anything Khione serves up. Now that you think about it. She made everyone's drink and served them. 
 + [Continue] -> turn
 
 === inspect_k_6 ===
-IK6 - Knew B's schedule
+IK6 - Boreas wasn't the type of business man to actually conduct business. He would fill his calendar with meetings where he looks you in the eye and demands more money. Khione was at every meeting you remember attending with Boreas, helping him get to the next one. Always ready in case things got ugly. 
 + [Continue] -> turn
 
 === inspect_k_7 ===
-IK7 - Has keys to all rooms
+IK7 - Khione moves silently throughout the train which takes skill for someone with such a large key ring. A key to every door, cabinet, and safe. A lot of responsibility... a lot of power. 
 + [Continue] -> turn
 
 /// Ded Moroz Self //////////////////////////////////////////////
@@ -1007,31 +1015,31 @@ CS37 - Shreds of a document are scattered in the pool of blood. Some are stained
 
 ///Inspect Ded Moroz///
 === inspect_dm_1 ===
-IDM1 - Concealed sword in cane 
+IDM1 - Ded Moroz has this strange thing that he does when he's bored. You're not even sure that he knows that he does it. He twists the top of his cane, pulls it up an inch - just far enough to see the glint of the steel concealed within - and then drops it back it place and twist locks it. 
 + [Continue] -> turn
 
 === inspect_dm_2 ===
-IDM2 - Handkerchief
+IDM2 - Ded Moroz samples from the tray of leftovers, spilling escargot on his shirt. He starts to pat down his pockets, looking for something, but ends up using the table cloth to dab at his shirt. 
 + [Continue] -> turn
 
 === inspect_dm_3 ===
-IDM3 - Invoices / Ledger 
+IDM3 - A small booklet on the ground has Ded Moroz's name on it. You flip through it. Numbers. Dates. Your ledger. Underlined with angry emphasis are a lot of payments to "Boreas Trans." The numbers kept increasing even over the span of a few short months. Boreas always believed that if someone was able to pay, they could always pay more.
 + [Continue] -> turn
 
 === inspect_dm_4 ===
-IDM4 - Cigars 
+IDM4 - Without gauging his surroundings, Ded Moroz strikes up a match and lights one of his cigars. Awful, foul smelling things. It filled the room almost immediately. 
 + [Continue] -> turn
 
 === inspect_dm_5 ===
-IDM5 - Animal fur boots 
+IDM5 - You could follow Ded Moroz anywhere in the train by following the fur his ridiculous boots were shedding.
 + [Continue] -> turn
 
 === inspect_dm_6 ===
-IDM6 - Seen playing cards with Boreas 
+IDM6 - In the hallway outside the game room, you find a playing card. The game must have been pretty heated if cards are flying out into the hall. You remember Boreas playing with Ded Moroz. 
 + [Continue] -> turn
 
 === inspect_dm_7 ===
-IDM7 - Beads on his coat 
+IDM7 - Jingle jingle. Jingle jingle. Ded Moroz is wearing a dumb coat that is covered in beads that makes that annoying sound as he walks around. Everywhere he goes, jingle jingle jingle. 
 + [Continue] -> turn
 
 /// Itzlacoliuhqui Self //////////////////////////////////////////////
@@ -1135,7 +1143,7 @@ II6 - Cigarettes
 + [Continue] -> turn
 
 === inspect_i_7 ===
-II7 - Cologne 
+II7 - Cologne  
 + [Continue] -> turn
 
 /// Marzanna Self //////////////////////////////////////////////
@@ -1673,7 +1681,7 @@ INS7 - Knitting needles
 
 {
     - murder == 1 && accuse == 1: 
-        Desponia 
+       Despoina.
         -> END
     - murder == 2 && accuse == 2:  
         Khione 
@@ -1702,7 +1710,7 @@ INS7 - Knitting needles
     - else: 
     {
         - accuse == 1: 
-            Desponia innocent
+            Despoina innocent
             + [Return] -> turn
         - accuse == 2: 
             Khione innocent
