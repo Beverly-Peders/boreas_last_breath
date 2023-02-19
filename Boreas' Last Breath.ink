@@ -10,14 +10,16 @@ VAR naneh_sarma = 0
 VAR character = 1 
 VAR character_turn = 1
 
-[[Boreas Invitation.]]
+You are cordially invited to celebrate Boreas' 57th birthday on his private train. Only the best for the owner of Boreas Transcontinental. 
+
+No plus ones. No children. No dietary restrictions. 
 
 + [Accept] -> character_selection
 
 === character_selection ===
 
 Please select the your character: 
-+   {despoina == 0}[Despoina]
++   {despoina == 0} [Despoina]
     A wealthy heiress with a passion for horses.
     ++ [Select]
     ~ despoina = character
@@ -34,7 +36,7 @@ Please select the your character:
     ++ [Go back]
     -> character_selection
 +   {ded_moroz == 0}[Ded Moroz]
-    Business partner and owner of a large shipping business.
+    Boreas' business partner and owner of a large shipping business.
     ++ [Select]
     ~ ded_moroz = character
     ~ character += 1
@@ -82,7 +84,7 @@ Please select the your character:
     ++ [Go back]
     -> character_selection
 +   {naneh_sarma == 0}[Naneh Sarma]
-    A elderly entrepreneur who charitably gives to the community every chance she gets. 
+    An elderly entrepreneur who charitably gives to the community every chance she gets. 
     ++ [Select]
     ~ naneh_sarma = character
     ~ character += 1
@@ -96,6 +98,8 @@ Please select the your character:
 VAR npc = 9
 ~ npc -= character
 
+/// NPCs are broken and create playable characters - FIX!
+
 Would you like to add NPCs? 
 *   {character < 10}[Yes] -> add_npc
 *   [No] -> setup 
@@ -103,41 +107,77 @@ Would you like to add NPCs?
 === add_npc ===
 
 Please select your NPCs: 
-*   {despoina == 0} [Despoina]
++   {despoina == 0} [Despoina]
+    A wealthy heiress with a passion for horses.
+    ++ [Select]
     ~ despoina = npc
     ~ npc += 1
     -> add_npc
-*   {khione == 0} [Khione]
+    ++ [Go back]
+    -> add_npc
++   {khione == 0} [Khione]
+    Daughter of Boreas who keeps the whole train running smoothly. 
+    ++ [Select]
     ~ khione = npc
     ~ npc += 1
     -> add_npc
-*   {ded_moroz == 0} [Ded Moroz]
+    ++ [Go back]
+    -> add_npc
++   {ded_moroz == 0} [Ded Moroz]
+    Boreas' business partner and owner of a large shipping business.
+    ++ [Select]
     ~ ded_moroz = npc
     ~ npc += 1
     -> add_npc
-*   {itzlacoliuhqui == 0} [Itzlacoliuhqui]
+    ++ [Go back]
+    -> add_npc
++   {itzlacoliuhqui == 0} [Itzlacoliuhqui]
+    Wealthy playboy who recently invested a lot of money into Boreas Transcontinental.
+    ++ [Select]
     ~ itzlacoliuhqui = npc
     ~ npc += 1
     -> add_npc
-*   {marzanna == 0} [Marzanna]
+    ++ [Go back]
+    -> add_npc
++   {marzanna == 0} [Marzanna]
+    Quirky woman dressing above her station desperate to speak with Boreas about something private. 
+    ++ [Select]
     ~ marzanna = npc
     ~ npc += 1
     -> add_npc
-*   {skadi == 0} [Skadi]
+    ++ [Go back]
+    -> add_npc
++   {skadi == 0} [Skadi]
+    Famous winter sports althete always looking to expand their brand.
+    ++ [Select]
     ~ skadi = npc
     ~ npc += 1
     -> add_npc
-*   {hine_takurua == 0} [Hine-Takurua]
+    ++ [Go back]
+    -> add_npc
++   {hine_takurua == 0} [Hine-Takurua]
+    Wife of a wealthy and powerful political leader. 
+    ++ [Select]
     ~ hine_takurua = npc
     ~ npc += 1
     -> add_npc
-*   {shakok == 0} [Shakok]
+    ++ [Go back]
+    -> add_npc
++   {shakok == 0} [Shakok]
+    Biggest investor of Boreas Transcontinental with a eye for numbers. 
+    ++ [Select]
     ~ shakok = npc
     ~ npc += 1
     -> add_npc
-*   {naneh_sarma == 0} [Naneh Sarma]
+    ++ [Go back]
+    -> add_npc
++   {naneh_sarma == 0} [Naneh Sarma]
+    An elderly entrepreneur who charitably gives to the community every chance she gets. 
+    ++ [Select]
     ~ naneh_sarma = npc
     ~ npc += 1
+    -> add_npc
+    ++ [Go back]
     -> add_npc
 *   [Continue]
     -> setup 
@@ -247,25 +287,26 @@ The lights are too bright, your temples are pounding. Everyone stumbles out of t
     The door to Boreas' study is strangely ajar. You all curiously peek through the doors to reveal Boreas slumped on the ground, blood staining his shirt. 
     -> turn 
     - murder == 3: 
-    [[Ded Moroz]]
+    The last place searched is the game room. Boreas' body is sprawled in a chair at the poker table, blood completely staining his shirt. His face frozen in an expression of horror. 
     -> turn 
     - murder == 4: 
-    [[Itzlacoliuhqui]]
+    Sitting next to the fireplace in the lounge, he almost looks peaceful. It isn't until a maid screams when she checks on him that anyone is aware that he is dead. 
     -> turn 
     - murder == 5: 
-    [[Marzanna]] 
+    Searching everywhere, a scream from the viewing room brings everyone to the back of the train. Lying on the floor in the viewing room is Boreas' body. 
     -> turn 
     - murder == 6: 
-    [[Skadi]]
+    Propped up in the lounge in an air chair by the firplace is Boreas' body. If it wasn't for the blood stains down his neck and sides, he could have been taking a nap. 
     -> turn 
     - murder == 7: 
-    [[Hine Takurua]]
+    A scream from Boreas' sleeping car draws everyone's attention. A maid cowers in the doorway. Boreas' body lies cold and still in the tangled sheets. 
     -> turn 
     - murder == 8: 
-    [[Shakok]]
+    The door to Boreas' study is strangely ajar. You all curiously peek through the doors to reveal Boreas slumped on the ground, blood staining his shirt. 
     -> turn 
     - murder == 9:
-    [[Naneh Sarma]]
+    He's slumped over in the hallway, almost as if he tripped and fell... but the blood on the back of Boreas' head makes you wonder whether there's something more nefarious happening. 
+    -> turn
     - else: 
     something fucked up 
     -> turn 
@@ -274,7 +315,6 @@ The lights are too bright, your temples are pounding. Everyone stumbles out of t
 === gameplay ===
 VAR accuse = 0 
 VAR inspect = 0
-{murder}
 {char_turn_name}'s Turn
 
 +   [Inspect Self] -> inspect_self
@@ -282,31 +322,31 @@ VAR inspect = 0
 +   [Inspect Crime Scene] -> inspect_crime_scene
 +   [Inspect Others]
     Who would you like to inspect?
-    **  {despoina > 0}[Despoina]
+    **  {despoina > 0 && char_turn_name != "Despoina"}[Despoina]
         ~ inspect = 1 
         -> inspect_others
-    **  {khione > 0}[Khione]
+    **  {khione > 0 && char_turn_name != "Khione"}[Khione]
         ~ inspect = 2
         -> inspect_others
-    **  {ded_moroz > 0}[Ded Moroz]
+    **  {ded_moroz > 0 && char_turn_name != "Ded Moroz"}[Ded Moroz]
         ~ inspect = 3
         -> inspect_others
-    **  {itzlacoliuhqui > 0}[Itzlacoliuhqui]
+    **  {itzlacoliuhqui > 0 && char_turn_name != "Itzlacoliuhqui"}[Itzlacoliuhqui]
         ~ inspect = 4
         -> inspect_others
-    **  {marzanna > 0}[Marzanna]
+    **  {marzanna > 0 && char_turn_name != "Marzanna"}[Marzanna]
         ~ inspect = 5
         -> inspect_others
-    **  {skadi > 0}[Skadi]
+    **  {skadi > 0 && char_turn_name != "Skadi"}[Skadi]
         ~ inspect = 6
         -> inspect_others
-    **  {hine_takurua > 0}[Hine Takurua]
+    **  {hine_takurua > 0 && char_turn_name != "Hine Takurua"}[Hine Takurua]
         ~ inspect = 7
         -> inspect_others
-    **  {shakok > 0} [Shakok]
+    **  {shakok > 0 && char_turn_name != "Shakok"} [Shakok]
         ~ inspect = 8
         -> inspect_others
-    **  {naneh_sarma > 0} [Naneh Sarma]
+    **  {naneh_sarma > 0 && char_turn_name != "Naneh Sarma"} [Naneh Sarma]
         ~ inspect = 9
         -> inspect_others
 +   [Solve the Crime!]
@@ -618,8 +658,8 @@ VAR inspect = 0
                     - ->  inspect_d_2
                     - ->  inspect_d_3
                     - ->  inspect_d_4
-                    - {character != "itzlacoliuhqui"} -> inspect_d_5
-                    - {character == "itzlacoliuhqui"} -> inspect_d_5_i
+                    - {char_turn_name != "itzlacoliuhqui"} -> inspect_d_5
+                    - {char_turn_name == "itzlacoliuhqui"} -> inspect_d_5_i
                     - ->  inspect_d_6
                     - ->  inspect_d_7
         }
@@ -1068,7 +1108,7 @@ I6 - In a flair of boredom, you pull out a pack of thin hand-rolled cigarettes a
 + [Continue] -> turn
 
 === self_i_7 === 
-I7 - A tiny bottle secured in your luggage is a lifesaver. While everyone else takes on the stench of nervous energy and fear, you easily walk about with an expertly crafted scent that is as delicate as a flower and lingers like the smell of gunpowder. 
+I7 - A tiny bottle secured in your luggage is a lifesaver. While everyone else takes on the stench of nervous energy and fear, you easily walk about with an expertly crafted scent that is as alluring as a sea breeze and lingers like the smell of gunpowder. 
 + [Continue] -> turn
 
 ///Body 4///
@@ -1119,31 +1159,31 @@ CS46 - Between the dining room and the lounge, strange scuff marks are on the fl
 
 ///Inspect Itzlacoliuhqui///
 === inspect_i_1 ===
-II1 - Coded correspondence with Zephyr
+II1 - Itzlacoliuhqui pulls a document out from his jacket and unfolds it, unaware of you looking over his shoulder. What you could glimpse is a paper covered in weird symbols. A coded message. You think you can figure out a demand for a ring... and the printed letterhead - an ornate "Z"... the logo of Zephyr International Transit. 
 + [Continue] -> turn
 
 === inspect_i_2 ===
-II2 - Seen helping B into lounge 
+II2 - While the party was in full swing, you remember seeing Itzlacoliuhqui helping Boreas walk from the dining room to the lounge. More like dragging with the state that Boreas had in. 
 + [Continue] -> turn
 
 === inspect_i_3 ===
-II3 - Flirting with everyone
+II3 - That smirk painted on Itzlacoliuhqui seems to be so charming, if you hadn't seen him trade it with everyone on the train. Either he is incredibly friendly or there's a reason he wants to get close to everyone.
 + [Continue] -> turn
 
 === inspect_i_4 ===
-II4 - Missing gun, empty holster
+II4 - Reaching for a bottle of whiskey, you can see Itzlacoliuhqui's jacket open. A shoulder holster hangs from his arm, but it's empty. 
 + [Continue] -> turn
 
 === inspect_i_5 ===
-II5 - Very exepnsive accesories 
+II5 - The playboy will talk non-stop about his business ventures and investments like some number-loving nerd, but you know better. He skates along the surface of what an investor really does and honestly, has way too few grey hairs to be pulling off the deals he brags about. But if he's not being paid by massive dividends, where did he get the money to pay for that expensive time piece and those exquisite cuff links? You don't know anyone who owns emeralds that large!
 + [Continue] -> turn
 
 === inspect_i_6 ===
-II6 - Cigarettes
+II6 - There was something about the way that Itzlacoliuhqui smoked that wasn't about the nicotine, it was about setting the stage. The cigarette was just a way to draw attention and keep up the bad boy appearance. 
 + [Continue] -> turn
 
 === inspect_i_7 ===
-II7 - Cologne  
+II7 - You smell it waft into the room before he even enters. It's strange. Like a sea breeze, it draws your attention and awakens nostalgic memories... but it has an unpleasant edge. Like gunpowder. Keeping you wary, but intrigued. 
 + [Continue] -> turn
 
 /// Marzanna Self //////////////////////////////////////////////
@@ -1227,31 +1267,33 @@ CS57 - The viewing car has very few places to hide anything. Floor to ceiling wi
 
 ///Inspect Marzanna///
 === inspect_m_1 ===
-IM1 - Missing pills / bottle
+IM1 - Marzanna leaves her purse unattended for a moment as she enters the powder room. You sneak a peek inside, but the door knob rattles and scares you away. Clutched tightly in your hand, you managed to sneak out a simple small document. A prescription notice from her doctor. Strange... you didn't see any pill or a bottle in her bag. 
 + [Continue] -> turn
 
 === inspect_m_2 ===
-IM2 - Purse full of stolen items 
+IM2 - You've noticed Marzanna struggle to carry around her bag with her. By the way the strap digs into her shoulder, it must be carrying something awfully heavy. You wait until she sets it down for a moment to take a look. 
+
+    A thief! Everything from silver cutlery to gold ashtrays to an engraved lighter is stuffed into her bag. 
 + [Continue] -> turn
 
 === inspect_m_3 ===
-IM3 - Clothing covered in beads, fake gems
+IM3 - Tink! A little bead pops off of Marzanna's dress and bounces on the ground. Her thick bangles and heavy necklaces were constantly at war with the beads. The jewlery was winning the war against the beads and her skin. You catch a glimpse every now and then of the greenish hue the fake metal was staining her skin. 
 + [Continue] -> turn
 
 === inspect_m_4 ===
-IM4 - Smokes a pipe 
+IM4 - Marzanna packs her pipe like a child playing pretend. When she lights it, the thick smoke and cheap tabacco smell always clears out whoever else is in the car with her.  
 + [Continue] -> turn
 
 === inspect_m_5 ===
-IM5 - Seen gawking in viewing room 
+IM5 - While the viewing car is the back of the train, you did stumble back there once or twice to use that restroom when the others were in use. And she was there every time, just gawking out the windows like some child in an aquarium. 
 + [Continue] -> turn
 
 === inspect_m_6 ===
-IM6 - Missing scarf/shawl
+IM6 - You're no fashion designer, but Marzanna's outfit screams of someone who thinks the wealthy wear what the magazines sell. It checks all the right boxes to look wealthy, but the materials don't drape right. You do remember a half-decent knit shawl that she was wearing looked classically lovely, but unfortunately it seems like that's the one article of clothing she no longer is wearing. 
 + [Continue] -> turn
 
 === inspect_m_7 ===
-IM7 - Old photograph of mother/Boreas
+IM7 - Shuffling off into another room, a strange card-like object falls from Marzanna's purse. A faded photograph. The woman looks exactly like Marzanna and wears a shawl around her shoulders. A man holds her, his arms encircling her in a loving embrace. If you squint just right and pretend that the warm gaze was instead a cruel scowl, the man looks exactly like Boreas. 
 + [Continue] -> turn
 
 /// Skadi Self //////////////////////////////////////////////
@@ -1335,31 +1377,31 @@ CS67 - You almost missed it. Dropped with the other dirty dishes in the kitchen.
 
 ///Inspect Skadi///
 === inspect_sk_1 ===
-ISK1 - Missing fur coat
+ISK1 - You know Skadi from all the winter althetic magazines. Her picture is everywhere on advertisements for everything from snowshoes to brandy. In every photoshoot, she wears the same fur coat. It's her signature look and the way everyone identifies her in public. You swear the only way you knew it was her at the party was she was wearing it... but she isn't anymore. 
 + [Continue] -> turn
 
 === inspect_sk_2 ===
-ISK2 - Correspondence 
+ISK2 - A crumpled paper falls from Skadi's pocket and you flatten it out. Everyone can recognize the sloppy, aggresive hand writing of Boreas, but not everyone can read it. His condescending tone is evident before you even start to read. Skadi's request for a new rail line to her up-and-coming resort has been denied. 
 + [Continue] -> turn
 
 === inspect_sk_3 ===
-ISK3 - Forged contract 
+ISK3 - Skadi sits down in the lounge and takes an envelope out of the inner pocket of her vest. You peek over her shoulder and read the steady type-written print of an official document. It's a contract for the immediate construction of a new rail line to be directed straight to the resort. Something was off about the signature. It looked hesitant and harsh. Not at all like the arrogant swoops and flourishes of the real Boreas signature. 
 + [Continue] -> turn
 
 === inspect_sk_4 ===
-ISK4 - Went to get ice from supply room
+ISK4 - At the bar, Skadi pours herself a whiskey and then grimaces, complaining that it's too warm. You remember she did the same last night. Demanding more ice. Always more ice. Khione got so sick of it that Skadi went to fetch her own ice from the supply room. 
 + [Continue] -> turn
 
 === inspect_sk_5 ===
-ISK5 - Feather accessories in hair 
+ISK5 - The magazines say that Skadi wears the feathered headband as a tribute to the island she grew up in and the birds there. The fake feathers are almost as bad as her fake rags-to-riches story. When her wealthy husband died, she inherited a fortune. 
 + [Continue] -> turn
 
 === inspect_sk_6 ===
-ISK6 - Brochure for new resort 
+ISK6 - You browse the magazines in the lounge looking for something to entertain you when you come across a colorful brochure stuffed away from view. It's for a new ski resort in the northwest mountains and it has Skadi's brand and image plastered all over it. 
 + [Continue] -> turn
 
 === inspect_sk_7 ===
-ISK7 - Soot on boots
+ISK7 - Despite the dress code for the party being cocktail attire, Skadi still wore her branded ski outfit complete with boots. If that wasn't bad enough, her boots are leaving black soot throughout the train cars. 
 + [Continue] -> turn
 
 /// Hine-Takurua Self //////////////////////////////////////////////
@@ -1444,31 +1486,33 @@ CS77 - A small bottle of hair gel was cleaned up, the broken bits in the trash, 
 
 ///Inspect Hine-Takurua///
 === inspect_ht_1 ===
-IHT1 - Bird feathers on outfit 
+IHT1 - You nearly bump into Hine-Takurua as she spins in front of her reflection in the windows. Feathers from her dress lift up and float, like feathers escaping a down pillow. Even as you brush by, she continues to immerse herself in her own reflection.
 + [Continue] -> turn
 
 === inspect_ht_2 ===
-IHT2 - Newspaper clippings about husband 
+IHT2 - You don't really read the newspapers since you prefer listening to the radio, but since there isn't a functioning radio in any of the train cars, you pick up a newspaper on a side table out of boredom. The international news page. The picture features a wealthy political figure with another woman on his arm. That's Hine-Takurua's wealthy political husband... but that woman is not Hine-Takurua! The puff piece about his habits and interests never once mentions his own wife. Maybe you should read newspapers more often. 
 + [Continue] -> turn
 
 === inspect_ht_3 ===
-IHT3 - Perfume
+IHT3 - You catch a mouthful of Hine-Takurua's perfume as she liberally applies it without noticing you behind her. While lovely, it smells overwhelmingly sweet. As you stumble away and gasp for fresh air by the windows, you wonder if it's similar in the way those fly eating plants smell lovely to attract their prey. In small doses, that perfume would lure in many an interested prey. 
 + [Continue] -> turn
 
 === inspect_ht_4 ===
-IHT4 - Seen handing on Boreas' arm 
+IHT4 - The huge wedding ring glints on Hine-Takurua's finger, yet you remember that same hand draped over Boreas' arm... draped on his waist... and if your hungover mind isn't mistaken, caressing his backside. If she wanted to start a scandal, she was doing very well. 
 + [Continue] -> turn
 
 === inspect_ht_5 ===
-IHT5 - Has gems bought by Boreas (ledger)
+IHT5 - Hine-Takurua fiddles with her earring, a stunning ruby statement set. Except... when she turns her head you can see that she only has one. The other earring must have slipped out. The stones alone must be worth a fortune. 
 + [Continue] -> turn
 
 === inspect_ht_6 ===
-IHT6 - Love letters
+IHT6 - You watch as Hine-Takurua emerges from her room in the sleeping car and strolls down the hallway without closing the room to her door. You slip in, just for a moment, to get a glimpse of what she might be hiding. Under the bed, in a little box is a bound set of letters. You read the first one and immediately flee the room toward the dining car. 
+
+    The words haunt you as you pour a strong drink. That handwriting was unmistakable - it could only have been written by Boreas - but the words were those of a man long out of practice in writing love letters if he had any practice at all. Perhaps words would have been bad enough, but the man decided to try out his art skills. You pour another drink. 
 + [Continue] -> turn
 
 === inspect_ht_7 ===
-IHT7 - Security 
+IHT7 - Two men constantly circle around Hine-Takurua like guard dogs. They've become even more insufferable since Boreas' body was found. One even has his jacket unbuttoned in order to display his gun and holster as a casual threat. 
 + [Continue] -> turn
 
 /// Shakok Self //////////////////////////////////////////////
@@ -1489,7 +1533,7 @@ SH4 - The utmost important documents are always kept on your person. You open th
 + [Continue] -> turn
 
 === self_sh_5 === 
-SH5 - You pull a sliver of embossed card stock out from your pocket. It’s your business card. Shakok Investments - 100 Successful Businesses. 
+SH5 - You pull a sliver of embossed card stock out from your pocket. It’s your business card. Shakok Investments - 100 Successful Businesses and Counting. 
 + [Continue] -> turn
 
 === self_sh_6 === 
@@ -1531,7 +1575,7 @@ CS83 - Lying Boreas' open safe is his Last Will and Testament. All of his assest
 + [Continue] -> turn
 
 === cs_8_4 ===
-CS84 - Something smells strange. It reminds you of that vacation you took to the tropical islands in the west. Sipping straight from coconuts and glistening at the edge of the surf under the sun. 
+CS84 - Something smells strangely familiar. It reminds you of that vacation you took to the tropical islands in the west. Sipping straight from coconuts and glistening at the edge of the surf under the sun. 
 + [Continue] -> turn 
 
 === cs_8_5 ===
@@ -1544,31 +1588,33 @@ CS86 - Boreas always had a love for large coats. Perhaps he liked to stay warm o
 
 ///Inspect Shakok///
 === inspect_sh_1 ===
-ISH1 - Seen shouting with Boreas about finances 
+ISH1 - Not many people are allowed in Boreas' study. You always assumed it was because he liked to create an air of mystery around his business. In reality, it was probably to hide the fact he didn't really conduct business at all. 
+
+    Yet, you remember hearing Shakok's voice loud and clear coming from the study with Boreas. They were shouting about numbers and finance. Or something similarly boring. It's not like it was memorable. 
 + [Continue] -> turn
 
 === inspect_sh_2 ===
-ISH2 - Scent
+ISH2 - In all, Shakok looks like an average business man. Buttoned up suit, neat appearance, but when you stand near him, you smell the aroma of a tropical vacation. Coconut and shea butter. 
 + [Continue] -> turn
 
 === inspect_sh_3 ===
-ISH3 - Missing briefcase
+ISH3 - A memory from last night springs back into your mind. Shakok had a briefcase he dragged around with him and you joked that if he wasn't going to leave it in his room that he should handcuff it to his wrists so he'd have both hands free. He had not found the joke amusing. 
 + [Continue] -> turn
 
 === inspect_sh_4 ===
-ISH4 - Ledger 
+ISH4 - While the train cars warm up in the afternoon heat, Shakok removes his jacket for a moment. You take this time to search the pockets. You open the small notebook tucked away inside your jacket just to look at the numbers. Dozens of companies are tracked with their finances. Near the end of the list, red numbers disrupt the order. Boreas Transcontinental. 
 + [Continue] -> turn
 
 === inspect_sh_5 ===
-ISH5 - Business card 
+ISH5 - Shakok dresses like a businessman, talks like a businessman, and seems to only care for numbers... like a businessman. But a business card on Boreas' desk with Shakok's business logo on it confirms it. Shakok Investments - 100 Successful Businesses and Counting. 
 + [Continue] -> turn
 
 === inspect_sh_6 ===
-ISH6 - Missing handkerchief
+ISH6 - One of the only bits of color Shakok had on his person was a small handkerchief he had tucked away in his pocket. Shakok wipes up a dab of condensation from his drink with a napkin and you notice that little glimmer of color is gone. 
 + [Continue] -> turn
 
 === inspect_sh_7 ===
-ISH7 - Soot on shoes 
+ISH7 - Shakok's shoes are so well polished and such a serious shade of black, that you wouldn't have noticed the slight powdering of soot on the shoes if it weren't for the intense glare from the sunlight outside the window. The shoes didn't have that same blinding shine to them they had before. 
 + [Continue] -> turn
 
 /// Naneh Sarma Self //////////////////////////////////////////////
@@ -1648,93 +1694,93 @@ CS96 - A sturdy gentleman's briefcase rests on top of Boreas' body with blood on
 
 ///Inspect Naneh Sarma///
 === inspect_ns_1 ===
-INS1 - Yarn
+INS1 - She never stops knitting. You can't really tell what it is Naneh Sarma is making. Is it part of a sweater? A hat? A scarf? The stitches look irregular and strange. You'd think if she never stops knitting that she would be actually good at it. 
 + [Continue] -> turn
 
 === inspect_ns_2 ===
-INS2 - Correspondence 
+INS2 - During one of Naneh Sarma's naps, you take a look inside her knitting bag. It's full of strange small projects. A glove missing two fingers, a hat too big for any head, a sock with two toes, but strangely no extra yarn. Once she finishes a project, she unwinds one of the old projects and starts over. They're never worn.  
+
+    You squint at the irregular stitches and imperfections. Could it be a code?
 + [Continue] -> turn
 
 === inspect_ns_3 ===
-INS3 - Helpers are packing heat 
+INS3 - Naneh Sarma may be old and fragile, but the two men helping her are very far from helpless. In fact, you think you saw one had an ankle holster. 
 + [Continue] -> turn
 
 === inspect_ns_4 ===
-INS4 - Beads on her knitting bag 
+INS4 - Naneh Sarma keeps her knitting bag close to her. An obnoxious amount of beads stitched into the fabric act as an alarm whenever it shifts weight. What could be inside?
 + [Continue] -> turn
 
 === inspect_ns_5 ===
-INS5 - Missing handkerchief 
+INS5 - Her motor controls aren't what they used to be, so Naneh Sarma often has a few spills to clean up. A little bit of brandy got on her skirt from last night, but then she had a handkerchief to mop up the mess. Now, one of her assistants uses a napkin to help clear up the Persian Chai spilled on the table. 
 + [Continue] -> turn
 
 === inspect_ns_6 ===
-INS6 - Ledger
+INS6 - The more you look at Naneh Sarma, the more the little old lady facade chips away. That same irregular stitching pattern is present on her cardigan. Different colors of yarn that are seemingly strange an ecclectic may be a code or information. Unlike her bag full of strange projects, she only ever adds on to her cardigan. Could this be a ledger of sorts?
 + [Continue] -> turn
 
 === inspect_ns_7 ===
-INS7 - Knitting needles
+INS7 - Naneh Sarma's needles catch the light as rhythmically follows an unknown pattern. Thin, sharp looking steel needles. 
 + [Continue] -> turn
 
 /// Murderer Reveal //////////////////////////////////////////////
-
 === murderer_reveal ===
 
 {
     - murder == 1 && accuse == 1: 
-       Despoina.
+       Despoina howls with rage. "He wouldn't give me what I deserve, so I gave him what he did!" 
         -> END
     - murder == 2 && accuse == 2:  
-        Khione 
+        Khione seethes. "If any of you were in my place, you would have done the same!"
         -> END
     - murder == 3 && accuse == 3:  
-        Ded Moroz 
+        Ded Moroz pulls out the concealed sword and waves it about. "If anyone here wanted Boreas' to live, they can be the first to challenge me!" 
         -> END
     - murder == 4 && accuse == 4: 
-        Itzlacoliuhqui
+        Itzlacoliuhqui shrugs. "It's just business." 
         -> END
     - murder == 5 && accuse == 5: 
-        Marzanna 
+        Marzanna sobs. "I didn't mean to! He wouldn't listen!" 
         -> END
     - murder == 6 && accuse == 6: 
-        Skadi
+        Skadi scowls. "If he had just done what I asked, this wouldn't have needed to happen." 
         -> END
     - murder == 7 && accuse == 7: 
-        Hine Takurua 
+        Hine Takurua wipes away at forced tears with the edge of her sleeve. "When he proposed, he was no longer useful to me."  
         -> END
     - murder == 8 && accuse == 8: 
-        Shakok
-        -> END
+        Shakok checks his watch. "I did what I had to in order to save a good business."
     - murder == 9 && accuse == 9: 
-        Naneh Sarma
+        Naneh Sarma doesn't even look up from her knitting. "No one else had the backbone to do it." 
         -> END
     - else: 
     {
         - accuse == 1: 
-            Despoina innocent
+            Despoina reels back. "Me? A killer? You're crazy!" 
             + [Return] -> turn
         - accuse == 2: 
-            Khione innocent
+            Khione laughs. "You think I did this? If I had, you would never know." 
             + [Return] -> turn
         - accuse == 3:
-            Ded Moroz innocent
+            Ded Moroz scoffs. "How insulting! I would never!" 
             + [Return] -> turn
         - accuse == 4: 
-            Itzlacoliuhqui innocent
+            Itzlacoliuhqui shrugs. "I barely knew the guy. Why would I do it?" 
             + [Return] -> turn
         - accuse == 5: 
-            Marzanna innocent
+            Marzanna sobs. "Me? I couldn't! I wouldn't!"
             + [Return] -> turn
         - accuse == 6: 
-            Skadi innocent
+            Skadi growls. "I wouldn't kill scum like Boreas even if I was paid. He's not worth it." 
             + [Return] -> turn
         - accuse == 7: 
-            Hine Takurua innocent
+            Hine Takurua gasps. "Me? I'll have you sued for libel!" 
             + [Return] -> turn
         - accuse == 8: 
-            Shakok innocent
+            Shakok stifles a yawn. "Are you done messing around? Maybe accuse the real killer."
             + [Return] -> turn
         - else: 
-            Naneh Sarma innocent
+            Naneh Sarma doesn't even look up from her knitting. "I don't think you're much of a detective. Maybe try something else?" 
             + [Return] -> turn
     }
 
