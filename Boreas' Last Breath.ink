@@ -11,7 +11,7 @@ VAR character = 1
 VAR character_turn = 1
 # theme: dark 
 
--> invitation
+-> instructions
 
 === invitation ===
 
@@ -36,21 +36,22 @@ Select one of the four investigate options to learn more about the crime and cha
 Due to your hangover, you may discover the same information twice! 
 
 Once you think you have enough clues to solve the murder - select "Solve the murder!" 
--> invitation
+
++ [Select Characters] -> character_selection
 
 === character_selection ===
 
 # CLEAR 
 
-{character == 1: Please select your first character:}
-{character == 2: Please select your second character:}
-{character == 3: Please select your third character:}
-{character == 4: Please select your fourth character:}
-{character == 5: Please select your fifth character:}
-{character == 6: Please select your sixth character:}
-{character == 7: Please select your seventh character:}
-{character == 8: Please select your eighth character:}
-{character == 9: Please select your ninth character:}
+{character == 1: Please select player one:}
+{character == 2: Please select player two:}
+{character == 3: Please select player three:}
+{character == 4: Please select player four:}
+{character == 5: Please select player five:}
+{character == 6: Please select player six:}
+{character == 7: Please select player seven:}
+{character == 8: Please select player eight:}
+{character == 9: Please select player nine:}
 +   {despoina == 0} [Despoina]
     # IMAGE: images/despoina.jpg
     A wealthy heiress with a passion for horses.
@@ -132,16 +133,25 @@ Once you think you have enough clues to solve the murder - select "Solve the mur
     -> character_selection
     ++ [Go back]
     -> character_selection
-+   [Continue]
++   {character > 1} [Select NPCs]
     -> npcs 
++   {character > 1} [Continue to Game]
+    -> setup 
 
 === npcs ===
+VAR npc_despoina = 0 
+VAR npc_khione = 0
+VAR npc_ded_moroz = 0 
+VAR npc_itzlacoliuhqui = 0
+VAR npc_marzanna = 0 
+VAR npc_skadi = 0 
+VAR npc_hine_takurua = 0 
+VAR npc_shakok = 0 
+VAR npc_naneh_sarma = 0
 VAR npc = 9
 ~ npc -= character
 
 # CLEAR
-
-/// NPCs are broken and create playable characters - FIX!
 
 Would you like to add NPCs? 
 *   {character < 10}[Yes] -> add_npc
@@ -150,74 +160,92 @@ Would you like to add NPCs?
 === add_npc ===
 
 Please select your NPCs: 
-+   {despoina == 0} [Despoina]
++   {despoina == 0 && npc_despoina == 0} [Despoina]
+    # IMAGE: images/despoina.jpg
     A wealthy heiress with a passion for horses.
     ++ [Select]
-    ~ despoina = npc
+    ~ npc_despoina = npc
+    ~ despoina = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {khione == 0} [Khione]
++   {khione == 0 && npc_khione == 0} [Khione]
+    # IMAGE: images/khione.jpg
     Daughter of Boreas who keeps the whole train running smoothly. 
     ++ [Select]
-    ~ khione = npc
+    ~ npc_khione = npc
+    ~ khione = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {ded_moroz == 0} [Ded Moroz]
++   {ded_moroz == 0 && npc_ded_moroz == 0} [Ded Moroz]
+    # IMAGE: images/ded_moroz.jpg
     Boreas' business partner and owner of a large shipping business.
     ++ [Select]
-    ~ ded_moroz = npc
+    ~ npc_ded_moroz = npc
+    ~ ded_moroz = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {itzlacoliuhqui == 0} [Itzlacoliuhqui]
++   {itzlacoliuhqui == 0 && npc_itzlacoliuhqui == 0} [Itzlacoliuhqui]
+    # IMAGE: images/itzla.jpg
     Wealthy playboy who recently invested a lot of money into Boreas Transcontinental.
     ++ [Select]
-    ~ itzlacoliuhqui = npc
+    ~ npc_itzlacoliuhqui = npc
+    ~ itzlacoliuhqui = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {marzanna == 0} [Marzanna]
++   {marzanna == 0 && npc_marzanna == 0} [Marzanna]
+    # IMAGE: images/marzanna.jpg
     Quirky woman dressing above her station desperate to speak with Boreas about something private. 
     ++ [Select]
-    ~ marzanna = npc
+    ~ npc_marzanna = npc
+    ~ marzanna = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {skadi == 0} [Skadi]
++   {skadi == 0 && npc_skadi == 0} [Skadi]
+    # IMAGE: images/skadi.jpg
     Famous winter sports althete always looking to expand their brand.
     ++ [Select]
-    ~ skadi = npc
+    ~ npc_skadi = npc
+    ~ skadi = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {hine_takurua == 0} [Hine-Takurua]
++   {hine_takurua == 0 && npc_hine_takurua == 0} [Hine-Takurua]
+    # IMAGE: images/hine.jpg
     Wife of a wealthy and powerful political leader. 
     ++ [Select]
-    ~ hine_takurua = npc
+    ~ npc_hine_takurua = npc
+    ~ hine_takurua = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {shakok == 0} [Shakok]
++   {shakok == 0 && npc_shakok == 0} [Shakok]
+    # IMAGE: images/shakok.jpg
     Biggest investor of Boreas Transcontinental with a eye for numbers. 
     ++ [Select]
-    ~ shakok = npc
+    ~ npc_shakok = npc
+    ~ shakok = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
     -> add_npc
-+   {naneh_sarma == 0} [Naneh Sarma]
++   {naneh_sarma == 0 && npc_naneh_sarma == 0} [Naneh Sarma]
+    # IMAGE: images/naneh_sarma.jpg
     An elderly entrepreneur who charitably gives to the community every chance she gets. 
     ++ [Select]
-    ~ naneh_sarma = npc
+    ~ npc_naneh_sarma = npc
+    ~ naneh_sarma = 10
     ~ npc += 1
     -> add_npc
     ++ [Go back]
@@ -233,42 +261,45 @@ VAR murder = 0
 ~ killer_selection = RANDOM(1,npc)
 
 { 
-    - despoina == killer_selection: 
+    - despoina == killer_selection or npc_despoina == killer_selection: 
         ~ killer = "Despoina"
         ~ murder = 1
         -> murder_scene
-    - khione == killer_selection: 
+    - khione == killer_selection or npc_khione == killer_selection: 
         ~ killer = "Khione"
         ~ murder = 2
         -> murder_scene
-    - ded_moroz == killer_selection: 
+    - ded_moroz == killer_selection or npc_ded_moroz == killer_selection: 
         ~ killer = "Ded Moroz"
         ~ murder = 3
         -> murder_scene
-    - itzlacoliuhqui == killer_selection:
+    - itzlacoliuhqui == killer_selection or npc_itzlacoliuhqui == killer_selection:
         ~ killer = "Itzlacoliuhqui"
         ~ murder = 4
         -> murder_scene
-    - marzanna == killer_selection: 
+    - marzanna == killer_selection or npc_marzanna == killer_selection: 
         ~ killer = "Marzanna"
         ~ murder = 5
         -> murder_scene
-    - skadi == killer_selection:
+    - skadi == killer_selection or npc_skadi == killer_selection:
         ~ killer = "Skadi"
         ~ murder = 6
         -> murder_scene
-    - hine_takurua == killer_selection:
+    - hine_takurua == killer_selection or npc_hine_takurua == killer_selection:
         ~ killer = "Hine Takurua"
         ~ murder = 7
         -> murder_scene
-    - shakok == killer_selection: 
+    - shakok == killer_selection or npc_shakok == killer_selection: 
         ~ killer = "Shakok"
         ~ murder = 8
         -> murder_scene
-    - else: 
+    - naneh_sarma == killer_selection or npc_naneh_sarma == killer_selection: 
         ~ killer = "Naneh Sarma"
         ~ murder = 9
         -> murder_scene
+    - else: 
+    something fucked up 
+    -> murder_scene
 }
 
 -> turn
@@ -368,7 +399,7 @@ VAR inspect = 0
 +   [Inspect Crime Scene] -> inspect_crime_scene
 +   [Inspect Others]
     Who would you like to inspect?
-    ++  {despoina > 0 && char_turn_name != "Despoina"}[Despoina]
+    ++  {despoina > 0 && char_turn_name != "Despoina"} [Despoina]
         ~ inspect = 1 
         -> inspect_others
     ++  {khione > 0 && char_turn_name != "Khione"}[Khione]
@@ -397,7 +428,7 @@ VAR inspect = 0
         -> inspect_others
 +   [Solve the Crime!]
     Who do you think murdered Boreas?
-    **  {despoina > 0}[Despoina]
+    **  {despoina > 0} [Despoina]
         ~ accuse = 1 
         -> murderer_reveal
     **  {khione > 0}[Khione]
