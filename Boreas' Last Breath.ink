@@ -11,33 +11,25 @@ VAR character = 1
 VAR character_turn = 1
 # theme: dark 
 
--> instructions
-
-=== invitation ===
-
-/// turn this into a pretty image 
-
-You are cordially invited to celebrate Boreas' 57th birthday on his private train. Only the best for the owner of Boreas Transcontinental. 
-
-No plus ones. No children. No dietary restrictions. No exceptions. 
-
-+ [Accept] -> character_selection
-+ [Gameplay instructions] -> instructions
+# IMAGE: images/invitation.jpg
+    
+    + [Accept] -> character_selection
+    + [Gameplay instructions] -> instructions
 
 === instructions ===
-Each player should select one of nine characters. 
-
-You can add NPCs if you would like to increase the difficulty and try different murder scenarios. 
-
-Player turns will be taken in order of selection, the player's character name will appear on their turn. 
-
-Select one of the four investigate options to learn more about the crime and characters. You can choose to share this information or keep it to yourself. 
-
-Due to your hangover, you may discover the same information twice! 
-
-Once you think you have enough clues to solve the murder - select "Solve the murder!" 
-
-+ [Select Characters] -> character_selection
+    Each player should select one of nine characters. 
+    
+    You can add NPCs if you would like to increase the difficulty and try different murder scenarios. 
+    
+    Player turns will be taken in order of selection, the player's character name will appear on their turn. 
+    
+    Select one of the four investigate options to learn more about the crime and characters. You can choose to share this information or keep it to yourself. 
+    
+    Due to your hangover, you may discover the same information twice! 
+    
+    Once you think you have enough clues to solve the murder (and maybe get away with it!) - select "Solve the murder!" 
+    
+    + [Select Characters] -> character_selection
 
 === character_selection ===
 
@@ -55,88 +47,88 @@ Once you think you have enough clues to solve the murder - select "Solve the mur
 +   {despoina == 0} [Despoina]
     # IMAGE: images/despoina.jpg
     A wealthy heiress with a passion for horses.
-    ++ [Select]
-    ~ despoina = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ despoina = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {khione == 0}[Khione]
     # IMAGE: images/khione.jpg
     Daughter of Boreas who keeps the whole train running smoothly. 
-    ++ [Select]
-    ~ khione = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ khione = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {ded_moroz == 0}[Ded Moroz]
     # IMAGE: images/ded_moroz.jpg
     Boreas' business partner and owner of a large shipping business.
-    ++ [Select]
-    ~ ded_moroz = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ ded_moroz = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {itzlacoliuhqui == 0}[Itzlacoliuhqui]
     # IMAGE: images/itzla.jpg
     Wealthy playboy who recently invested a lot of money into Boreas Transcontinental.
-    ++ [Select]
-    ~ itzlacoliuhqui = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ itzlacoliuhqui = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {marzanna == 0}[Marzanna]
     # IMAGE: images/marzanna.jpg
     Quirky woman dressing above her station desperate to speak with Boreas about something private. 
-    ++ [Select]
-    ~ marzanna = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ marzanna = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {skadi == 0 }[Skadi]
     # IMAGE: images/skadi.jpg
     Famous winter sports althete always looking to expand their brand. 
-    ++ [Select]
-    ~ skadi = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ skadi = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {hine_takurua == 0}[Hine-Takurua]
     # IMAGE: images/hine.jpg
     Wife of a wealthy and powerful political leader. 
-    ++ [Select]
-    ~ hine_takurua = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ hine_takurua = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {shakok == 0}[Shakok]
     # IMAGE: images/shakok.jpg
     Biggest investor of Boreas Transcontinental with a eye for numbers.
-    ++ [Select]
-    ~ shakok = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ shakok = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {naneh_sarma == 0}[Naneh Sarma]
     # IMAGE: images/naneh_sarma.jpg
     An elderly entrepreneur who charitably gives to the community every chance she gets. 
-    ++ [Select]
-    ~ naneh_sarma = character
-    ~ character += 1
-    -> character_selection
-    ++ [Go back]
-    -> character_selection
+        ++ [Select]
+            ~ naneh_sarma = character
+            ~ character += 1
+            -> character_selection
+        ++ [Go back]
+            -> character_selection
 +   {character > 1} [Select NPCs]
-    -> npcs 
+        -> npcs 
 +   {character > 1} [Continue to Game]
-    -> setup 
+        -> setup 
 
 === npcs ===
 VAR npc_despoina = 0 
@@ -163,95 +155,95 @@ Please select your NPCs:
 +   {despoina == 0 && npc_despoina == 0} [Despoina]
     # IMAGE: images/despoina.jpg
     A wealthy heiress with a passion for horses.
-    ++ [Select]
-    ~ npc_despoina = npc
-    ~ despoina = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_despoina = npc
+            ~ despoina = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {khione == 0 && npc_khione == 0} [Khione]
     # IMAGE: images/khione.jpg
     Daughter of Boreas who keeps the whole train running smoothly. 
-    ++ [Select]
-    ~ npc_khione = npc
-    ~ khione = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_khione = npc
+            ~ khione = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {ded_moroz == 0 && npc_ded_moroz == 0} [Ded Moroz]
     # IMAGE: images/ded_moroz.jpg
     Boreas' business partner and owner of a large shipping business.
-    ++ [Select]
-    ~ npc_ded_moroz = npc
-    ~ ded_moroz = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_ded_moroz = npc
+            ~ ded_moroz = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {itzlacoliuhqui == 0 && npc_itzlacoliuhqui == 0} [Itzlacoliuhqui]
     # IMAGE: images/itzla.jpg
     Wealthy playboy who recently invested a lot of money into Boreas Transcontinental.
-    ++ [Select]
-    ~ npc_itzlacoliuhqui = npc
-    ~ itzlacoliuhqui = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_itzlacoliuhqui = npc
+            ~ itzlacoliuhqui = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {marzanna == 0 && npc_marzanna == 0} [Marzanna]
     # IMAGE: images/marzanna.jpg
     Quirky woman dressing above her station desperate to speak with Boreas about something private. 
-    ++ [Select]
-    ~ npc_marzanna = npc
-    ~ marzanna = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_marzanna = npc
+            ~ marzanna = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {skadi == 0 && npc_skadi == 0} [Skadi]
     # IMAGE: images/skadi.jpg
     Famous winter sports althete always looking to expand their brand.
-    ++ [Select]
-    ~ npc_skadi = npc
-    ~ skadi = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_skadi = npc
+            ~ skadi = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {hine_takurua == 0 && npc_hine_takurua == 0} [Hine-Takurua]
     # IMAGE: images/hine.jpg
     Wife of a wealthy and powerful political leader. 
-    ++ [Select]
-    ~ npc_hine_takurua = npc
-    ~ hine_takurua = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_hine_takurua = npc
+            ~ hine_takurua = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {shakok == 0 && npc_shakok == 0} [Shakok]
     # IMAGE: images/shakok.jpg
     Biggest investor of Boreas Transcontinental with a eye for numbers. 
-    ++ [Select]
-    ~ npc_shakok = npc
-    ~ shakok = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_shakok = npc
+            ~ shakok = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 +   {naneh_sarma == 0 && npc_naneh_sarma == 0} [Naneh Sarma]
     # IMAGE: images/naneh_sarma.jpg
     An elderly entrepreneur who charitably gives to the community every chance she gets. 
-    ++ [Select]
-    ~ npc_naneh_sarma = npc
-    ~ naneh_sarma = 10
-    ~ npc += 1
-    -> add_npc
-    ++ [Go back]
-    -> add_npc
+        ++ [Select]
+            ~ npc_naneh_sarma = npc
+            ~ naneh_sarma = 10
+            ~ npc += 1
+            -> add_npc
+        ++ [Go back]
+            -> add_npc
 *   [Continue]
-    -> setup 
+        -> setup 
     
 
 === setup ===
@@ -298,8 +290,8 @@ VAR murder = 0
         ~ murder = 9
         -> murder_scene
     - else: 
-    something fucked up 
-    -> murder_scene
+        something fucked up 
+        -> murder_scene
 }
 
 -> turn
@@ -1802,150 +1794,370 @@ Naneh Sarma's needles catch the light as rhythmically follows an unknown pattern
 /// Murderer Reveal //////////////////////////////////////////////
 === murderer_reveal ===
 
-//// murderer reveal needs to change if the murderer guesses correctly themselves
-
 {
     - murder == 1 && accuse == 1: 
-       Despoina howls with rage. "He wouldn't give me what I deserve, so I gave him what he did!" 
+    {
+        - char_turn_name == "Despoina":
+            If only your mother could see you now. These idiots babbling about trying to play detective, but you know better. You've known for a while. 
+            
+            You remember cornering Boreas in the lounge. This time he would listen. You tried to convince him to invest in your new business: horse rentals - a new way to ride! Horses would be rented out to people as quick travel to other transit, such as a train, and get dropped off at designated locations. Those without carriages or taxi fare could rent a horse to ride for a cheap fee. 
+            
+            He laughed. 
        
-       Despoina had tried to convince Boreas to invest in her new business: horse rentals - a new way to ride! Horses would be rented out to people as quick travel to other transit, such as a train, and get dropped off. Those without carriages or taxi fare could rent a horse to ride for a fee. 
+            You remember that laugh clearly. The same laugh your mother always had ready and the same laugh your sister joined in with. They all laughed. Well, there was one way to stop his laughing. One poker. One swing. 
        
-       He laughed at her. The same laugh her mother gave her and the same laugh her sister joined in. They all laughed. Well, there was one way to stop his laughing. One poker. One swing. 
+            Setting him up in the bedroom was more difficult than you had thought, but it worked in throwing them off the trail. 
+            
+            Now the train is pulling up to the station and you'll be gone with your forged contract. Finally you'll gain the respect you deserve from your family. Or they'll share a similar fate. 
+            -> END
+        - else: 
+            Despoina howls with rage. "He wouldn't give me what I deserve, so I gave him what he did!" 
        
-       Setting him up in the bedroom was more difficult than she had thought, but that was supposed to throw off the trail. And you still managed to catch her. 
-        -> END
+            Despoina had tried to convince Boreas to invest in her new business: horse rentals - a new way to ride! Horses would be rented out to people as quick travel to other transit, such as a train, and get dropped off. Those without carriages or taxi fare could rent a horse to ride for a fee. 
+       
+            He laughed at her. The same laugh her mother gave her and the same laugh her sister joined in. They all laughed. Well, there was one way to stop his laughing. One poker. One swing. 
+       
+            Setting him up in the bedroom was more difficult than she had thought, but that was supposed to throw off the trail. And you still managed to catch her. 
+            -> END
+    }
     - murder == 2 && accuse == 2:  
-        Khione seethes. "If any of you were in my place, you would have done the same!"
-        
-        According to Boreas' will, no child of his could inherit from his death if they weren't working for his business. Most of her siblings had ambition and dreams of their own, so they went off in the world. 
-        
-        Khione stayed. And how did Boreas repay her? By working her to the bone. Every task was shoved off to her and he ignored her pleas for more staff. More staff meant more on the payroll. 
-        
-        Finally, Khione had enough. She wanted to see the world while she still could. But she had spent her life working for him, working for his business. She even ran his blackmail side business when she would steal incriminating evidence from clients in the sleeping cars. She earned every penny of that inheritance! 
-        
-        Not according to Boreas and that stupid will. That's when Khione set it up. A crime with so much evidence pointing in every direction, no one would know it was her. 
-        
-        Instead of working until Boreas died, she'd kill Boreas in order to stop working. And she almost got away with it too.
-        -> END
-    - murder == 3 && accuse == 3:  
-        Ded Moroz pulls out the concealed sword and waves it about. "If anyone here wanted Boreas' to live, they can be the first to challenge me!" 
-        
-        Boreas had always charged Ded Moroz more than what he thought was fair, but back then when they both were just starting their businesses, he saw it as a way to support Boreas. 
-        
-        But Boreas started to get greedy. The more payments Ded Moroz was able to pay, the higher the price got. It was getting to the point where it was bleeding Ded Moroz's business dry and leaving him will little left. 
-        
-        Meanwhile, Boreas Transcontinental had muscled out almost all the competition. Ded Moroz was desperate. He begged Boreas to lower his fees and be reasonable. 
-        
-        Boreas sneered and told him that if he couldn't pay, it proved he wasn't a good businessman. 
-        
-        But Ded Moroz proved that he was still good with a sword. 
-        -> END
+    {
+        - char_turn_name == "Khione": 
+            Boreas may have thought that he had you wrapped around his finger, a properly trained dog to do his bidding, but those very same skills you gained through his employ were what helped you get away with it. 
+            
+            According to Boreas' will, no child of his could inherit from his death if they weren't working for his business. Most of your siblings had ambition and dreams of their own, so they went off in the world. 
+            
+            But you stayed. And how did Boreas repay you? By working you to the bone. Every task was shoved off to you and he ignored your pleas for more staff. More staff meant more on the payroll. More payroll was less profit.
+            
+            You snapped.
+            
+            The world won't wait for you forever. You spent your whole life working for him, working for his business. You even ran his blackmail side business -  stealing incriminating evidence from clients in the sleeping cars. You earned every penny of that inheritance and more! 
+            
+            Not according to Boreas and that stupid will. That's when it was all set in motion. A crime with so much evidence pointing in every direction, no one would be able to put it together. 
+            Instead of working until Boreas died, why not kill Boreas in order to stop working? 
+            
+            Now the train is finally rolling up to the station. You can go anywhere! Anywhere you want and never lift a finger for the rest of your life! 
+            -> END
+        - else: 
+            Khione seethes. "If any of you were in my place, you would have done the same!"
+            
+            According to Boreas' will, no child of his could inherit from his death if they weren't working for his business. Most of her siblings had ambition and dreams of their own, so they went off in the world. 
+            
+            Khione stayed. And how did Boreas repay her? By working her to the bone. Every task was shoved off to her and he ignored her pleas for more staff. More staff meant more on the payroll. 
+            
+            Finally, Khione had enough. She wanted to see the world while she still could. But she spent her whole life working for him, working for his business. She even ran his blackmail side business when she would steal incriminating evidence from clients in the sleeping cars. She earned every penny of that inheritance! 
+            
+            Not according to Boreas and that stupid will. That's when Khione set it up. A crime with so much evidence pointing in every direction, no one would know it was her. 
+            
+            Instead of working until Boreas died, she'd kill Boreas in order to stop working. And she almost got away with it too.
+            -> END
+    }
+    - murder == 3 && accuse == 3: 
+    {
+        - char_turn_name == "Ded Moroz": 
+            You pull out a cigar and light it. Is it too soon to celebrate? Nah, no one here will figure it out. It's not like anyone here is broken up about his death anyway. Good riddance. 
+            
+            Boreas had always charged you more than what he thought was fair, but back then when you both were just starting your businesses, you saw it as a way to support Boreas. High tides and all that.
+            
+            But Boreas started to get greedy. The more payments you were able to pay, the higher the price got. It was getting to the point where it was bleeding your business dry and leaving you will to nothing little left. 
+            
+            Meanwhile, Boreas Transcontinental muscled out almost all the competition. You became desperate and begged Boreas to lower his fees. To be reasonable! You were friends. Right?
+            
+            Boreas sneered and told you that if you couldn't pay, you weren't a good businessman. 
+            
+            But you were good with a sword. 
+            
+            The train pulls into the station and you savor the cigar. Your business may still be underwater, but you got rid of the boot that was holding you under. 
+            -> END
+        - else: 
+            Ded Moroz pulls out the concealed sword and waves it about. "If anyone here wanted Boreas' to live, they can be the first to challenge me!" 
+            
+            Boreas had always charged Ded Moroz more than what he thought was fair, but back then when they both were just starting their businesses, he saw it as a way to support Boreas. 
+            
+            But Boreas started to get greedy. The more payments Ded Moroz was able to pay, the higher the price got. It was getting to the point where it was bleeding Ded Moroz's business dry and leaving him will little left. 
+            
+            Meanwhile, Boreas Transcontinental muscled out almost all the competition. Ded Moroz was desperate. He begged Boreas to lower his fees and be reasonable. 
+            
+            Boreas sneered and told him that if he couldn't pay, it proved he wasn't a good businessman. 
+            
+            But Ded Moroz proved that he was still good with a sword. 
+            -> END
+    }
     - murder == 4 && accuse == 4: 
-        Itzlacoliuhqui shrugs. "It's just business." 
-        
-        His business? A trained assassin. He only takes the high profile ones and this included a party invitation so he was ready and willing. 
-        
-        A gun seemed too obvious, so he stole the pills from Marzanna to drug Boreas' drink. He took the ring to prove the job was done for those that hired him: Zephyr International Transit. Boreas' main competitor. 
-        -> END
-    - murder == 5 && accuse == 5: 
-        Marzanna sobs. "I didn't mean to! He wouldn't listen!" 
-        
-        Boreas met his first love in his hometown before he made it big. She was left behind when he started moving with a wealthier crowd, but he didn't know he left her with a daughter. Not until the letters asking for money came in. 
-        
-        At first Boreas was sending very generous checks, but as Marzanna grew older, Boreas stopped all together. When her mother got sick and died, she thought she might finally meet her father at the funeral... but he never showed. 
-        
-        While digging through her mother's old mail, Marzanna found an alimony check. She reached out to Boreas begging to at least meet. That's when she received the invitation. 
-        
-        She wasn't interested in his money at first, but when he got angry about needing to rewrite his will to write her out, she snapped. Maybe she was hoping if he was dead, she'd never know just how much like her father she was. 
-        -> END
+    {
+        - char_turn_name == "Itzlacoliuhqui":
+            You pour yourself to drink. A toast to another job well done and a nice hefty paycheck coming in. You're the best in the business.
+            
+            The business? Some might call you a trained assassin, but you like to think of yourself as a cleaner. You're just cleaning up messes for clients. And boy was Boreas a mess. 
+            
+            You only take high profile jobs and since this included a party with an open bar and top shelf tequila, he was ready and willing. That and all those zeros after the dollar sign. Probably your biggest payday yet. 
+            
+            A gun seemed too obvious and messy, so you stole pills from Marzanna to drug Boreas' drink. Your missing gun? Not missing at all, but painted a nice picture to make you look the victim, didn't it? 
+            
+            You took Boreas' ring to prove the job was done for your client: Zephyr International Transit. Boreas' main competitor. Ready to swoop in and pay out all of Boreas' children for their shares and create a monopoly of the railroad business. Worth every penny of your fee.
+            
+            As the train pulls into the station, you knock back the last of your drink and start planning your long vacation. Somewhere warm. 
+            -> END
+        - else: 
+            Itzlacoliuhqui shrugs and pours a drink. "It's just business." 
+            
+            His business? A trained assassin, although he prefers the term "cleaner". His client points him to something they need taken care of and Itzlacoliuhqui uses his skills to make the mess go away. And boy was Boreas a mess. 
+            
+            Itzlacoliuhqui only takes the high profile jobs and since this included an open bar and top shelf tequila, he was ready and willing. That and all those zeros after the dollar sign. Probably your biggest payday yet. 
+            
+            A gun seemed too obvious and messy, so he stole the pills from Marzanna to drug Boreas' drink. His missing gun? Not missing at all, but definitely made him look the victim, didn't it? 
+            
+            He took Boreas' ring to prove the job was done for his client: Zephyr International Transit. Boreas' main competitor. Ready to swoop in and pay out all of Boreas' children for their shares until they have a monopoly of the railroad business. Worth every penny of Itzlacoliuhqui's fee.
+            
+            Even though you've caught him, that smirk displays the confidence of someone who's never been put behind bars no matter the evidence. 
+            -> END
+    }
+    - murder == 5 && accuse == 5:
+    {
+        - char_turn_name == "Marzanna":
+            You wipe at the tears on your face, disregarding the makeup your smearing on your sleeve. 
+            
+            Boreas met his first love in his hometown before he made it big. She was left behind when he started moving with a wealthier crowd, but he didn't know he left her with a daughter. Not until the letters asking for money came in. 
+            
+            At first Boreas was sending very generous checks, but as you grew older, Boreas stopped all together. When your mother got sick and died, you thought you might finally meet your father at the funeral... but he never showed. 
+            
+            While digging through your mother's old mail, you found an alimony check. You reached out to Boreas begging to at least meet. That's when you received the invitation. 
+            
+            You weren't interested in his money at first, but when he got angry about needing to rewrite his will to write you out, you snapped. Maybe you were hoping if he was dead, you'd never find out just how much like your father you are. 
+            
+            The train pulls up to the station and you wait anxiously by the door. You just want to go back to your small town and leave all of this behind you. Forget Boreas and this toxic society.
+            -> END
+        - else: 
+            Marzanna sobs. "I didn't mean to! He wouldn't listen!" 
+            
+            Boreas met his first love in his hometown before he made it big. She was left behind when he started moving with a wealthier crowd, but he didn't know he left her with a daughter. Not until the letters asking for money came in. 
+            
+            At first Boreas was sending very generous checks, but as Marzanna grew older, Boreas stopped all together. When her mother got sick and died, she thought she might finally meet her father at the funeral... but he never showed. 
+            
+            While digging through her mother's old mail, Marzanna found an alimony check. She reached out to Boreas begging to at least meet. That's when she received the invitation. 
+            
+            She wasn't interested in his money at first, but when he got angry about needing to rewrite his will to write her out, she snapped. Maybe she was hoping if he was dead, she'd never find out just how much like her father she was. 
+            -> END
+    }
     - murder == 6 && accuse == 6: 
-        Skadi scowls. "If he had just done what I asked, this wouldn't have needed to happen." 
-        
-        Skadi had many ski resports. The best ski resports, in fact. But this one, her new one being planned in the northwest mountains was going to be the crown jewel of ski resorts. 
-        
-        Boreas already had a main arterial train line nearby, it would have been a simple enough task to make a new one to the base of the mountain and have the gondola bring the visitors up. Wealthy visitors. 
-        
-        No matter how many times she ran the numbers, Boreas' quote was just too high. It was going to cost more than the construction of her whole resort! Ridiculous! 
-        
-        Boreas wouldn't budge. "If you really want it, you'll come up with the money." Zephyr International Transit didn't have any rail lines close enough to be feasbile. She was desperate. 
-        
-        When he dipped into the supply closet to take a whole bottle of booze for a party trick, Skadi tried her luck to get him to agree in his inebriated state. Even blackout drunk, he was still a greed jerk. 
-        
-        He can't contest a forged signature if he's dead, right? And she needed that rail line. 
-        -> END
+    {
+        - char_turn_name == "Skadi":
+            You look out at the windows at the passing mountain ranges, itching to be back out on the slopes and away from this whole fiasco.
+            
+            You own many ski resports. The best ski resports, in fact. But this one, your new one being planned in the northwest mountains was going to be the crown jewel of ski resorts. 
+            
+            Boreas already had a main arterial train line nearby, it would have been a simple enough task to make a small local line to the base of the mountain and have the gondola bring the visitors up. Wealthy visitors. 
+            
+            No matter how many times you ran the numbers, Boreas' quote was just too high. It was going to cost more than the construction of the whole resort for a simple rail line! Ridiculous! 
+            
+            Boreas wouldn't budge. "If you really want it, you'll come up with the money." Zephyr International Transit didn't have any rail lines close enough to be feasible. You were desperate. This was your dream!
+            
+            When he dipped into the supply closet to take a whole bottle of booze for a party trick, You tried your luck to get him to agree in his inebriated state. Even blackout drunk, he was still a greedy jerk. 
+            
+            He can't contest a forged signature if he's dead, right? And you need that rail line.
+            
+            The train pulls up to the station and you pat at the document under your jacket. Soon enough you'll be skiing the fresh powder and your new resort without a thought about Boreas. As it should be. 
+            -> END
+        - else: 
+            Skadi scowls. "If he had just done what I asked, this wouldn't have needed to happen." 
+            
+            Skadi owns many ski resports. The best ski resports, in fact. But this one, her new one being planned in the northwest mountains was going to be the crown jewel of ski resorts. 
+            
+            Boreas already had a main arterial train line nearby, it would have been a simple enough task to make a small local line to the base of the mountain and have the gondola bring the visitors up. Wealthy visitors. 
+            
+            No matter how many times she ran the numbers, Boreas' quote was just too high. It was going to cost more than the construction of her whole resort! Ridiculous! 
+            
+            Boreas wouldn't budge. "If you really want it, you'll come up with the money." Zephyr International Transit didn't have any rail lines close enough to be feasible. She was desperate. 
+            
+            When he dipped into the supply closet to take a whole bottle of booze for a party trick, Skadi tried her luck to get him to agree in his inebriated state. Even blackout drunk, he was still a greedy jerk. 
+            
+            He can't contest a forged signature if he's dead, right? And she needed that rail line. 
+            -> END
+    }
     - murder == 7 && accuse == 7: 
-        Hine Takurua wipes away at forced tears with the edge of her sleeve. "It's not my fault, he was just no longer useful to me."  
-        
-        Hine Takurua married her husband for everything but love. He had political power, wealth, and easy on the eyes. It was a perfect match for a while, an easy enough ruse to maintain. She could easily play the part of doting wife when she wore the latest fashions and traveled the world on his dime. 
-        
-        But love would have kept her in luxury. As her looks started to fade and their romance was no longer the talk of newspapers, he found someone new who would get his name in the paper and on everyone's lips. 
-        
-        That nasty skank! Instead of bowing out, Hine Takurua doubled down. If he wanted scandal, that's what he would get. She started meeting with powerful, wealthy men and making sure she was seen with them. She wanted him to notice her again.
-        
-        Instead, she got the notice of someone else. Boreas didn't see the game, he only saw her attention, that fool! He even proposed! Can you imagine? Boreas wasn't even half the man Hine Takurua's husband was. So he had to go. 
-        -> END
+    {
+        - char_turn_name == "Hine Takurua": 
+            You practice brining tears to your eyes in the mirror. You know, in case any reporter asks about the murder. You need to make sure you look sad, but not weepy. 
+            
+            You married your husband for everything but love. He had political power, wealth, and was easy on the eyes. It was a perfect match for a while, an easy enough ruse to maintain. You could easily play the part of doting wife when you wore the latest fashions and traveled the world on his dime. 
+            
+            But love would have kept you in that luxury. As your looks started to fade and your romance was no longer the talk of newspapers, he found someone new who would get his name back on everyone's lips. 
+            
+            That nasty skank! Instead of bowing out, you doubled down. He just needed to be reminded of what you meant to him... you needed to make him jealous. You started meeting with powerful, wealthy men and making sure you were seen with them. You wanted him to notice you again by any means necessary.
+            
+            Boreas didn't see the game, he didn't see past the flirtation and the attention for what it was, that fool! He even proposed! Boreas wasn't even half the man your husband was. So he had to go. 
+            
+            You slip your sunglasses on as the train rolls into the station. Perhaps you don't need your huband to love you to keep him. Perhaps you just need him to fear you. 
+            -> END
+        - else: 
+            Hine Takurua wipes away at forced tears with the edge of her sleeve. "It's not my fault, he was just no longer useful to me."  
+            
+            Hine Takurua married her husband for everything but love. He had political power, wealth, and was easy on the eyes. It was a perfect match for a while, an easy enough ruse to maintain. She could easily play the part of doting wife when she wore the latest fashions and traveled the world on his dime. 
+            
+            But love would have kept her in that luxury. As her looks started to fade and their romance was no longer the talk of newspapers, he found someone new who would get his name back on everyone's lips. 
+            
+            That nasty skank! Instead of bowing out, Hine Takurua doubled down. He just needed to be reminded of what she meant to him... she needed to make him jealous. Hine Takurua started meeting with powerful, wealthy men and making sure she was seen with them. She wanted him to notice her again. And she'd do anything to do that. 
+            
+            Instead, she got the notice of someone else. Boreas didn't see the game, he only saw her attention, that fool! He even proposed! Can you imagine? Boreas wasn't even half the man Hine Takurua's husband was. So he had to go. 
+            -> END
+    }
     - murder == 8 && accuse == 8: 
-        Shakok checks his watch. "I did what I had to in order to save a good business."
-        
-        Shakok had never backed a bad business. He had a great eye for spotting talent and could tell when a small buisiness would make it big. 
-        
-        He was the first investor into Boreas Transcontinental. Boreas had a knack for getting what he wanted, which was necessary in the cut throat business of railroads. 
-        
-        The more Boreas Transcontinental grew, so did the profits. Shakok at first was proud, but then the numbers didn't add up. They kept growing. There wasn't a time where Boreas recorded a single loss. 
-        
-        Shakok started requesting receipts for shipments and logs and always got the same answers. "It's in the mail." "I'll have Khione send it." "Let me update them first." 
-        
-        When he received the invite, Shakok knew this would be his moment to confront Boreas. His private train had all his documents. The truth was in his reach. 
-        
-        And it was much worse than he thought. The only way to collect on the loss at this point was to kill Boreas and liquidate his company to pay off all the debt. 
-        
-        And Shakok never backed a bad business.
-        -> END
+    {
+        - char_turn_name == "Shakok": 
+            You check your watch, keeping track of the train schedule. You'll be arriving at the station any moment now. 
+            
+            You've never backed a bad business. Since you started with a small amount of seed money, you've had a great eye for spotting talent and could tell when a small buisiness would make it big. 
+            
+            You were the first investor into Boreas Transcontinental. Boreas had a knack for getting what he wanted, which was necessary in the cut throat business of railroads. 
+            
+            The more Boreas Transcontinental grew, so did the profits. You were proud at first, but then the numbers didn't add up. They kept growing. There wasn't a time where Boreas recorded a single loss. 
+            
+            You requested receipts for shipments and logs and always got the same answers. "It's in the mail." "I'll have Khione send it." "Let me update them first." 
+            
+            When you received the invite, you knew this would be your moment to confront Boreas. His private train had all his documents. The truth was in your reach. 
+            
+            And it was much worse than you thought. The only way to collect on the loss at this point was to kill Boreas and liquidate his company to pay off all the debt. 
+            
+            You've never backed a bad business and you weren't going to let this blemish your record. And as you step off the train at the station, it looks like your record is going to stay clean.
+            -> END
+        - else:
+            Shakok checks his watch. "I did what I had to in order to save a good business."
+            
+            Shakok had never backed a bad business. He had a great eye for spotting talent and could tell when a small buisiness would make it big. 
+            
+            He was the first investor into Boreas Transcontinental. Boreas had a knack for getting what he wanted, which was necessary in the cut throat business of railroads. 
+            
+            The more Boreas Transcontinental grew, so did the profits. Shakok at first was proud, but then the numbers didn't add up. They kept growing. There wasn't a time where Boreas recorded a single loss. 
+            
+            Shakok requested receipts for shipments and logs and always got the same answers. "It's in the mail." "I'll have Khione send it." "Let me update them first." 
+            
+            When he received the invite, Shakok knew this would be his moment to confront Boreas. His private train had all his documents. The truth was in his reach. 
+            
+            And it was much worse than he thought. The only way to collect on the loss at this point was to kill Boreas and liquidate his company to pay off all the debt. 
+            
+            And Shakok never backed a bad business.
+            -> END
+    }
     - murder == 9 && accuse == 9: 
-        Naneh Sarma doesn't even look up from her knitting. "No one else had the backbone to do it." 
-        
-        Sweet, sweet Naneh Sarma was great a knitting and bringing people together. While a sweater could fetch the right price or a pair of gloves could help the needy, she wanted to do something else with her skills. 
-        
-        During the war, she had read of secret messages and codes used in espionage. From this idea, she created her knitting code. Not just in the stitches, but she used the type of clothing, size, and shapes. 
-        
-        It started with messages to friends, but she quickly realized it had potential. Her nephew needed a new radio? She would get her friend in a shipping company to let her know those times and she would relay the information. 
-        
-        Suddenly, her business grew. All she did was run the communications, but suddenly many were interested in information that wasn't legible by authorities and could easily be unraveled into a ball of yarn. 
-        
-        When Boreas caught onto her smuggling business being run on his trains, instead of reporting them to the police, he started charging her fees. At first, it was fine. It almost made it look like Boreas had hired her to steal from his clients, but then the fees grew. 
-        
-        Then they finally outgrew his value and she rigged a suitcase to fall on him, luring him with the ruby earring. And shot for good measure. 
-        -> END
+    {
+        - char_turn_name == "Naneh Sarma": 
+            You tie in the edges of your latest knitting project: a skinny scarf where one end splits into three different lengths. 
+            
+            You were great at knitting and bringing people together. While a sweater could fetch the right price or a pair of gloves could help the needy, you wanted to do something else with your skills. 
+            
+            During the war, you read of secret messages and codes used in espionage. From this idea, you created your knitting code. Not just in the stitches, but you used the type of clothing, size, and shapes. 
+            
+            It started with messages to friends, but you quickly realized it had bigger potential. Your nephew needed a new radio? You would get your friend in a shipping company to let you know those times and would relay the information. What he did with the information was on him.
+            
+            Suddenly, your business grew. All you did was run the communications, but many were interested in information that wasn't legible by authorities and could easily be unraveled into a boring ball of yarn. 
+            
+            You're not sure how, but Boreas caught onto the smuggling business you were running on his trains. Instead of reporting you to the police, he started charging you fees. At first, it was fine. It almost made it look like Boreas had hired you to steal from his clients, which would look bad for him if you were caught by real authorities. But then the fees grew. 
+            
+            Then they finally outgrew his value and you rigged a suitcase to fall on him, luring him with the ruby earring. And a bullet for good measure. 
+            
+            When the train rolls up to the station, you shuffle onto the platform. A nice bell hop comes to your aid. You slip him the scarf and he smiles knowingly. Business as usual. 
+            -> END
+        - else: 
+            Naneh Sarma doesn't even look up from her knitting. "No one else had the backbone to do it." 
+            
+            Sweet, sweet Naneh Sarma was great at knitting and bringing people together. While a sweater could fetch the right price or a pair of gloves could help the needy, she wanted to do something else with her skills. 
+            
+            During the war, she read of secret messages and codes used in espionage. From this idea, she created her knitting code. Not just in the stitches, but she used the type of clothing, size, and shapes. 
+            
+            It started with messages to friends, but she quickly realized it had potential. Her nephew needed a new radio? She would get her friend in a shipping company to let her know those times and she would relay the information. 
+            
+            Suddenly, her business grew. All she did was run the communications, but suddenly many were interested in information that wasn't legible by authorities and could easily be unraveled into a ball of yarn. 
+            
+            When Boreas caught onto the smuggling business she was running on his trains, instead of reporting them to the police, he started charging her fees. At first, it was fine. It almost made it look like Boreas had hired her to steal from his clients, which would look bad for him if they were caught by real authorities. But then the fees grew. 
+            
+            Then they finally outgrew his value and she rigged a suitcase to fall on him, luring him with the ruby earring. And bullet for good measure. 
+            -> END
+    }
     - else: 
-    
-    /// make the dialogue different if self guesses self incorrectly
     {
         - accuse == 1: 
-            Despoina reels back. "Me? A killer? You're crazy!" 
-            + [Return] -> turn
+            {
+            - char_turn_name == "Despoina":
+                No, it couldn't have been you! This isn't your style. 
+                + [Return] -> turn 
+            - else: 
+                Despoina reels back. "Me? A killer? You're crazy!" 
+                + [Return] -> turn
+            }
         - accuse == 2: 
-            Khione laughs. "You think I did this? If I had, you would never know." 
-            + [Return] -> turn
+            {
+            - char_turn_name == "Khione":
+                You think you did this? There's no way. You'd never get caught. 
+                + [Return] -> turn
+            - else: 
+                Khione laughs. "You think I did this? If I had, you would never know." 
+                + [Return] -> turn
+            }
         - accuse == 3:
-            Ded Moroz scoffs. "How insulting! I would never!" 
-            + [Return] -> turn
+            {
+            - char_turn_name == "Ded Moroz":
+                There are so many better ways to deal with Boreas, you wouldn't have to kill him. There's no way you did this. 
+                + [Return] -> turn
+            - else: 
+                Ded Moroz scoffs. "How insulting! I would never!" 
+                + [Return] -> turn
+            }
         - accuse == 4: 
-            Itzlacoliuhqui shrugs. "I barely knew the guy. Why would I do it?" 
-            + [Return] -> turn
+            {
+            - char_turn_name == "Itzlacoliuhqui":
+                You barely knew Boreas. Why would you kill him? 
+                + [Return] -> turn
+            - else: 
+                Itzlacoliuhqui shrugs. "I barely knew the guy. Why would I do it?" 
+                + [Return] -> turn
+            }
         - accuse == 5: 
-            Marzanna sobs. "Me? I couldn't! I wouldn't!"
-            + [Return] -> turn
+            {
+            - char_turn_name == "Marzanna":
+                XX
+                + [Return] -> turn
+            - else:
+                Marzanna sobs. "Me? I couldn't! I wouldn't!"
+                + [Return] -> turn
+            }
         - accuse == 6: 
-            Skadi growls. "I wouldn't kill scum like Boreas even if I was paid. He's not worth it." 
-            + [Return] -> turn
+            {
+            - char_turn_name == "Skadi":
+                You use your energy to do two things: winter sports and make money. Killing Boreas wouldn't help either. 
+                + [Return] -> turn
+            - else:
+                Skadi growls. "I wouldn't kill scum like Boreas even if I was paid. He's not worth it." 
+                + [Return] -> turn
+            }
         - accuse == 7: 
-            Hine Takurua gasps. "Me? I'll have you sued for libel!" 
-            + [Return] -> turn
+            {
+            - char_turn_name == "Hine Takurua": 
+                You didn't get to your position of power by being sloppy. This wasn't you. 
+                + [Return] -> turn 
+            - else: 
+                Hine Takurua gasps. "Me? I'll have you sued for libel!" 
+                + [Return] -> turn
+            }
         - accuse == 8: 
-            Shakok stifles a yawn. "Are you done messing around? Maybe accuse the real killer."
-            + [Return] -> turn
-        - else: 
-            Naneh Sarma doesn't even look up from her knitting. "I don't think you're much of a detective. Maybe try something else?" 
+            {
+            - char_turn_name == "Shakok": 
+                Kill Boreas? You really drank too much if you're considering you'd do anything so stupid. 
+                + [Return] -> turn 
+            - else: 
+                Shakok stifles a yawn. "Are you done messing around? Maybe accuse the real killer."
+                + [Return] -> turn
+            }
+        - accuse == 9: 
+            {
+            - char_turn_name == "Naneh Sarma":
+                There's too much you have to do to waste time killing someone so inconsequential as Boreas.
+                + [Return] -> turn 
+            - else: 
+                Naneh Sarma doesn't even look up from her knitting. "I don't think you're much of a detective. Maybe try something else?" 
+                + [Return] -> turn
+            }
+        - else:
+            Something fucked up
             + [Return] -> turn
     }
 
